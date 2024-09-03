@@ -12,13 +12,14 @@ To see the user interface : `10.3.141.1:1880/ui`
 2) A raspeberry pi 1 - 'modulo huellin', which concatenate the data from all the sensors and send it to the 'modulo tierra' through LoRa.
 <details open>
 <summary>
-Pre-requisites
+Current implemented sensors are:
 </summary> <br />
-The current implemented sensors are:
-a) Oxygen
-b) PH
-c) Water quality
-d) GPS 
-
+###
+- Oxygen
+- PH
+- Water quality
+- GPS 
+</details open>
+### Shortly will be added the diagram of the project and the rest of the source code
 
 version 3.1.9 de node red
