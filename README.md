@@ -20,6 +20,14 @@ Current implemented sensors are:
 - Water quality
 - GPS 
 </details open>
+
+
+
+3) The documentation of the project
+![Alt text here](Doc\Diagrama general.svg)
+
+
+
 ### Shortly will be added the diagram of the project and the rest of the source code
 
 version 3.1.9 de node red
