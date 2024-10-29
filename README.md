@@ -14,15 +14,14 @@ To see the user interface : `10.3.141.1:1880/ui`
 <summary>
 Current implemented sensors are:
 </summary> <br />
-###
 
-- Oxygen
+	- Oxygen
 
-- PH
+	- PH
 
-- Water quality
+	- Water quality
 
-- GPS 
+	- GPS 
 </details open>
 
 
@@ -31,7 +30,7 @@ Current implemented sensors are:
 a) The general diagram:
 ![Diagrama general](Doc/Diagrama_general.drawio.svg)
 
-<details open>
+<details closed>
 <summary>
 The others diagram
 </summary> <br />
@@ -53,10 +52,11 @@ e) Caja_Carga_A:
 ![Caja_Carga_A](Doc/Caja_Carga_A.drawio.svg)
 
 
-e) Caja_Carga_B:
+f) Caja_Carga_B:
 ![Caja_Carga_B](Doc/Caja_Carga_B.drawio.svg)
 
-</details open>
+
+</details closed>
 
 ### Shortly will be added the rest of the source code
 
