@@ -26,7 +26,7 @@ Current implemented sensors are:
 
 
 
-3) The documentation of the project
+Please find below all the documentation of the project
 
 
 a) The general diagram:
@@ -59,6 +59,9 @@ f) Caja_Carga_B:
 
 
 </details closed>
+
+There is a list also of vocabulary used in the different diagrams:
+![List_vocab](Doc/Lista_de_definiciones.md)
 
 ### Shortly will be added the rest of the source code
 
