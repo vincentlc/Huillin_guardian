@@ -24,7 +24,7 @@ Current implemented sensors are:
 
 
 3) The documentation of the project
-![Alt text here](Doc\Diagrama general.svg)
+![Diagrama general](Doc/Diagrama general.drawio.svg)
 
 
 
