@@ -2,7 +2,23 @@
     {
         "id": "77987b289f476cac",
         "type": "tab",
+        "label": "Flow 1 -old",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b28149ca8a6be0f6",
+        "type": "tab",
         "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0bcb25fecad4f1a1",
+        "type": "tab",
+        "label": "Flow Calibración",
         "disabled": false,
         "info": "",
         "env": []
@@ -110,8 +126,9 @@
     {
         "id": "63d5bafdc744c302",
         "type": "ui_tab",
-        "name": "Proyecto Huillin Guardian",
+        "name": "Datos adicional",
         "icon": "dashboard",
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -230,21 +247,74 @@
         "tab": "48418b79.0f5834",
         "order": 1,
         "disp": true,
-        "width": "12"
+        "width": "12",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "48418b79.0f5834",
         "type": "ui_tab",
         "name": "Dashboard",
         "icon": "dashboard",
-        "order": 1
+        "order": 4
+    },
+    {
+        "id": "6f7bd30d11d84d05",
+        "type": "ui_group",
+        "name": "Calibracion",
+        "tab": "ebc50ee4244772fc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "07c9c1fce28c0d9f",
+        "type": "ui_group",
+        "name": "CalibrationPhGroup",
+        "tab": "69ac7fda749b14eb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ebc50ee4244772fc",
+        "type": "ui_tab",
+        "name": "Inicio",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "69ac7fda749b14eb",
+        "type": "ui_tab",
+        "name": "CalibracionpH",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a3b1899c42a8b66e",
+        "type": "ui_group",
+        "name": "Huillin Parametros",
+        "tab": "ebc50ee4244772fc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "edcb6b572e130d67",
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 2",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -427,7 +497,7 @@
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 6",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -628,7 +698,7 @@
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 9",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -842,8 +912,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1160,
-        "y": 360,
+        "x": 1180,
+        "y": 300,
         "wires": [
             [
                 "4725a0b65fa4f01a"
@@ -859,11 +929,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1340,
-        "y": 280,
+        "x": 1360,
+        "y": 300,
         "wires": []
     },
     {
@@ -1066,7 +1137,7 @@
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 13",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1406,6 +1477,1929 @@
         "wires": [
             [
                 "f31a598d.9fd2c8"
+            ]
+        ]
+    },
+    {
+        "id": "28d7516a68070605",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "715710ce6ffe0feb",
+        "type": "inject",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "prueba de transmision",
+        "payloadType": "str",
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "2bc51499650e3028"
+            ]
+        ]
+    },
+    {
+        "id": "2bc51499650e3028",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8871bff5b7be6692",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "Envio de datos hacia base terrena / uart 3",
+        "info": "",
+        "x": 200,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "85bd0961c8103acb",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "recepcion de datos desde el gps / uart 4",
+        "info": "",
+        "x": 170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a8c4ed6508b9bda6",
+        "type": "serial in",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "serial": "ed8d12af33e12adf",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "a4e4679c8db994f5"
+            ]
+        ]
+    },
+    {
+        "id": "a4e4679c8db994f5",
+        "type": "nmea",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "property": "payload",
+        "outputProperty": "payload",
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "79dcd3a26e8c4cd4"
+            ]
+        ]
+    },
+    {
+        "id": "79dcd3a26e8c4cd4",
+        "type": "switch",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "property": "payload.sentence",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "RMC",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "24962180b9551e44",
+                "6b0c226f169cf406"
+            ]
+        ]
+    },
+    {
+        "id": "f0a9a32b40c6336b",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "Sensores Atlas Scientific / Uart 5",
+        "info": "",
+        "x": 170,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fcc7f7c29e11934f",
+        "type": "serial in",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "serial": "89738a6854cb6d44",
+        "x": 110,
+        "y": 480,
+        "wires": [
+            [
+                "8c3351b5ed47ad36",
+                "fc2595819521b15f"
+            ]
+        ]
+    },
+    {
+        "id": "8c3351b5ed47ad36",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f90937e656dc496b",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "Sensor Modbus / Uart 2",
+        "info": "",
+        "x": 140,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "356957fc3c3ed298",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "ad24ca838bc8172a",
+        "type": "serial in",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "serial": "71abda4c42167479",
+        "x": 70,
+        "y": 640,
+        "wires": [
+            [
+                "55747e2ad51dcc81"
+            ]
+        ]
+    },
+    {
+        "id": "d6adcb9218853930",
+        "type": "json",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "d9d9906f29d07fa7"
+            ]
+        ]
+    },
+    {
+        "id": "d9d9906f29d07fa7",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "fc2595819521b15f",
+        "type": "csv",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "sep": ";",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "PH, EC, RTD",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 250,
+        "y": 520,
+        "wires": [
+            [
+                "d6adcb9218853930",
+                "8c3351b5ed47ad36",
+                "a02b022af8f34947"
+            ]
+        ]
+    },
+    {
+        "id": "24962180b9551e44",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "4",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 120,
+        "wires": [
+            [
+                "87b2ffdfa77c9f70"
+            ]
+        ]
+    },
+    {
+        "id": "a02b022af8f34947",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "function 1",
+        "func": "var salida = {\n    ph : msg.payload.PH.substring(4),\n    ec : msg.payload.EC.substring(4),\n    rtd: msg.payload.RTD.substring(5)\n\n}\n\nmsg.payload = salida\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 520,
+        "wires": [
+            [
+                "e274d62d50888cdd",
+                "5f42b8042240b974",
+                "bcb78fc94e23474b"
+            ]
+        ]
+    },
+    {
+        "id": "e274d62d50888cdd",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "84eff09503c12e81",
+        "type": "join",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "1",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 830,
+        "y": 820,
+        "wires": [
+            [
+                "fd44840d4abf9212",
+                "a9d81a89e75bedbf",
+                "58d96161926bfb5d",
+                "b795d192560b64e4",
+                "aed6f0b62b185919"
+            ]
+        ]
+    },
+    {
+        "id": "87b2ffdfa77c9f70",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "function 2",
+        "func": "\nvar salida ={\n    ts : msg.payload.timestamp,\n    fecha : msg.payload.dateTime,\n    speed : msg.payload.speedKnots,\n    lat : msg.payload.lat,\n    lon : msg.payload.lon\n}\n\nmsg.payload = salida \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 120,
+        "wires": [
+            [
+                "28d7516a68070605",
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "fd44840d4abf9212",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "6b0c226f169cf406",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5f42b8042240b974",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "4",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "55747e2ad51dcc81",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "4",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 640,
+        "wires": [
+            [
+                "356957fc3c3ed298",
+                "874374257552a5b2"
+            ]
+        ]
+    },
+    {
+        "id": "874374257552a5b2",
+        "type": "csv",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "TempO, SAT, OD",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 390,
+        "y": 700,
+        "wires": [
+            [
+                "356957fc3c3ed298",
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "29463a50c4ed1ac3",
+        "type": "file",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "filename": "/home/javier/datos_logger.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1180,
+        "y": 600,
+        "wires": [
+            [
+                "a4e6b9cea737c859"
+            ]
+        ]
+    },
+    {
+        "id": "a4e6b9cea737c859",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a9d81a89e75bedbf",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "Genera Archivo Local Alta frecuencia",
+        "func": "var ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\n\nvar fechaActual = 0;\n//node.warn(\"enter generation\");\nif(!fechaOriginal)\n{\n    fechaActual = new Date();\n    //node.warn(\"enter here\")\n}\nelse\n{\n    fechaActual = new Date(fechaOriginal);\n}\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = fechaActual;\n//node.warn(fechaActual);\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n//node.warn(fechaFormateada);\n\n\n\nvar linea = fechaFormateada + ' ' +\n            lat + ' ' + \n            lon + ' '+ \n            speed + ' '+\n            od + ' ' +\n            sat + ' ' +\n            tempO + ' ' +\n            ph + ' ' +\n            ec + ' ' +\n            rtd;\n\nmsg.payload = linea;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 600,
+        "wires": [
+            [
+                "29463a50c4ed1ac3",
+                "9b46dd59f5a35610"
+            ]
+        ]
+    },
+    {
+        "id": "58d96161926bfb5d",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "Genera Trama Lora",
+        "func": "\nvar ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\n\n// var ts = Date.now();\n// ts = Math.round(ts / 1000);\n\n\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = new Date(fechaOriginal);\n\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n\n\n\n\nvar linea = fechaFormateada + ',' +\n            lat + ',' + \n            lon + ','+ \n            speed + ','+\n            od + ',' +\n            sat + ',' +\n            tempO + ',' +\n            ph + ',' +\n            ec + ',' +\n            rtd;\n\nmsg.payload = linea;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 300,
+        "wires": [
+            [
+                "511d9e4d93520b60"
+            ]
+        ]
+    },
+    {
+        "id": "0765cf27454e0ad4",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "Generacion de Archivo Local con alta frecuencia",
+        "info": "",
+        "x": 920,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "92ad9a4d8d574db8",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "Generacion de Trama para envio a travez de LoRa",
+        "info": "",
+        "x": 1250,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "511d9e4d93520b60",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1160,
+        "y": 360,
+        "wires": [
+            [
+                "c08c0658928e9c59"
+            ]
+        ]
+    },
+    {
+        "id": "c08c0658928e9c59",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "677d69de3cf1939c",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "PH",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1350,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f049034a287b7ba9",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "name": "ph",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ph",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 740,
+        "wires": [
+            [
+                "677d69de3cf1939c",
+                "2e1bd94d21e1792b"
+            ]
+        ]
+    },
+    {
+        "id": "d827280b09a465c2",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "name": "rtd",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rtd",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 800,
+        "wires": [
+            [
+                "80b4ae60aa21d107"
+            ]
+        ]
+    },
+    {
+        "id": "6aed36c8fae64226",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "name": "ec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ec",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 840,
+        "wires": [
+            [
+                "36dfaeddf13a8444"
+            ]
+        ]
+    },
+    {
+        "id": "a61b2df1547a0f75",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "name": "Temp Oxigeno Disuelto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempO",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2018dfb2ab51d69",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "name": "Oxigeno Disuelto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.OD",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 940,
+        "wires": [
+            [
+                "32f63888bef56643"
+            ]
+        ]
+    },
+    {
+        "id": "b795d192560b64e4",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 980,
+        "y": 860,
+        "wires": [
+            [
+                "f049034a287b7ba9",
+                "103054ae609ed613",
+                "d827280b09a465c2",
+                "6aed36c8fae64226",
+                "a61b2df1547a0f75",
+                "f2018dfb2ab51d69",
+                "178a889628e4ef40",
+                "1ede131d01f14a5c"
+            ]
+        ]
+    },
+    {
+        "id": "103054ae609ed613",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "80b4ae60aa21d107",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1370,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "36dfaeddf13a8444",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Conductividad",
+        "label": "µS/cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1380,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b7b4c1fa57d95731",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "group": "662a82187be82ae4",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp OD",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1440,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "32f63888bef56643",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Oxígeno Disuelto",
+        "label": "mg/L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1450,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "2e1bd94d21e1792b",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "178a889628e4ef40",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "name": "Concentracion de Oxigeno",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.SAT",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 1000,
+        "wires": [
+            [
+                "cd87f99d61b65251"
+            ]
+        ]
+    },
+    {
+        "id": "b1990d0064f480ae",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "Set base path",
+        "func": "//restrict to c:\\temp\\\nvar basePath = \"/home/javier/datos_logger.txt\";\nvar filename = msg.req.params.fn;\n\n\nif(filename.includes(\"..//\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} else if(filename.includes(\"../\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} \n//TODO: add more checks\n\nmsg.filename = basePath;//basePath + filename;\nreturn [msg, null];//fire output 1\n\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 940,
+        "wires": [
+            [
+                "0c06b2869cbeb338"
+            ],
+            [
+                "7ff75b2a09e879d4"
+            ]
+        ]
+    },
+    {
+        "id": "7ff75b2a09e879d4",
+        "type": "http response",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "0c06b2869cbeb338",
+        "type": "file in",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 510,
+        "y": 920,
+        "wires": [
+            [
+                "7ff75b2a09e879d4"
+            ]
+        ]
+    },
+    {
+        "id": "5c9805856ed5d2cb",
+        "type": "catch",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 140,
+        "y": 1020,
+        "wires": [
+            [
+                "2fcaa37b9d1a94db",
+                "1493e905974a6cf9"
+            ]
+        ]
+    },
+    {
+        "id": "2fcaa37b9d1a94db",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "Set 404",
+        "func": "msg.payload = msg.error;\nmsg.statusCode = 404;//resource not found\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1020,
+        "wires": [
+            [
+                "7ff75b2a09e879d4"
+            ]
+        ]
+    },
+    {
+        "id": "1493e905974a6cf9",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 170,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "cd8f4423691f9818",
+        "type": "ui_template",
+        "z": "b28149ca8a6be0f6",
+        "group": "662a82187be82ae4",
+        "name": "ui_temlplate - present download links on dashboard",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div >\n    <a href=\"/home/javier/datos_logger.txt\">download log</a>\n    \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 510,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee1d2bab3a7a6ba1",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "Create http endpoint <nodered>/files/xxx  where xxx is the file name to download",
+        "info": "",
+        "x": 360,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "17e937c1a4a3faa6",
+        "type": "http in",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "url": "/home/javier/:fn",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "b1990d0064f480ae"
+            ]
+        ]
+    },
+    {
+        "id": "1ede131d01f14a5c",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "bcb78fc94e23474b",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "function 3",
+        "func": "var current_value=msg.payload.ph;\nif(msg.payload.calibration)\n{\n    msg.payload = current_value\n    return msg;\n}\nelse\n{\n    msg.payload = current_value\n    return msg;\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "ac166a3aaa990da3"
+            ]
+        ]
+    },
+    {
+        "id": "ac166a3aaa990da3",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "cd87f99d61b65251",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Saturacion",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1470,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "9b46dd59f5a35610",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "aed6f0b62b185919",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "name": "ph",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ph",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 1120,
+        "wires": [
+            [
+                "513beebd7c57029e"
+            ]
+        ]
+    },
+    {
+        "id": "513beebd7c57029e",
+        "type": "link out",
+        "z": "b28149ca8a6be0f6",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "ae3fa3bbbe40ecf3"
+        ],
+        "x": 1015,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "mainCalibrationButton",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Iniciar calibración",
+        "group": "6f7bd30d11d84d05",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Iniciar calibración",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"CalibracionpH\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "showCalibrationTab",
+                "a2446066c5e8963f",
+                "8c4b5a9339f89b70"
+            ]
+        ]
+    },
+    {
+        "id": "ph4Button",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Calibrar pH 4",
+        "group": "07c9c1fce28c0d9f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrar pH 4",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ph4",
+        "payloadType": "str",
+        "topic": "ph_type",
+        "topicType": "str",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "ef9f290fc422b89c"
+            ]
+        ]
+    },
+    {
+        "id": "ph7Button",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Calibrar pH 7",
+        "group": "07c9c1fce28c0d9f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrar pH 7",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ph7",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "ef9f290fc422b89c"
+            ]
+        ]
+    },
+    {
+        "id": "ph10Button",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Calibrar pH 10",
+        "group": "07c9c1fce28c0d9f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrar pH 10",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ph10",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "ef9f290fc422b89c"
+            ]
+        ]
+    },
+    {
+        "id": "storeCalibrationValue",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Guardar valores de calibration",
+        "func": "// Retrieve the sensor value\nlet phType = msg.payload.phType;  // ph4, ph7, or ph10\nlet sensorValue = parseFloat(msg.payload.pH);  // Raw pH value from sensor\nlet is_read = false;\n\n// Save the calibration values to file storage\nif (phType === 'ph4') {\n    flow.set('ph4_value', sensorValue, 'file');\n    is_read=true;\n} else if (phType === 'ph7') {\n    flow.set('ph7_value', sensorValue, 'file');\n    is_read=true;\n} else if (phType === 'ph10') {\n    flow.set('ph10_value', sensorValue, 'file');\n    is_read=true;\n}\nlet return_value = {};\nif(is_read)\n{\n    return_value = { payload: phType + ' '+sensorValue +' ✅!' }\n}\n\nreturn return_value;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 300,
+        "wires": [
+            [
+                "confirmCalibration",
+                "9e53500f65ab978d",
+                "556d66b3c37be968",
+                "b3d47c2c06c8083d"
+            ]
+        ]
+    },
+    {
+        "id": "confirmCalibration",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "group": "07c9c1fce28c0d9f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Calibración confirmación",
+        "label": "",
+        "format": "Calibración para {{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 790,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "calculateCalibratedPH",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Calcular pH calibrado",
+        "func": "// Retrieve stored calibration points\nlet ph4_value = flow.get('ph4_value', 'file');\nlet ph7_value = flow.get('ph7_value', 'file');\nlet ph10_value = flow.get('ph10_value', 'file');\n\nif (ph4_value !== undefined && ph7_value !== undefined && ph10_value !== undefined) {\n    // Known pH levels for calibration\n    const x1 = 4, x2 = 7, x3 = 10;\n    const y1 = ph4_value;\n    const y2 = ph7_value;\n    const y3 = ph10_value;\n    \n    // Calculate slope (m) and intercept (b) for linear regression\n    const sum_x = x1 + x2 + x3;\n    const sum_y = y1 + y2 + y3;\n    const sum_xy = x1 * y1 + x2 * y2 + x3 * y3;\n    const sum_x_squared = x1**2 + x2**2 + x3**2;\n    \n    const m = (sum_xy - (sum_x * sum_y) / 3) / (sum_x_squared - (sum_x**2) / 3);\n    const b = (sum_y / 3) - m * (sum_x / 3);\n    \n    // Apply linear regression to the current pH reading\n    const raw_ph = parseFloat(msg.payload.ph);\n    msg.payload.calibrated_ph = m * raw_ph + b;\n} else {\n    // Fallback: use the raw pH reading if calibration data is incomplete\n    msg.payload.calibrated_ph = parseFloat(msg.payload.ph);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 540,
+        "wires": [
+            [
+                "displayCalibratedPH"
+            ]
+        ]
+    },
+    {
+        "id": "displayCalibratedPH",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "group": "6f7bd30d11d84d05",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Indica pH Calibrado",
+        "label": "",
+        "format": "Valor calibrado pH: {{msg.payload.calibrated_ph}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 510,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "calibrationToggle",
+        "type": "ui_switch",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Activar calibración",
+        "label": "Activar calibración",
+        "tooltip": "",
+        "group": "6f7bd30d11d84d05",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "useCalibration",
+        "topicType": "str",
+        "onvalue": "start",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "stop",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 530,
+        "y": 80,
+        "wires": [
+            [
+                "useCalibrationToggle"
+            ]
+        ]
+    },
+    {
+        "id": "useCalibrationToggle",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Set activar Calibración",
+        "rules": [
+            {
+                "t": "set",
+                "p": "useCalibration",
+                "pt": "flow",
+                "to": "msg.payload",
+                "tot": "msg"
+            }
+        ],
+        "x": 640,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75fc955d9873c691",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "group": "07c9c1fce28c0d9f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Valor actual ph:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 260,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a2446066c5e8963f",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 80,
+        "wires": [
+            [
+                "calibrationToggle"
+            ]
+        ]
+    },
+    {
+        "id": "c12260eb28995a55",
+        "type": "comment",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Desactiva calibracion set para hacer la calibración",
+        "info": "",
+        "x": 450,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "showCalibrationTab",
+        "type": "ui_ui_control",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Switch to Calibration Tab",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c10302495a26f2c4",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Volver inicio",
+        "group": "07c9c1fce28c0d9f",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Volver",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Inicio\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "showCalibrationTab"
+            ]
+        ]
+    },
+    {
+        "id": "9e53500f65ab978d",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8c4b5a9339f89b70",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "?",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "confirmCalibration",
+                "ef9f290fc422b89c"
+            ]
+        ]
+    },
+    {
+        "id": "ebdb8250a82d5752",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "group": "07c9c1fce28c0d9f",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Indica pH Calibrado",
+        "label": "",
+        "format": "Valor set: 4:{{msg.payload.ph4_value}} 7:{{msg.payload.ph7_value}} 10:{{msg.payload.ph10_value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1050,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "556d66b3c37be968",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Valores pH calibrado",
+        "func": "// Retrieve stored calibration points\nlet ph4_value = flow.get('ph4_value', 'file');\nlet ph7_value = flow.get('ph7_value', 'file');\nlet ph10_value = flow.get('ph10_value', 'file');\n\nmsg.payload.ph4_value = ph4_value;\nmsg.payload.ph7_value = ph7_value;\nmsg.payload.ph10_value = ph10_value;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n// Retrieve stored calibration points\nlet ph4_value = flow.get('ph4_value', 'file');\nlet ph7_value = flow.get('ph7_value', 'file');\nlet ph10_value = flow.get('ph10_value', 'file');\n\nmsg.payload.ph4_value = ph4_value;\nmsg.payload.ph7_value = ph7_value;\nmsg.payload.ph10_value = ph10_value;\n\nreturn msg;",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 360,
+        "wires": [
+            [
+                "ebdb8250a82d5752",
+                "4c7d804d16cf1a74"
+            ]
+        ]
+    },
+    {
+        "id": "ae3fa3bbbe40ecf3",
+        "type": "link in",
+        "z": "0bcb25fecad4f1a1",
+        "name": "link in 1",
+        "links": [
+            "513beebd7c57029e"
+        ],
+        "x": 115,
+        "y": 440,
+        "wires": [
+            [
+                "75fc955d9873c691",
+                "3725d2044424d49e"
+            ]
+        ]
+    },
+    {
+        "id": "841c26ad441b189b",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "4c7d804d16cf1a74",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8c5293f587cb4ce5",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "392cdbe694bc1be4",
+        "type": "join",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "1",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            [
+                "841c26ad441b189b",
+                "storeCalibrationValue"
+            ]
+        ]
+    },
+    {
+        "id": "3725d2044424d49e",
+        "type": "csv",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "pH",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "392cdbe694bc1be4"
+            ]
+        ]
+    },
+    {
+        "id": "ef9f290fc422b89c",
+        "type": "csv",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "phType",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "392cdbe694bc1be4"
+            ]
+        ]
+    },
+    {
+        "id": "b3d47c2c06c8083d",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "name": "function 4",
+        "func": "let string = \"a button was press\" + msg.payload\nif(msg.payload)\n{\n    node.warn(string);\n    msg.payload=\"?\"\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 240,
+        "wires": [
+            [
+                "97ced0fcc825eab1"
+            ]
+        ]
+    },
+    {
+        "id": "97ced0fcc825eab1",
+        "type": "delay",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1020,
+        "y": 240,
+        "wires": [
+            [
+                "ef9f290fc422b89c"
             ]
         ]
     }
