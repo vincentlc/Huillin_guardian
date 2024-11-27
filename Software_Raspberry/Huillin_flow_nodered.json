@@ -2856,8 +2856,8 @@
         "payloadType": "json",
         "topic": "",
         "topicType": "str",
-        "x": 130,
-        "y": 120,
+        "x": 110,
+        "y": 100,
         "wires": [
             [
                 "showCalibrationTab",
@@ -2971,7 +2971,7 @@
         "type": "function",
         "z": "0bcb25fecad4f1a1",
         "name": "Calcular pH calibrado",
-        "func": "// Retrieve stored calibration points\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\nlet useCalibration = global.get(\"useCalibration\")\nmsg.payload.calibrated_ph = {}\n//node.warn(useCalibration);\nif (ph4_value !== undefined && ph7_value !== undefined && useCalibration ==\"start\") {\n    // Known pH levels for calibration\n    const x1 = 4, x2 = 7;\n    ph7_value = 9, ph4_value=5;\n    // Calculate slope (m) and intercept (b) for linear regression\n    let m = (ph7_value - ph4_value)/(x2 - x1)\n    let b = ph4_value - m * x1\n    \n    // Apply linear regression to the current pH reading\n    const raw_ph = parseFloat(msg.payload);\n    let calibrated_ph = parseFloat(m) * raw_ph + parseFloat(b);\n    //node.warn(m + \" \" + b +\" raw=\"+raw_ph+ \" \" + calibrated_ph );\n    //node.warn(raw_ph + \" \" + calibrated_ph);\n    msg.payload = calibrated_ph.toFixed(3); // fix to 3 digit the value\n} else {\n    // Fallback: use the raw pH reading if calibration data is incomplete\n    msg.payload = parseFloat(msg.payload).toFixed(3);\n}\n//node.warn(msg.payload);\nreturn msg;",
+        "func": "// Retrieve stored calibration points\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\nlet useCalibration = global.get(\"useCalibration\")\nmsg.payload.calibrated_ph = {}\n//node.warn(useCalibration);\nif (ph4_value !== undefined && ph7_value !== undefined && useCalibration ==\"start\") {\n    // Known pH levels for calibration\n    const x1 = 4, x2 = 7;\n    ph7_value = 9, ph4_value=5;\n    // Calculate slope (m) and intercept (b) for linear regression\n    let m = (ph7_value - ph4_value)/(x2 - x1)\n    let b = ph4_value - m * x1\n    \n    // Apply linear regression to the current pH reading\n    const raw_ph = parseFloat(msg.payload);\n    let calibrated_ph = parseFloat(m) * raw_ph + parseFloat(b);\n    //node.warn(m + \" \" + b +\" raw=\"+raw_ph+ \" \" + calibrated_ph );\n    //node.warn(raw_ph + \" \" + calibrated_ph);\n    msg.payload = calibrated_ph.toFixed(2); // fix to 3 digit the value\n} else {\n    // Fallback: use the raw pH reading if calibration data is incomplete\n    msg.payload = parseFloat(msg.payload).toFixed(2);\n}\n//node.warn(msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3033,7 +3033,7 @@
         "offcolor": "",
         "animate": true,
         "className": "",
-        "x": 530,
+        "x": 710,
         "y": 80,
         "wires": [
             [
@@ -3057,7 +3057,7 @@
                 "dc": true
             }
         ],
-        "x": 640,
+        "x": 860,
         "y": 140,
         "wires": [
             []
@@ -3104,7 +3104,7 @@
         "to": "",
         "reg": false,
         "x": 320,
-        "y": 80,
+        "y": 60,
         "wires": [
             [
                 "calibrationToggle"
@@ -3117,8 +3117,8 @@
         "z": "0bcb25fecad4f1a1",
         "name": "Desactiva calibracion set para hacer la calibración",
         "info": "",
-        "x": 450,
-        "y": 40,
+        "x": 470,
+        "y": 20,
         "wires": []
     },
     {
@@ -3127,7 +3127,7 @@
         "z": "0bcb25fecad4f1a1",
         "name": "Switch to Calibration Tab",
         "x": 370,
-        "y": 160,
+        "y": 140,
         "wires": [
             []
         ]
@@ -3152,11 +3152,12 @@
         "payloadType": "json",
         "topic": "",
         "topicType": "str",
-        "x": 130,
-        "y": 160,
+        "x": 110,
+        "y": 180,
         "wires": [
             [
-                "showCalibrationTab"
+                "showCalibrationTab",
+                "d1471c661a6cca22"
             ]
         ]
     },
@@ -3196,7 +3197,7 @@
         "to": "",
         "reg": false,
         "x": 360,
-        "y": 220,
+        "y": 240,
         "wires": [
             [
                 "confirmCalibration",
@@ -3277,8 +3278,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 400,
+        "x": 560,
+        "y": 420,
         "wires": []
     },
     {
@@ -3366,7 +3367,7 @@
         "include_empty_strings": "",
         "include_null_values": "",
         "x": 290,
-        "y": 280,
+        "y": 320,
         "wires": [
             [
                 "392cdbe694bc1be4"
@@ -3439,7 +3440,7 @@
         "id": "558ee0650dfea382",
         "type": "function",
         "z": "0bcb25fecad4f1a1",
-        "name": "function 5",
+        "name": "Save status calibration",
         "func": "global.set(\"status_calibration\",msg.payload)\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -3447,7 +3448,7 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nmsg.payload = global.get(\"status_calibration\", msg.payload)\nreturn msg;",
         "finalize": "",
         "libs": [],
-        "x": 740,
+        "x": 940,
         "y": 80,
         "wires": [
             [
@@ -3488,5 +3489,32 @@
         "x": 425,
         "y": 640,
         "wires": []
+    },
+    {
+        "id": "d1471c661a6cca22",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "start",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "calibrationToggle"
+            ]
+        ]
     }
 ]
