@@ -2016,7 +2016,7 @@
         "type": "function",
         "z": "b28149ca8a6be0f6",
         "name": "Genera Archivo Local Alta frecuencia",
-        "func": "var ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\n\nvar fechaActual = 0;\n//node.warn(\"enter generation\");\nif(!fechaOriginal)\n{\n    fechaActual = new Date();\n    //node.warn(\"enter here\")\n}\nelse\n{\n    fechaActual = new Date(fechaOriginal);\n}\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = fechaActual;\n//node.warn(fechaActual);\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n//node.warn(fechaFormateada);\n\n\n\nvar linea = fechaFormateada + ' ' +\n            lat + ' ' + \n            lon + ' '+ \n            speed + ' '+\n            od + ' ' +\n            sat + ' ' +\n            tempO + ' ' +\n            ph + ' ' +\n            ec + ' ' +\n            rtd;\n\nmsg.payload = linea;\n\nreturn msg;",
+        "func": "var ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\nvar ph_cal = msg.payload.ph_calibrated;\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\n//node.warn(ph4_value + \"   \"+ ph7_value);\nvar fechaActual = 0;\n//node.warn(\"enter generation\");\nif(!fechaOriginal)\n{\n    fechaActual = new Date();\n    //node.warn(\"enter here\")\n}\nelse\n{\n    fechaActual = new Date(fechaOriginal);\n}\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = fechaActual;\n//node.warn(fechaActual);\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n//node.warn(fechaFormateada);\n\n\n\nvar linea = fechaFormateada + ' ' +\n            lat + ' ' + \n            lon + ' '+ \n            speed + ' '+\n            od + ' ' +\n            sat + ' ' +\n            tempO + ' ' +\n            ph + ' ' +\n            ec + ' ' +\n            rtd + ' ' +\n            ph_cal+ ' ' +\n            ph4_value+ ' ' +\n            ph7_value;\n\nmsg.payload = linea;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2151,7 +2151,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload.ph",
+                "to": "payload.ph_calibrated",
                 "tot": "msg"
             }
         ],
@@ -2574,7 +2574,7 @@
         "type": "debug",
         "z": "b28149ca8a6be0f6",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2763,7 +2763,7 @@
         "id": "513beebd7c57029e",
         "type": "link out",
         "z": "b28149ca8a6be0f6",
-        "name": "link out 1",
+        "name": "link out - raw ph",
         "mode": "link",
         "links": [
             "ae3fa3bbbe40ecf3"
@@ -2771,6 +2771,70 @@
         "x": 1015,
         "y": 1120,
         "wires": []
+    },
+    {
+        "id": "f14cb0144ecd46d0",
+        "type": "link in",
+        "z": "b28149ca8a6be0f6",
+        "name": "link ph calibrated - flow 1",
+        "links": [
+            "8445246cb69f1005"
+        ],
+        "x": 415,
+        "y": 820,
+        "wires": [
+            [
+                "b22a2049de512f1f"
+            ]
+        ]
+    },
+    {
+        "id": "b22a2049de512f1f",
+        "type": "csv",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "ph_calibrated",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 490,
+        "y": 820,
+        "wires": [
+            [
+                "8e9c80eb38b806f1"
+            ]
+        ]
+    },
+    {
+        "id": "8e9c80eb38b806f1",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 820,
+        "wires": [
+            [
+                "84eff09503c12e81"
+            ]
+        ]
     },
     {
         "id": "mainCalibrationButton",
@@ -2859,39 +2923,11 @@
         ]
     },
     {
-        "id": "ph10Button",
-        "type": "ui_button",
-        "z": "0bcb25fecad4f1a1",
-        "name": "Calibrar pH 10",
-        "group": "07c9c1fce28c0d9f",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Calibrar pH 10",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "ph10",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 120,
-        "y": 380,
-        "wires": [
-            [
-                "ef9f290fc422b89c"
-            ]
-        ]
-    },
-    {
         "id": "storeCalibrationValue",
         "type": "function",
         "z": "0bcb25fecad4f1a1",
         "name": "Guardar valores de calibration",
-        "func": "// Retrieve the sensor value\nlet phType = msg.payload.phType;  // ph4, ph7, or ph10\nlet sensorValue = parseFloat(msg.payload.pH);  // Raw pH value from sensor\nlet is_read = false;\n\n// Save the calibration values to file storage\nif (phType === 'ph4') {\n    flow.set('ph4_value', sensorValue, 'file');\n    is_read=true;\n} else if (phType === 'ph7') {\n    flow.set('ph7_value', sensorValue, 'file');\n    is_read=true;\n} else if (phType === 'ph10') {\n    flow.set('ph10_value', sensorValue, 'file');\n    is_read=true;\n}\nlet return_value = {};\nif(is_read)\n{\n    return_value = { payload: phType + ' '+sensorValue +' ✅!' }\n}\n\nreturn return_value;",
+        "func": "// Retrieve the sensor value\nlet phType = msg.payload.phType;  // ph4, ph7, or ph10\nlet sensorValue = parseFloat(msg.payload.pH);  // Raw pH value from sensor\nlet is_read = false;\n\n// Save the calibration values to file storage\nif (phType === 'ph4') {\n    global.set('ph4_value', sensorValue, 'file');\n    is_read=true;\n} else if (phType === 'ph7') {\n    global.set('ph7_value', sensorValue, 'file');\n    is_read=true;\n} \nlet return_value = {};\nif(is_read)\n{\n    return_value = { payload: phType + ' '+sensorValue +' ✅!' }\n}\n\nreturn return_value;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2935,7 +2971,7 @@
         "type": "function",
         "z": "0bcb25fecad4f1a1",
         "name": "Calcular pH calibrado",
-        "func": "// Retrieve stored calibration points\nlet ph4_value = flow.get('ph4_value', 'file');\nlet ph7_value = flow.get('ph7_value', 'file');\nlet ph10_value = flow.get('ph10_value', 'file');\n\nif (ph4_value !== undefined && ph7_value !== undefined && ph10_value !== undefined) {\n    // Known pH levels for calibration\n    const x1 = 4, x2 = 7, x3 = 10;\n    const y1 = ph4_value;\n    const y2 = ph7_value;\n    const y3 = ph10_value;\n    \n    // Calculate slope (m) and intercept (b) for linear regression\n    const sum_x = x1 + x2 + x3;\n    const sum_y = y1 + y2 + y3;\n    const sum_xy = x1 * y1 + x2 * y2 + x3 * y3;\n    const sum_x_squared = x1**2 + x2**2 + x3**2;\n    \n    const m = (sum_xy - (sum_x * sum_y) / 3) / (sum_x_squared - (sum_x**2) / 3);\n    const b = (sum_y / 3) - m * (sum_x / 3);\n    \n    // Apply linear regression to the current pH reading\n    const raw_ph = parseFloat(msg.payload.ph);\n    msg.payload.calibrated_ph = m * raw_ph + b;\n} else {\n    // Fallback: use the raw pH reading if calibration data is incomplete\n    msg.payload.calibrated_ph = parseFloat(msg.payload.ph);\n}\n\nreturn msg;",
+        "func": "// Retrieve stored calibration points\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\nlet useCalibration = global.get(\"useCalibration\")\nmsg.payload.calibrated_ph = {}\n//node.warn(useCalibration);\nif (ph4_value !== undefined && ph7_value !== undefined && useCalibration ==\"start\") {\n    // Known pH levels for calibration\n    const x1 = 4, x2 = 7;\n    ph7_value = 9, ph4_value=5;\n    // Calculate slope (m) and intercept (b) for linear regression\n    let m = (ph7_value - ph4_value)/(x2 - x1)\n    let b = ph4_value - m * x1\n    \n    // Apply linear regression to the current pH reading\n    const raw_ph = parseFloat(msg.payload);\n    let calibrated_ph = parseFloat(m) * raw_ph + parseFloat(b);\n    //node.warn(m + \" \" + b +\" raw=\"+raw_ph+ \" \" + calibrated_ph );\n    //node.warn(raw_ph + \" \" + calibrated_ph);\n    msg.payload = calibrated_ph.toFixed(3); // fix to 3 digit the value\n} else {\n    // Fallback: use the raw pH reading if calibration data is incomplete\n    msg.payload = parseFloat(msg.payload).toFixed(3);\n}\n//node.warn(msg.payload);\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2946,7 +2982,8 @@
         "y": 540,
         "wires": [
             [
-                "displayCalibratedPH"
+                "0dddfa9784215a05",
+                "8445246cb69f1005"
             ]
         ]
     },
@@ -2960,14 +2997,14 @@
         "height": 0,
         "name": "Indica pH Calibrado",
         "label": "",
-        "format": "Valor calibrado pH: {{msg.payload.calibrated_ph}}",
+        "format": "Valor calibrado pH: {{msg.payload}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 510,
+        "x": 790,
         "y": 540,
         "wires": []
     },
@@ -3000,7 +3037,8 @@
         "y": 80,
         "wires": [
             [
-                "useCalibrationToggle"
+                "useCalibrationToggle",
+                "558ee0650dfea382"
             ]
         ]
     },
@@ -3013,9 +3051,10 @@
             {
                 "t": "set",
                 "p": "useCalibration",
-                "pt": "flow",
+                "pt": "global",
                 "to": "msg.payload",
-                "tot": "msg"
+                "tot": "msg",
+                "dc": true
             }
         ],
         "x": 640,
@@ -3064,7 +3103,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 340,
+        "x": 320,
         "y": 80,
         "wires": [
             [
@@ -3175,7 +3214,7 @@
         "height": 0,
         "name": "Indica pH Calibrado",
         "label": "",
-        "format": "Valor set: 4:{{msg.payload.ph4_value}} 7:{{msg.payload.ph7_value}} 10:{{msg.payload.ph10_value}}",
+        "format": "Valor set: {{msg.payload}}",
         "layout": "row-spread",
         "className": "",
         "style": false,
@@ -3191,11 +3230,11 @@
         "type": "function",
         "z": "0bcb25fecad4f1a1",
         "name": "Valores pH calibrado",
-        "func": "// Retrieve stored calibration points\nlet ph4_value = flow.get('ph4_value', 'file');\nlet ph7_value = flow.get('ph7_value', 'file');\nlet ph10_value = flow.get('ph10_value', 'file');\n\nmsg.payload.ph4_value = ph4_value;\nmsg.payload.ph7_value = ph7_value;\nmsg.payload.ph10_value = ph10_value;\n\nreturn msg;",
+        "func": "// Retrieve stored calibration points\n//node.warn(\"read value ph4\");\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\nif(msg.payload)\n{\n    msg.payload.ph4_value = {};\n    msg.payload.ph7_value = {};\n\n    msg.payload.ph4_value = ph4_value;\n    msg.payload.ph7_value = ph7_value;\n\n    node.warn(msg.payload);\n    let string_data = `ph4: ${ph4_value},ph7: ${ph7_value} `    \n\n    return { payload: string_data };\n}\n\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.\n// Retrieve stored calibration points\nlet ph4_value = flow.get('ph4_value', 'file');\nlet ph7_value = flow.get('ph7_value', 'file');\nlet ph10_value = flow.get('ph10_value', 'file');\n\nmsg.payload.ph4_value = ph4_value;\nmsg.payload.ph7_value = ph7_value;\nmsg.payload.ph10_value = ph10_value;\n\nreturn msg;",
+        "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 820,
@@ -3211,7 +3250,7 @@
         "id": "ae3fa3bbbe40ecf3",
         "type": "link in",
         "z": "0bcb25fecad4f1a1",
-        "name": "link in 1",
+        "name": "link in - raw ph",
         "links": [
             "513beebd7c57029e"
         ],
@@ -3220,7 +3259,8 @@
         "wires": [
             [
                 "75fc955d9873c691",
-                "3725d2044424d49e"
+                "3725d2044424d49e",
+                "calculateCalibratedPH"
             ]
         ]
     },
@@ -3250,38 +3290,13 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
+        "complete": "payload.ph4_value",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 1040,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "8c5293f587cb4ce5",
-        "type": "change",
-        "z": "0bcb25fecad4f1a1",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 820,
-        "y": 460,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "392cdbe694bc1be4",
@@ -3363,7 +3378,7 @@
         "type": "function",
         "z": "0bcb25fecad4f1a1",
         "name": "function 4",
-        "func": "let string = \"a button was press\" + msg.payload\nif(msg.payload)\n{\n    node.warn(string);\n    msg.payload=\"?\"\n    return msg;\n}\n",
+        "func": "let string = \"a button was press\" + msg.payload\nif(msg.payload)\n{\n    //node.warn(string);\n    msg.payload=\"?\"\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3387,7 +3402,7 @@
         "timeout": "5",
         "timeoutUnits": "seconds",
         "rate": "1",
-        "nbRateUnits": "5",
+        "nbRateUnits": "9",
         "rateUnits": "second",
         "randomFirst": "1",
         "randomLast": "5",
@@ -3399,8 +3414,79 @@
         "y": 240,
         "wires": [
             [
-                "ef9f290fc422b89c"
+                "8c4b5a9339f89b70"
             ]
         ]
+    },
+    {
+        "id": "1e2cfe9e6f838ed9",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "558ee0650dfea382",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "name": "function 5",
+        "func": "global.set(\"status_calibration\",msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nmsg.payload = global.get(\"status_calibration\", msg.payload)\nreturn msg;",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 80,
+        "wires": [
+            [
+                "calibrationToggle"
+            ]
+        ]
+    },
+    {
+        "id": "0dddfa9784215a05",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "name": "add color activation calibration",
+        "func": "let useCalibration = global.get(\"useCalibration\")\nif(useCalibration == \"start\")\n{\n    msg.payload += \"🔵 \"\n}\nelse\n{\n    msg.payload += \"⚫ \"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 540,
+        "wires": [
+            [
+                "displayCalibratedPH",
+                "1e2cfe9e6f838ed9"
+            ]
+        ]
+    },
+    {
+        "id": "8445246cb69f1005",
+        "type": "link out",
+        "z": "0bcb25fecad4f1a1",
+        "name": "link out ph calibrated - calibrated",
+        "mode": "link",
+        "links": [
+            "f14cb0144ecd46d0"
+        ],
+        "x": 425,
+        "y": 640,
+        "wires": []
     }
 ]
