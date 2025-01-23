@@ -46,7 +46,7 @@
         ],
         "x": 74,
         "y": 39,
-        "w": 492,
+        "w": 502,
         "h": 122
     },
     {
@@ -64,9 +64,9 @@
             "0dddfa9784215a05",
             "8445246cb69f1005"
         ],
-        "x": 214,
+        "x": 204,
         "y": 719,
-        "w": 762,
+        "w": 782,
         "h": 182
     },
     {
@@ -87,7 +87,7 @@
         ],
         "x": 94,
         "y": 739,
-        "w": 432,
+        "w": 442,
         "h": 122
     },
     {
@@ -109,9 +109,9 @@
             "7ff75b2a09e879d4",
             "0c06b2869cbeb338"
         ],
-        "x": 4,
+        "x": -26,
         "y": 879,
-        "w": 722,
+        "w": 752,
         "h": 322
     },
     {
@@ -201,9 +201,9 @@
             "254c959d532619a8",
             "b02870ff9828ae5e"
         ],
-        "x": 594,
+        "x": 584,
         "y": 179,
-        "w": 772,
+        "w": 782,
         "h": 182
     },
     {
@@ -223,9 +223,9 @@
             "calibrationToggle",
             "d1471c661a6cca22"
         ],
-        "x": 414,
+        "x": 404,
         "y": 19,
-        "w": 792,
+        "w": 812,
         "h": 202
     },
     {
@@ -242,9 +242,9 @@
             "6582e99555c922cc",
             "4242f5acbd13769f"
         ],
-        "x": 214,
+        "x": 204,
         "y": 739,
-        "w": 772,
+        "w": 792,
         "h": 82
     },
     {
@@ -265,9 +265,9 @@
             "302e2e7e8ed93f0a",
             "43d40871fbed111f"
         ],
-        "x": 614,
+        "x": 604,
         "y": 379,
-        "w": 852,
+        "w": 862,
         "h": 302
     },
     {
@@ -289,9 +289,9 @@
             "b3d47c2c06c8083d",
             "97ced0fcc825eab1"
         ],
-        "x": 634,
+        "x": 624,
         "y": 259,
-        "w": 832,
+        "w": 842,
         "h": 322
     },
     {
@@ -316,9 +316,9 @@
             "75fc955d9873c691",
             "ae3fa3bbbe40ecf3"
         ],
-        "x": 34,
+        "x": 24,
         "y": 199,
-        "w": 552,
+        "w": 572,
         "h": 462
     },
     {
@@ -342,9 +342,9 @@
             "c81ca43302d2f9ba",
             "8bdb59bfd62a44ee"
         ],
-        "x": 14,
+        "x": 4,
         "y": 279,
-        "w": 572,
+        "w": 592,
         "h": 442
     },
     {
@@ -362,9 +362,9 @@
             "a4e6b9cea737c859",
             "9b46dd59f5a35610"
         ],
-        "x": 894,
+        "x": 884,
         "y": 459,
-        "w": 792,
+        "w": 862,
         "h": 162
     },
     {
@@ -400,12 +400,15 @@
         "nodes": [
             "58d96161926bfb5d",
             "511d9e4d93520b60",
-            "c08c0658928e9c59"
+            "c08c0658928e9c59",
+            "a2483bfaaf1dd8c4",
+            "f31c74bf8fd8f9b1",
+            "18e393bfda96bfe2"
         ],
-        "x": 894,
+        "x": 884,
         "y": 259,
-        "w": 592,
-        "h": 82
+        "w": 612,
+        "h": 142
     },
     {
         "id": "044ad35b83e4af54",
@@ -416,7 +419,6 @@
             "label": true
         },
         "nodes": [
-            "f90937e656dc496b",
             "ad24ca838bc8172a",
             "55747e2ad51dcc81",
             "874374257552a5b2",
@@ -778,6 +780,37 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "5dfc4e76f0b244cd",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "10.3.141.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
         "id": "edcb6b572e130d67",
@@ -2107,7 +2140,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 440,
+        "x": 420,
         "y": 360,
         "wires": []
     },
@@ -2298,7 +2331,8 @@
                 "58d96161926bfb5d",
                 "b795d192560b64e4",
                 "aed6f0b62b185919",
-                "4280c63eb0afae04"
+                "4280c63eb0afae04",
+                "efec498fe2f1de75"
             ]
         ]
     },
@@ -2443,13 +2477,13 @@
         "z": "b28149ca8a6be0f6",
         "g": "1e358f5664fad924",
         "name": "",
-        "filename": "/home/javier/datos_logger.txt",
+        "filename": "/data/shared_folder/data_logger.txt",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 1380,
+        "x": 1410,
         "y": 580,
         "wires": [
             [
@@ -2471,7 +2505,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1580,
+        "x": 1640,
         "y": 580,
         "wires": []
     },
@@ -2481,11 +2515,11 @@
         "z": "b28149ca8a6be0f6",
         "g": "1e358f5664fad924",
         "name": "Genera Archivo Local Alta frecuencia",
-        "func": "var ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\nvar ph_cal = msg.payload.ph_calibrated;\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\n//node.warn(ph4_value + \"   \"+ ph7_value);\nvar fechaActual = 0;\n//node.warn(\"enter generation\");\nif(!fechaOriginal)\n{\n    fechaActual = new Date();\n    //node.warn(\"enter here\")\n}\nelse\n{\n    fechaActual = new Date(fechaOriginal);\n}\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = fechaActual;\n//node.warn(fechaActual);\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n//node.warn(fechaFormateada);\n\n\n\nvar linea = fechaFormateada + ' ' +\n            lat + ' ' + \n            lon + ' '+ \n            speed + ' '+\n            od + ' ' +\n            sat + ' ' +\n            tempO + ' ' +\n            ph + ' ' +\n            ec + ' ' +\n            rtd + ' ' +\n            ph_cal+ ' ' +\n            ph4_value+ ' ' +\n            ph7_value;\n\nmsg.payload = linea;\n\nreturn msg;",
+        "func": "var ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\nvar ph_cal = msg.payload.ph_calibrated;\nvar ec_cal = msg.payload.ec_calibrated;\nlet ec_high_calib_value = global.get('ec_high_calib_value', 'file');\nlet ec_high_value = global.get('ec_high_value', 'file');\nlet ec_low_calib_value = global.get('ec_low_calib_value', 'file');\nlet ec_low_value = global.get('ec_low_value', 'file');\nlet useCalibrationValueEc = global.get('useCalibrationValueEc', 'file');\nlet useCalibrationPh = global.get('useCalibrationPh', 'file');\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\n\nlet logger_counter_value = global.get('logger_counter_value', 'file');\n\n//node.warn(ph4_value + \"   \"+ ph7_value);\nvar fechaActual = 0;\n//node.warn(\"enter generation\");\nif(!fechaOriginal)\n{\n    fechaActual = new Date();\n    //node.warn(\"enter here\")\n}\nelse\n{\n    fechaActual = new Date(fechaOriginal);\n}\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = fechaActual;\n//node.warn(fechaActual);\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n//node.warn(fechaFormateada);\n\n//if(lon ==\"\") node.ward(\"skip\");\n//else { node.warn(fechaFormateada+\" \"+lon +\" \" + rtd)}\n\nvar linea = fechaFormateada + ' ' +\n            lat + ' ' + \n            lon + ' '+ \n            speed + ' '+\n            od + ' ' +\n            sat + ' ' +\n            tempO + ' ' +\n            ph + ' ' +\n            ec + ' ' +\n            rtd + ' ' +\n            ph_cal+ ' ' +\n            ec_cal+ ' ' +\n            ph4_value+ ' ' +\n            ph7_value + ' ' +\n            ec_high_calib_value + ' ' +\n            ec_high_value + ' ' +\n            ec_low_calib_value + ' ' +\n            ec_low_value + ' ' +\n            useCalibrationValueEc + ' ' +\n            useCalibrationPh;\n\nglobal.set('logger_counter_value',logger_counter_value+1, 'file');\nif(logger_counter_value>=5) //skip first 5 messages\n{ \n    msg.payload = linea;\n\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set('logger_counter_value', 0, 'file');",
         "finalize": "",
         "libs": [],
         "x": 1070,
@@ -2544,14 +2578,15 @@
         "randomFirst": "1",
         "randomLast": "5",
         "randomUnits": "seconds",
-        "drop": false,
+        "drop": true,
         "allowrate": false,
         "outputs": 1,
         "x": 1220,
         "y": 300,
         "wires": [
             [
-                "c08c0658928e9c59"
+                "c08c0658928e9c59",
+                "a2483bfaaf1dd8c4"
             ]
         ]
     },
@@ -2958,14 +2993,14 @@
         "z": "b28149ca8a6be0f6",
         "g": "0e135c08a2bae613",
         "name": "Set base path",
-        "func": "//restrict to c:\\temp\\\nvar basePath = \"/home/javier/datos_logger.txt\";\nvar filename = msg.req.params.fn;\n\n\nif(filename.includes(\"..//\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} else if(filename.includes(\"../\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} \n//TODO: add more checks\n\nmsg.filename = basePath;//basePath + filename;\nreturn [msg, null];//fire output 1\n\n\n",
+        "func": "//restrict to c:\\temp\\\n//var basePath = \"/home/huillin/node-red-logger/datos_logger.txt\";\nvar basePath = \"/data/shared_folder/data_logger.txt\";\nvar filename = msg.req.params.fn;\n\n\nif(filename.includes(\"..//\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} else if(filename.includes(\"../\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} \n//TODO: add more checks\nmsg.filename = basePath;//basePath + filename;\nreturn [msg, null];//fire output 1\n\n\n",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
+        "x": 340,
         "y": 980,
         "wires": [
             [
@@ -3001,7 +3036,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 490,
+        "x": 520,
         "y": 960,
         "wires": [
             [
@@ -3053,7 +3088,7 @@
         "z": "b28149ca8a6be0f6",
         "g": "0e135c08a2bae613",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3075,7 +3110,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "format": "<div >\n    <a href=\"/home/javier/datos_logger.txt\">download log</a>\n    \n</div>",
+        "format": "<div >\n    <!-- <a href=\"/home/huillin/node-red-logger/datos_logger.txt\">download log</a>--> \n    <a href=\"/data/shared_folder/data_logger.txt\">download log</a>\n    \n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -3104,7 +3139,7 @@
         "z": "b28149ca8a6be0f6",
         "g": "0e135c08a2bae613",
         "name": "",
-        "url": "/home/javier/:fn",
+        "url": "/data/shared_folder/:fn",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
@@ -3129,7 +3164,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
+        "x": 590,
         "y": 360,
         "wires": [
             [
@@ -3143,14 +3178,14 @@
         "z": "b28149ca8a6be0f6",
         "g": "01e65d4d9567570d",
         "name": "debug 16",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
+        "x": 750,
         "y": 360,
         "wires": []
     },
@@ -3332,7 +3367,7 @@
         "topic": "",
         "payload": "12,138,19",
         "payloadType": "str",
-        "x": 280,
+        "x": 160,
         "y": 680,
         "wires": [
             []
@@ -3446,6 +3481,90 @@
                 "84eff09503c12e81"
             ]
         ]
+    },
+    {
+        "id": "a2483bfaaf1dd8c4",
+        "type": "mqtt out",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "",
+        "topic": "huillin/data",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5dfc4e76f0b244cd",
+        "x": 1390,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f31c74bf8fd8f9b1",
+        "type": "inject",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "\"semd\"",
+        "payloadType": "msg",
+        "x": 990,
+        "y": 360,
+        "wires": [
+            [
+                "18e393bfda96bfe2"
+            ]
+        ]
+    },
+    {
+        "id": "18e393bfda96bfe2",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "send random data",
+        "func": "\nmsg.payload = {\n    ph:((Math.random()*9)-10).toFixed(3),\n    ec: ((Math.random() * 16) + 15).toFixed(3),\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "efec498fe2f1de75",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 200,
+        "wires": []
     },
     {
         "id": "mainCalibrationButton",
@@ -5030,7 +5149,7 @@
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "let msg = {};\nmsg.payload = {};\nlet value = global.get(\"useCalibrationValueEc\", 'file')\nmsg.payload = \"\"+value\nnode.warn(\"init string=\" + value);\nreturn msg;",
+        "initialize": "let msg = {};\nmsg.payload = {};\nlet value = global.get(\"useCalibrationValueEc\", 'file')\nmsg.payload = \"\"+value\n//node.warn(\"init string=\" + value);\nreturn msg;",
         "finalize": "",
         "libs": [],
         "x": 520,
