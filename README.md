@@ -14,20 +14,55 @@ To see the user interface : `10.3.141.1:1880/ui`
 <summary>
 Current implemented sensors are:
 </summary> <br />
-###
-- Oxygen
-- PH
-- Water quality
-- GPS 
+
+	- Oxygen
+
+	- PH
+
+	- Water quality
+
+	- GPS 
 </details open>
 
 
 
-3) The documentation of the project
-![Diagrama general](Doc/Diagrama general.drawio.svg)
+Please find below all the documentation of the project
 
 
+a) The general diagram:
+![Diagrama general](Doc/Diagrama_general.drawio.svg)
 
-### Shortly will be added the diagram of the project and the rest of the source code
+<details closed>
+<summary>
+The others diagram
+</summary> <br />
+
+
+b) Caja_A:
+![Caja_A](Doc/Caja_A.drawio.svg)
+
+
+c) Caja_B:
+![Caja_B](Doc/Caja_B.drawio.svg)
+
+
+d) Modulo_Tierra:
+![Modulo_Tierra](Doc/Modulo_Tierra.drawio.svg)
+
+
+e) Caja_Carga_A:
+![Caja_Carga_A](Doc/Caja_Carga_A.drawio.svg)
+
+
+f) Caja_Carga_B:
+![Caja_Carga_B](Doc/Caja_Carga_B.drawio.svg)
+
+
+</details closed>
+
+There is a list also of vocabulary used in the different diagrams:
+![List_vocab](Doc/Lista_de_definiciones.md)
+
+### Shortly will be added the rest of the source code
 
 version 3.1.9 de node red
