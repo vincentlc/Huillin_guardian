@@ -1,0 +1,99 @@
+[
+    {
+        "id": "0eeeca0a5c630f84",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9ba0b072e7bc2c1e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9ba3a1d7392627c0",
+        "type": "mqtt in",
+        "z": "0eeeca0a5c630f84",
+        "name": "",
+        "topic": "huillin/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9ba0b072e7bc2c1e",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "74a19249120e3a22"
+            ]
+        ]
+    },
+    {
+        "id": "064248023e1cbe94",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "74a19249120e3a22",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "name": "Convert to json",
+        "func": "let value = msg.payload.replace(/'/g, '\"')\nmsg.payload = JSON.parse(value);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "064248023e1cbe94"
+            ]
+        ]
+    }
+]

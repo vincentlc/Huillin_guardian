@@ -1,0 +1,4 @@
+ebyte-lora-e22-rpi
+pyserial
+RPI.GPIO
+paho-mqtt

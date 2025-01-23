@@ -1,0 +1,6 @@
+1) on huillin start the python code
+python3 lora_project/send_transparent_dictionary.py &>>lora_project/output_file.txt 2>&1
+2) On estacion run :
+python3 read_string_send_mqtt.py
+
+3) then you can see the debug data read on node red 
