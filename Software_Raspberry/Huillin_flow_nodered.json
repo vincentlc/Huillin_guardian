@@ -2,10 +2,456 @@
     {
         "id": "77987b289f476cac",
         "type": "tab",
+        "label": "Flow 1 -old",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b28149ca8a6be0f6",
+        "type": "tab",
         "label": "Flow 1",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "0bcb25fecad4f1a1",
+        "type": "tab",
+        "label": "Calibración pH",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7b79584f5ac858c5",
+        "type": "tab",
+        "label": "Menu y Calibration ec",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f71521d6c8334611",
+        "type": "group",
+        "z": "7b79584f5ac858c5",
+        "name": "menu calibracion",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3cfa2f6fc9f615bb",
+            "c3daf9469720f5d7",
+            "07d52ce5fb94f454"
+        ],
+        "x": 74,
+        "y": 39,
+        "w": 492,
+        "h": 122
+    },
+    {
+        "id": "7d6e41a329a62b04",
+        "type": "group",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Display calibrado pH",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "calculateCalibratedPH",
+            "displayCalibratedPH",
+            "1e2cfe9e6f838ed9",
+            "0dddfa9784215a05",
+            "8445246cb69f1005"
+        ],
+        "x": 214,
+        "y": 719,
+        "w": 762,
+        "h": 182
+    },
+    {
+        "id": "0efc5b3b41726169",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "In calibrated value",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f14cb0144ecd46d0",
+            "b22a2049de512f1f",
+            "8e9c80eb38b806f1",
+            "c0d0737be953fbfc",
+            "37cd30db300483ce",
+            "d82b51b1cce5631a"
+        ],
+        "x": 94,
+        "y": 739,
+        "w": 432,
+        "h": 122
+    },
+    {
+        "id": "0e135c08a2bae613",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Group download file url",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cd8f4423691f9818",
+            "ee1d2bab3a7a6ba1",
+            "17e937c1a4a3faa6",
+            "b1990d0064f480ae",
+            "1493e905974a6cf9",
+            "5c9805856ed5d2cb",
+            "2fcaa37b9d1a94db",
+            "7ff75b2a09e879d4",
+            "0c06b2869cbeb338"
+        ],
+        "x": 4,
+        "y": 879,
+        "w": 722,
+        "h": 322
+    },
+    {
+        "id": "f0077f0d7cc8cab6",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Calibration process ",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "aed6f0b62b185919",
+            "513beebd7c57029e",
+            "4280c63eb0afae04",
+            "6d9b0a528c14f1a7"
+        ],
+        "x": 884,
+        "y": 1119,
+        "w": 232,
+        "h": 122
+    },
+    {
+        "id": "25f9441755bfb3b4",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Display stat huillin",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "677d69de3cf1939c",
+            "f049034a287b7ba9",
+            "d827280b09a465c2",
+            "6aed36c8fae64226",
+            "a61b2df1547a0f75",
+            "f2018dfb2ab51d69",
+            "80b4ae60aa21d107",
+            "36dfaeddf13a8444",
+            "b7b4c1fa57d95731",
+            "32f63888bef56643",
+            "178a889628e4ef40",
+            "cd87f99d61b65251",
+            "b795d192560b64e4",
+            "103054ae609ed613",
+            "2e1bd94d21e1792b",
+            "fd44840d4abf9212"
+        ],
+        "x": 914,
+        "y": 659,
+        "w": 692,
+        "h": 402
+    },
+    {
+        "id": "795911b7df02df87",
+        "type": "group",
+        "z": "7b79584f5ac858c5",
+        "name": "Display calibrado ec",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "567eb3c4aff10817",
+            "da59df69df96dfc3",
+            "702191a03284b4f2",
+            "ad81b7f80d903c23",
+            "e6fbe4dbda2eec28",
+            "d611f3f95f7de3aa"
+        ],
+        "x": 174,
+        "y": 859,
+        "w": 752,
+        "h": 162
+    },
+    {
+        "id": "5feb43d39c874325",
+        "type": "group",
+        "z": "7b79584f5ac858c5",
+        "name": "Group activation / deactivation calibración ec",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ebaa4c894bb82c0a",
+            "be1d7d55fabc18fb",
+            "a51ebc7bc19a46db",
+            "d81823822b01054c",
+            "254c959d532619a8",
+            "b02870ff9828ae5e"
+        ],
+        "x": 594,
+        "y": 179,
+        "w": 772,
+        "h": 182
+    },
+    {
+        "id": "c95c04806cb2ed41",
+        "type": "group",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Group activation / deactivation calibración pH",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a2446066c5e8963f",
+            "c12260eb28995a55",
+            "6e54db121693976d",
+            "558ee0650dfea382",
+            "useCalibrationToggle",
+            "calibrationToggle",
+            "d1471c661a6cca22"
+        ],
+        "x": 414,
+        "y": 19,
+        "w": 792,
+        "h": 202
+    },
+    {
+        "id": "0d52326935b4712a",
+        "type": "group",
+        "z": "7b79584f5ac858c5",
+        "name": "read valor calibración",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e65436e8202ad3a7",
+            "c0bd9719364b1e8f",
+            "6582e99555c922cc",
+            "4242f5acbd13769f"
+        ],
+        "x": 214,
+        "y": 739,
+        "w": 772,
+        "h": 82
+    },
+    {
+        "id": "c314d5840c040dd0",
+        "type": "group",
+        "z": "7b79584f5ac858c5",
+        "name": "Guardar valores ec & display",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "62bdec7eebc8b7f5",
+            "dc39b3926446ca9b",
+            "e5022564134f4001",
+            "9e1e925e4e53a1e8",
+            "1ae819ece894f491",
+            "e46eb518ecc43084",
+            "302e2e7e8ed93f0a",
+            "43d40871fbed111f"
+        ],
+        "x": 614,
+        "y": 379,
+        "w": 852,
+        "h": 302
+    },
+    {
+        "id": "0d747f940ac2f3d2",
+        "type": "group",
+        "z": "0bcb25fecad4f1a1",
+        "name": "Guardar valoresph & display",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "storeCalibrationValue",
+            "confirmCalibration",
+            "9e53500f65ab978d",
+            "ebdb8250a82d5752",
+            "556d66b3c37be968",
+            "841c26ad441b189b",
+            "4c7d804d16cf1a74",
+            "b3d47c2c06c8083d",
+            "97ced0fcc825eab1"
+        ],
+        "x": 634,
+        "y": 259,
+        "w": 832,
+        "h": 322
+    },
+    {
+        "id": "7ddfa50494954f3d",
+        "type": "group",
+        "z": "0bcb25fecad4f1a1",
+        "name": "interfaz & parsing",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "mainCalibrationButton",
+            "ph4Button",
+            "ph7Button",
+            "showCalibrationTab",
+            "c10302495a26f2c4",
+            "8c4b5a9339f89b70",
+            "392cdbe694bc1be4",
+            "ef9f290fc422b89c",
+            "4222e57d0e95bbb5",
+            "3725d2044424d49e",
+            "75fc955d9873c691",
+            "ae3fa3bbbe40ecf3"
+        ],
+        "x": 34,
+        "y": 199,
+        "w": 552,
+        "h": 462
+    },
+    {
+        "id": "6c1a170030b6e3d8",
+        "type": "group",
+        "z": "7b79584f5ac858c5",
+        "name": "interfaz & parsing",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ab9d6098bfe746df",
+            "d50cf00adf1d3c13",
+            "117f2b0bb7e3b366",
+            "8829baf246311f1d",
+            "e87d62c233b1ff8c",
+            "4433b9aab3f79d92",
+            "ba0432607e0feb08",
+            "a56c37faeb37553b",
+            "4c2685063f2cc2fc",
+            "c81ca43302d2f9ba",
+            "8bdb59bfd62a44ee"
+        ],
+        "x": 14,
+        "y": 279,
+        "w": 572,
+        "h": 442
+    },
+    {
+        "id": "1e358f5664fad924",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Generacion archivos",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a9d81a89e75bedbf",
+            "0765cf27454e0ad4",
+            "29463a50c4ed1ac3",
+            "a4e6b9cea737c859",
+            "9b46dd59f5a35610"
+        ],
+        "x": 894,
+        "y": 459,
+        "w": 792,
+        "h": 162
+    },
+    {
+        "id": "17976ea43efcf369",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Recepcion de datos desde el gps / uart 4",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "28d7516a68070605",
+            "a8c4ed6508b9bda6",
+            "a4e4679c8db994f5",
+            "79dcd3a26e8c4cd4",
+            "24962180b9551e44",
+            "87b2ffdfa77c9f70",
+            "6b0c226f169cf406"
+        ],
+        "x": 64,
+        "y": 19,
+        "w": 982,
+        "h": 122
+    },
+    {
+        "id": "6d2adcfab212ecb9",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Generacion de Trama para envio a travez de LoRa",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "58d96161926bfb5d",
+            "511d9e4d93520b60",
+            "c08c0658928e9c59"
+        ],
+        "x": 894,
+        "y": 259,
+        "w": 592,
+        "h": 82
+    },
+    {
+        "id": "044ad35b83e4af54",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Sensor Oxygeno : TempO, SAT, OD / Uart 2 (modbus)",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f90937e656dc496b",
+            "ad24ca838bc8172a",
+            "55747e2ad51dcc81",
+            "874374257552a5b2",
+            "b711700a67c97b1e",
+            "356957fc3c3ed298"
+        ],
+        "x": 34,
+        "y": 579,
+        "w": 672,
+        "h": 142
+    },
+    {
+        "id": "01e65d4d9567570d",
+        "type": "group",
+        "z": "b28149ca8a6be0f6",
+        "name": "Sensores Altas scie - PH, EC, RTD / Uart 5",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "fcc7f7c29e11934f",
+            "8c3351b5ed47ad36",
+            "d6adcb9218853930",
+            "d9d9906f29d07fa7",
+            "fc2595819521b15f",
+            "a02b022af8f34947",
+            "e274d62d50888cdd",
+            "5f42b8042240b974",
+            "bcb78fc94e23474b",
+            "ac166a3aaa990da3"
+        ],
+        "x": 14,
+        "y": 319,
+        "w": 852,
+        "h": 242
     },
     {
         "id": "ed8d12af33e12adf",
@@ -110,8 +556,9 @@
     {
         "id": "63d5bafdc744c302",
         "type": "ui_tab",
-        "name": "Proyecto Huillin Guardian",
+        "name": "Datos adicional",
         "icon": "dashboard",
+        "order": 3,
         "disabled": false,
         "hidden": false
     },
@@ -198,7 +645,7 @@
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
-            "allowTempTheme": "true",
+            "allowTempTheme": "false",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
                 "sx": 48,
@@ -230,21 +677,114 @@
         "tab": "48418b79.0f5834",
         "order": 1,
         "disp": true,
-        "width": "12"
+        "width": "12",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "48418b79.0f5834",
         "type": "ui_tab",
         "name": "Dashboard",
         "icon": "dashboard",
-        "order": 1
+        "order": 4
+    },
+    {
+        "id": "6f7bd30d11d84d05",
+        "type": "ui_group",
+        "name": "Calibracion",
+        "tab": "ebc50ee4244772fc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "07c9c1fce28c0d9f",
+        "type": "ui_group",
+        "name": "CalibrationPhGroup",
+        "tab": "69ac7fda749b14eb",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ebc50ee4244772fc",
+        "type": "ui_tab",
+        "name": "Inicio",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "69ac7fda749b14eb",
+        "type": "ui_tab",
+        "name": "CalibracionpH",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a3b1899c42a8b66e",
+        "type": "ui_group",
+        "name": "Huillin Parametros",
+        "tab": "ebc50ee4244772fc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2917f91dab3a37a9",
+        "type": "ui_tab",
+        "name": "CalibracionMenu",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "acbac56284ad93c5",
+        "type": "ui_group",
+        "name": "Menu",
+        "tab": "2917f91dab3a37a9",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "47f23170b5390789",
+        "type": "ui_tab",
+        "name": "Calibracionec",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6a341e6f89fb83ca",
+        "type": "ui_group",
+        "name": "CalibrationetcGroup",
+        "tab": "47f23170b5390789",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "edcb6b572e130d67",
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 2",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -427,7 +967,7 @@
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 6",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -628,7 +1168,7 @@
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 9",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -842,8 +1382,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1160,
-        "y": 360,
+        "x": 1180,
+        "y": 300,
         "wires": [
             [
                 "4725a0b65fa4f01a"
@@ -859,11 +1399,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1340,
-        "y": 280,
+        "x": 1360,
+        "y": 300,
         "wires": []
     },
     {
@@ -1066,7 +1607,7 @@
         "type": "debug",
         "z": "77987b289f476cac",
         "name": "debug 13",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1408,5 +1949,3115 @@
                 "f31a598d.9fd2c8"
             ]
         ]
+    },
+    {
+        "id": "28d7516a68070605",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "17976ea43efcf369",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "715710ce6ffe0feb",
+        "type": "inject",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "prueba de transmision",
+        "payloadType": "str",
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "2bc51499650e3028"
+            ]
+        ]
+    },
+    {
+        "id": "2bc51499650e3028",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8871bff5b7be6692",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "name": "Envio de datos hacia base terrena / uart 3",
+        "info": "",
+        "x": 220,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a8c4ed6508b9bda6",
+        "type": "serial in",
+        "z": "b28149ca8a6be0f6",
+        "g": "17976ea43efcf369",
+        "name": "",
+        "serial": "ed8d12af33e12adf",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "a4e4679c8db994f5"
+            ]
+        ]
+    },
+    {
+        "id": "a4e4679c8db994f5",
+        "type": "nmea",
+        "z": "b28149ca8a6be0f6",
+        "g": "17976ea43efcf369",
+        "name": "",
+        "property": "payload",
+        "outputProperty": "payload",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "79dcd3a26e8c4cd4"
+            ]
+        ]
+    },
+    {
+        "id": "79dcd3a26e8c4cd4",
+        "type": "switch",
+        "z": "b28149ca8a6be0f6",
+        "g": "17976ea43efcf369",
+        "name": "",
+        "property": "payload.sentence",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "RMC",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "24962180b9551e44",
+                "6b0c226f169cf406"
+            ]
+        ]
+    },
+    {
+        "id": "fcc7f7c29e11934f",
+        "type": "serial in",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "",
+        "serial": "89738a6854cb6d44",
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "8c3351b5ed47ad36",
+                "fc2595819521b15f"
+            ]
+        ]
+    },
+    {
+        "id": "8c3351b5ed47ad36",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "356957fc3c3ed298",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "ad24ca838bc8172a",
+        "type": "serial in",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "",
+        "serial": "71abda4c42167479",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "55747e2ad51dcc81"
+            ]
+        ]
+    },
+    {
+        "id": "d6adcb9218853930",
+        "type": "json",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "d9d9906f29d07fa7"
+            ]
+        ]
+    },
+    {
+        "id": "d9d9906f29d07fa7",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "fc2595819521b15f",
+        "type": "csv",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "",
+        "sep": ";",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "PH, EC, RTD",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 250,
+        "y": 480,
+        "wires": [
+            [
+                "d6adcb9218853930",
+                "8c3351b5ed47ad36",
+                "a02b022af8f34947"
+            ]
+        ]
+    },
+    {
+        "id": "24962180b9551e44",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "17976ea43efcf369",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "4",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 100,
+        "wires": [
+            [
+                "87b2ffdfa77c9f70"
+            ]
+        ]
+    },
+    {
+        "id": "a02b022af8f34947",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "function 1",
+        "func": "var salida = {\n    ph : msg.payload.PH.substring(4),\n    ec : msg.payload.EC.substring(4),\n    rtd: msg.payload.RTD.substring(5)\n\n}\n\nmsg.payload = salida\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 480,
+        "wires": [
+            [
+                "e274d62d50888cdd",
+                "5f42b8042240b974",
+                "bcb78fc94e23474b"
+            ]
+        ]
+    },
+    {
+        "id": "e274d62d50888cdd",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "84eff09503c12e81",
+        "type": "join",
+        "z": "b28149ca8a6be0f6",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "1",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 830,
+        "y": 820,
+        "wires": [
+            [
+                "fd44840d4abf9212",
+                "a9d81a89e75bedbf",
+                "58d96161926bfb5d",
+                "b795d192560b64e4",
+                "aed6f0b62b185919",
+                "4280c63eb0afae04"
+            ]
+        ]
+    },
+    {
+        "id": "87b2ffdfa77c9f70",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "17976ea43efcf369",
+        "name": "function 2",
+        "func": "\nvar salida ={\n    ts : msg.payload.timestamp,\n    fecha : msg.payload.dateTime,\n    speed : msg.payload.speedKnots,\n    lat : msg.payload.lat,\n    lon : msg.payload.lon\n}\n\nmsg.payload = salida \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 100,
+        "wires": [
+            [
+                "28d7516a68070605",
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "fd44840d4abf9212",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "6b0c226f169cf406",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "17976ea43efcf369",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5f42b8042240b974",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "4",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "55747e2ad51dcc81",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "4",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 620,
+        "wires": [
+            [
+                "356957fc3c3ed298",
+                "874374257552a5b2"
+            ]
+        ]
+    },
+    {
+        "id": "874374257552a5b2",
+        "type": "csv",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "TempO, SAT, OD",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "356957fc3c3ed298",
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "29463a50c4ed1ac3",
+        "type": "file",
+        "z": "b28149ca8a6be0f6",
+        "g": "1e358f5664fad924",
+        "name": "",
+        "filename": "/home/javier/datos_logger.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1380,
+        "y": 580,
+        "wires": [
+            [
+                "a4e6b9cea737c859"
+            ]
+        ]
+    },
+    {
+        "id": "a4e6b9cea737c859",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "1e358f5664fad924",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "a9d81a89e75bedbf",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "1e358f5664fad924",
+        "name": "Genera Archivo Local Alta frecuencia",
+        "func": "var ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\nvar ph_cal = msg.payload.ph_calibrated;\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\n//node.warn(ph4_value + \"   \"+ ph7_value);\nvar fechaActual = 0;\n//node.warn(\"enter generation\");\nif(!fechaOriginal)\n{\n    fechaActual = new Date();\n    //node.warn(\"enter here\")\n}\nelse\n{\n    fechaActual = new Date(fechaOriginal);\n}\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = fechaActual;\n//node.warn(fechaActual);\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n//node.warn(fechaFormateada);\n\n\n\nvar linea = fechaFormateada + ' ' +\n            lat + ' ' + \n            lon + ' '+ \n            speed + ' '+\n            od + ' ' +\n            sat + ' ' +\n            tempO + ' ' +\n            ph + ' ' +\n            ec + ' ' +\n            rtd + ' ' +\n            ph_cal+ ' ' +\n            ph4_value+ ' ' +\n            ph7_value;\n\nmsg.payload = linea;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 580,
+        "wires": [
+            [
+                "29463a50c4ed1ac3",
+                "9b46dd59f5a35610"
+            ]
+        ]
+    },
+    {
+        "id": "58d96161926bfb5d",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "Genera Trama Lora",
+        "func": "\nvar ph = msg.payload.ph;\nvar ec = msg.payload.ec;\nvar rtd = msg.payload.rtd;\nvar tempO = msg.payload.TempO;\nvar sat = msg.payload.SAT;\nvar od = msg.payload.OD;\nvar ts = msg.payload.ts;\nvar fechaOriginal = msg.payload.fecha;\nvar speed = msg.payload.speed;\nvar lat = msg.payload.lat;\nvar lon = msg.payload.lon;\n\n// var ts = Date.now();\n// ts = Math.round(ts / 1000);\n\n\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = new Date(fechaOriginal);\n\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = dosDigitos(fecha.getDate()) + '/'\n                       + dosDigitos(fecha.getMonth() + 1) + '/' // Los meses en JavaScript comienzan desde 0\n                       + fecha.getFullYear() + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n\n\n\n\nvar linea = fechaFormateada + ',' +\n            lat + ',' + \n            lon + ','+ \n            speed + ','+\n            od + ',' +\n            sat + ',' +\n            tempO + ',' +\n            ph + ',' +\n            ec + ',' +\n            rtd;\n\nmsg.payload = linea;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 300,
+        "wires": [
+            [
+                "511d9e4d93520b60"
+            ]
+        ]
+    },
+    {
+        "id": "0765cf27454e0ad4",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "g": "1e358f5664fad924",
+        "name": "Generacion de Archivo Local con alta frecuencia",
+        "info": "",
+        "x": 1120,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "511d9e4d93520b60",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1220,
+        "y": 300,
+        "wires": [
+            [
+                "c08c0658928e9c59"
+            ]
+        ]
+    },
+    {
+        "id": "c08c0658928e9c59",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "677d69de3cf1939c",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "PH",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1390,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "f049034a287b7ba9",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "ph_calibrated",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ph_calibrated",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 760,
+        "wires": [
+            [
+                "677d69de3cf1939c",
+                "2e1bd94d21e1792b"
+            ]
+        ]
+    },
+    {
+        "id": "d827280b09a465c2",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "rtd",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.rtd",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 820,
+        "wires": [
+            [
+                "80b4ae60aa21d107"
+            ]
+        ]
+    },
+    {
+        "id": "6aed36c8fae64226",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "ec_calibrated",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ec_calibrated",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 860,
+        "wires": [
+            [
+                "36dfaeddf13a8444"
+            ]
+        ]
+    },
+    {
+        "id": "a61b2df1547a0f75",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "Temp Oxigeno Disuelto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempO",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2018dfb2ab51d69",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "Oxigeno Disuelto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.OD",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1270,
+        "y": 960,
+        "wires": [
+            [
+                "32f63888bef56643"
+            ]
+        ]
+    },
+    {
+        "id": "b795d192560b64e4",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1020,
+        "y": 880,
+        "wires": [
+            [
+                "f049034a287b7ba9",
+                "103054ae609ed613",
+                "d827280b09a465c2",
+                "6aed36c8fae64226",
+                "a61b2df1547a0f75",
+                "f2018dfb2ab51d69",
+                "178a889628e4ef40"
+            ]
+        ]
+    },
+    {
+        "id": "103054ae609ed613",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "80b4ae60aa21d107",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1410,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "36dfaeddf13a8444",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Conductividad",
+        "label": "µS/cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1420,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "b7b4c1fa57d95731",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "",
+        "group": "662a82187be82ae4",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp OD",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1480,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "32f63888bef56643",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Oxígeno Disuelto",
+        "label": "mg/L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1490,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "2e1bd94d21e1792b",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "178a889628e4ef40",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "Concentracion de Oxigeno",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.SAT",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 1020,
+        "wires": [
+            [
+                "cd87f99d61b65251"
+            ]
+        ]
+    },
+    {
+        "id": "b1990d0064f480ae",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "Set base path",
+        "func": "//restrict to c:\\temp\\\nvar basePath = \"/home/javier/datos_logger.txt\";\nvar filename = msg.req.params.fn;\n\n\nif(filename.includes(\"..//\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} else if(filename.includes(\"../\")){\n    msg.payload = \"Illegal file path\";\n    msg.statusCode = 405;//not allowed\n    return [null, msg];//fire output 2\n} \n//TODO: add more checks\n\nmsg.filename = basePath;//basePath + filename;\nreturn [msg, null];//fire output 1\n\n\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 980,
+        "wires": [
+            [
+                "0c06b2869cbeb338"
+            ],
+            [
+                "7ff75b2a09e879d4"
+            ]
+        ]
+    },
+    {
+        "id": "7ff75b2a09e879d4",
+        "type": "http response",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "0c06b2869cbeb338",
+        "type": "file in",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 490,
+        "y": 960,
+        "wires": [
+            [
+                "7ff75b2a09e879d4"
+            ]
+        ]
+    },
+    {
+        "id": "5c9805856ed5d2cb",
+        "type": "catch",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 120,
+        "y": 1060,
+        "wires": [
+            [
+                "2fcaa37b9d1a94db",
+                "1493e905974a6cf9"
+            ]
+        ]
+    },
+    {
+        "id": "2fcaa37b9d1a94db",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "Set 404",
+        "func": "msg.payload = msg.error;\nmsg.statusCode = 404;//resource not found\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1060,
+        "wires": [
+            [
+                "7ff75b2a09e879d4"
+            ]
+        ]
+    },
+    {
+        "id": "1493e905974a6cf9",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 150,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "cd8f4423691f9818",
+        "type": "ui_template",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "group": "662a82187be82ae4",
+        "name": "ui_temlplate - present download links on dashboard",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div >\n    <a href=\"/home/javier/datos_logger.txt\">download log</a>\n    \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 360,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee1d2bab3a7a6ba1",
+        "type": "comment",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "Create http endpoint <nodered>/files/xxx  where xxx is the file name to download",
+        "info": "",
+        "x": 340,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "17e937c1a4a3faa6",
+        "type": "http in",
+        "z": "b28149ca8a6be0f6",
+        "g": "0e135c08a2bae613",
+        "name": "",
+        "url": "/home/javier/:fn",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 980,
+        "wires": [
+            [
+                "b1990d0064f480ae"
+            ]
+        ]
+    },
+    {
+        "id": "bcb78fc94e23474b",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "function 3",
+        "func": "var current_value=msg.payload.ph;\nif(msg.payload.calibration)\n{\n    msg.payload = current_value\n    return msg;\n}\nelse\n{\n    msg.payload = current_value\n    return msg;\n}\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 360,
+        "wires": [
+            [
+                "ac166a3aaa990da3"
+            ]
+        ]
+    },
+    {
+        "id": "ac166a3aaa990da3",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "01e65d4d9567570d",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "cd87f99d61b65251",
+        "type": "ui_gauge",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "",
+        "group": "a3b1899c42a8b66e",
+        "order": 0,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Saturacion",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "140",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "100",
+        "seg2": "101",
+        "diff": false,
+        "className": "range-ui",
+        "x": 1510,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "9b46dd59f5a35610",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "1e358f5664fad924",
+        "name": "debug 17",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "aed6f0b62b185919",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "f0077f0d7cc8cab6",
+        "name": "ph",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ph",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1160,
+        "wires": [
+            [
+                "513beebd7c57029e"
+            ]
+        ]
+    },
+    {
+        "id": "513beebd7c57029e",
+        "type": "link out",
+        "z": "b28149ca8a6be0f6",
+        "g": "f0077f0d7cc8cab6",
+        "name": "link out - raw ph",
+        "mode": "link",
+        "links": [
+            "ae3fa3bbbe40ecf3"
+        ],
+        "x": 1075,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "f14cb0144ecd46d0",
+        "type": "link in",
+        "z": "b28149ca8a6be0f6",
+        "g": "0efc5b3b41726169",
+        "name": "link ph calibrated - flow 1",
+        "links": [
+            "8445246cb69f1005"
+        ],
+        "x": 135,
+        "y": 820,
+        "wires": [
+            [
+                "b22a2049de512f1f"
+            ]
+        ]
+    },
+    {
+        "id": "b22a2049de512f1f",
+        "type": "csv",
+        "z": "b28149ca8a6be0f6",
+        "g": "0efc5b3b41726169",
+        "name": "ph_calibrated",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "ph_calibrated",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 250,
+        "y": 820,
+        "wires": [
+            [
+                "8e9c80eb38b806f1"
+            ]
+        ]
+    },
+    {
+        "id": "8e9c80eb38b806f1",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "0efc5b3b41726169",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "b711700a67c97b1e",
+        "type": "inject",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "12,138,19",
+        "payloadType": "str",
+        "x": 280,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4280c63eb0afae04",
+        "type": "change",
+        "z": "b28149ca8a6be0f6",
+        "g": "f0077f0d7cc8cab6",
+        "name": "ec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.ec",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1200,
+        "wires": [
+            [
+                "6d9b0a528c14f1a7"
+            ]
+        ]
+    },
+    {
+        "id": "6d9b0a528c14f1a7",
+        "type": "link out",
+        "z": "b28149ca8a6be0f6",
+        "g": "f0077f0d7cc8cab6",
+        "name": "link out - raw ec",
+        "mode": "link",
+        "links": [
+            "c81ca43302d2f9ba"
+        ],
+        "x": 1065,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "c0d0737be953fbfc",
+        "type": "csv",
+        "z": "b28149ca8a6be0f6",
+        "g": "0efc5b3b41726169",
+        "name": "ec_calibrated",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "ec_calibrated",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 250,
+        "y": 780,
+        "wires": [
+            [
+                "d82b51b1cce5631a"
+            ]
+        ]
+    },
+    {
+        "id": "37cd30db300483ce",
+        "type": "link in",
+        "z": "b28149ca8a6be0f6",
+        "g": "0efc5b3b41726169",
+        "name": "link ec calibrated - flow 1",
+        "links": [
+            "d611f3f95f7de3aa"
+        ],
+        "x": 135,
+        "y": 780,
+        "wires": [
+            [
+                "c0d0737be953fbfc"
+            ]
+        ]
+    },
+    {
+        "id": "d82b51b1cce5631a",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "0efc5b3b41726169",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 780,
+        "wires": [
+            [
+                "84eff09503c12e81"
+            ]
+        ]
+    },
+    {
+        "id": "mainCalibrationButton",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "Iniciar calibración ph ",
+        "group": "acbac56284ad93c5",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Iniciar calibración ph ",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"CalibracionpH\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "showCalibrationTab",
+                "a2446066c5e8963f",
+                "8c4b5a9339f89b70"
+            ]
+        ]
+    },
+    {
+        "id": "ph4Button",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "Calibrar pH 4",
+        "group": "07c9c1fce28c0d9f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrar pH 4",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ph4",
+        "payloadType": "str",
+        "topic": "ph_type",
+        "topicType": "str",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "ef9f290fc422b89c"
+            ]
+        ]
+    },
+    {
+        "id": "ph7Button",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "Calibrar pH 7",
+        "group": "07c9c1fce28c0d9f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrar pH 7",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ph7",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "ef9f290fc422b89c"
+            ]
+        ]
+    },
+    {
+        "id": "storeCalibrationValue",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "name": "Guardar valores de calibration",
+        "func": "// Retrieve the sensor value\nlet phType = msg.payload.phType;  // ph4, ph7, or ph10\nlet sensorValue = parseFloat(msg.payload.pH);  // Raw pH value from sensor\nlet is_read = false;\n\n// Save the calibration values to file storage\nif (phType === 'ph4') {\n    global.set('ph4_value', sensorValue, 'file');\n    is_read=true;\n} else if (phType === 'ph7') {\n    global.set('ph7_value', sensorValue, 'file');\n    is_read=true;\n} \nlet return_value = {};\nif(is_read)\n{\n    return_value = { payload: phType + ' '+sensorValue +' ✅!' }\n}\n\nreturn return_value;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "confirmCalibration",
+                "9e53500f65ab978d",
+                "556d66b3c37be968",
+                "b3d47c2c06c8083d"
+            ]
+        ]
+    },
+    {
+        "id": "confirmCalibration",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "group": "07c9c1fce28c0d9f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Calibración confirmación ph",
+        "label": "",
+        "format": "Calibración para {{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1020,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "calculateCalibratedPH",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7d6e41a329a62b04",
+        "name": "Calcular pH calibrado",
+        "func": "// Retrieve stored calibration points\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\nlet useCalibration = global.get(\"useCalibrationPh\", 'file')\n\nif (msg.payload) msg.payload.calibrated_ph = {};\n\n//node.warn(useCalibration_ph);\nif (ph4_value !== undefined && ph7_value !== undefined && useCalibration ==\"start\") {\n    // Known pH levels for calibration\n    const x1 = 4, x2 = 7;\n    //ph7_value = 9, ph4_value=5;\n    //ph7_value =150;\n    // Calculate slope (m) and intercept (b) for linear regression\n    let m = (ph7_value - ph4_value)/(x2 - x1)\n    let b = ph4_value - m * x1\n    \n    // Apply linear regression to the current pH reading\n    const raw_ph = parseFloat(msg.payload);\n    let calibrated_ph = parseFloat(m) * raw_ph + parseFloat(b);\n    //node.warn(m + \" \" + b +\" raw=\"+raw_ph+ \" \" + calibrated_ph );\n    //node.warn(raw_ph + \" \" + calibrated_ph);\n    msg.payload = calibrated_ph.toFixed(2); // fix to 3 digit the value\n} else {\n    // Fallback: use the raw pH reading if calibration data is incomplete\n    msg.payload = parseFloat(msg.payload).toFixed(2);\n}\n//node.warn(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 760,
+        "wires": [
+            [
+                "0dddfa9784215a05",
+                "8445246cb69f1005"
+            ]
+        ]
+    },
+    {
+        "id": "displayCalibratedPH",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7d6e41a329a62b04",
+        "group": "6f7bd30d11d84d05",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Indica pH Calibrado",
+        "label": "",
+        "format": "Valor calibrado pH: {{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 860,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "calibrationToggle",
+        "type": "ui_switch",
+        "z": "0bcb25fecad4f1a1",
+        "g": "c95c04806cb2ed41",
+        "name": "Activar calibración ph",
+        "label": "Activar calibración ph",
+        "tooltip": "",
+        "group": "6f7bd30d11d84d05",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "useCalibration",
+        "topicType": "str",
+        "onvalue": "start",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "stop",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 800,
+        "y": 120,
+        "wires": [
+            [
+                "useCalibrationToggle",
+                "558ee0650dfea382"
+            ]
+        ]
+    },
+    {
+        "id": "useCalibrationToggle",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "g": "c95c04806cb2ed41",
+        "name": "Set activar Calibración ph",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::useCalibrationPh",
+                "pt": "global",
+                "to": "msg.payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "x": 950,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75fc955d9873c691",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "group": "07c9c1fce28c0d9f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Valor actual ph:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 320,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a2446066c5e8963f",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "g": "c95c04806cb2ed41",
+        "name": "deactivar calibracion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "calibrationToggle"
+            ]
+        ]
+    },
+    {
+        "id": "c12260eb28995a55",
+        "type": "comment",
+        "z": "0bcb25fecad4f1a1",
+        "g": "c95c04806cb2ed41",
+        "name": "Desactiva calibracion set para hacer la calibración",
+        "info": "",
+        "x": 790,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "showCalibrationTab",
+        "type": "ui_ui_control",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "Switch to Calibration Tab",
+        "x": 450,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c10302495a26f2c4",
+        "type": "ui_button",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "Volver inicio",
+        "group": "07c9c1fce28c0d9f",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Volver",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Inicio\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 320,
+        "wires": [
+            [
+                "showCalibrationTab",
+                "d1471c661a6cca22"
+            ]
+        ]
+    },
+    {
+        "id": "9e53500f65ab978d",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "8c4b5a9339f89b70",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "erase value ph",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "?",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "confirmCalibration",
+                "ef9f290fc422b89c"
+            ]
+        ]
+    },
+    {
+        "id": "ebdb8250a82d5752",
+        "type": "ui_text",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "group": "07c9c1fce28c0d9f",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Indica pH Calibrado",
+        "label": "",
+        "format": "Valor set: {{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1230,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "556d66b3c37be968",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "name": "Valores pH calibrado",
+        "func": "// Retrieve stored calibration points\n//node.warn(\"read value ph4\");\nlet ph4_value = global.get('ph4_value', 'file');\nlet ph7_value = global.get('ph7_value', 'file');\nif(msg.payload)\n{\n    msg.payload.ph4_value = {};\n    msg.payload.ph7_value = {};\n\n    msg.payload.ph4_value = ph4_value;\n    msg.payload.ph7_value = ph7_value;\n\n    node.warn(msg.payload);\n    let string_data = `ph4: ${ph4_value},ph7: ${ph7_value} `    \n\n    return { payload: string_data };\n}\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 480,
+        "wires": [
+            [
+                "ebdb8250a82d5752",
+                "4c7d804d16cf1a74"
+            ]
+        ]
+    },
+    {
+        "id": "ae3fa3bbbe40ecf3",
+        "type": "link in",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "link in - raw ph",
+        "links": [
+            "513beebd7c57029e"
+        ],
+        "x": 145,
+        "y": 580,
+        "wires": [
+            [
+                "75fc955d9873c691",
+                "3725d2044424d49e",
+                "calculateCalibratedPH"
+            ]
+        ]
+    },
+    {
+        "id": "841c26ad441b189b",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4c7d804d16cf1a74",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.ph4_value",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "392cdbe694bc1be4",
+        "type": "join",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "join the values",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "1",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "841c26ad441b189b",
+                "storeCalibrationValue"
+            ]
+        ],
+        "info": "Concatenate all the value into one"
+    },
+    {
+        "id": "3725d2044424d49e",
+        "type": "csv",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "ph parser",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "pH",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 300,
+        "y": 580,
+        "wires": [
+            [
+                "392cdbe694bc1be4"
+            ]
+        ]
+    },
+    {
+        "id": "ef9f290fc422b89c",
+        "type": "csv",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "join ph values",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "phType",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 320,
+        "y": 460,
+        "wires": [
+            [
+                "392cdbe694bc1be4"
+            ]
+        ]
+    },
+    {
+        "id": "b3d47c2c06c8083d",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "name": "reset the value to avoid overflow",
+        "func": "let string = \"a button was press\" + msg.payload\nif(msg.payload)\n{\n    //node.warn(string);\n    msg.payload=\"?\"\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 360,
+        "wires": [
+            [
+                "97ced0fcc825eab1"
+            ]
+        ],
+        "info": "function to reset the value in order to not over flow"
+    },
+    {
+        "id": "97ced0fcc825eab1",
+        "type": "delay",
+        "z": "0bcb25fecad4f1a1",
+        "g": "0d747f940ac2f3d2",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1360,
+        "y": 320,
+        "wires": [
+            [
+                "8c4b5a9339f89b70"
+            ]
+        ]
+    },
+    {
+        "id": "1e2cfe9e6f838ed9",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7d6e41a329a62b04",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "558ee0650dfea382",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "g": "c95c04806cb2ed41",
+        "name": "Save status calibration ph",
+        "func": "",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n//let data = global.get(\"status_calibration_ph\", 'file')\nlet data = global.get(\"useCalibrationPh\", 'file')\n\n//node.warn(\"on start value=\" + data)\nreturn data;",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 120,
+        "wires": [
+            [
+                "6e54db121693976d",
+                "calibrationToggle"
+            ]
+        ]
+    },
+    {
+        "id": "0dddfa9784215a05",
+        "type": "function",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7d6e41a329a62b04",
+        "name": "add color activation calibration",
+        "func": "let useCalibration = global.get(\"useCalibrationPh\", 'file')\nif(useCalibration == \"start\")\n{\n    msg.payload += \"🔵 \"\n}\nelse\n{\n    msg.payload += \"⚫ \"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 760,
+        "wires": [
+            [
+                "displayCalibratedPH",
+                "1e2cfe9e6f838ed9"
+            ]
+        ]
+    },
+    {
+        "id": "8445246cb69f1005",
+        "type": "link out",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7d6e41a329a62b04",
+        "name": "link out ph calibrated - calibrated",
+        "mode": "link",
+        "links": [
+            "f14cb0144ecd46d0"
+        ],
+        "x": 495,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "d1471c661a6cca22",
+        "type": "change",
+        "z": "0bcb25fecad4f1a1",
+        "g": "c95c04806cb2ed41",
+        "name": "re-aactivar calibracion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "start",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "calibrationToggle"
+            ]
+        ]
+    },
+    {
+        "id": "4222e57d0e95bbb5",
+        "type": "comment",
+        "z": "0bcb25fecad4f1a1",
+        "g": "7ddfa50494954f3d",
+        "name": "input from current value ph",
+        "info": "",
+        "x": 170,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "6e54db121693976d",
+        "type": "debug",
+        "z": "0bcb25fecad4f1a1",
+        "g": "c95c04806cb2ed41",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c3daf9469720f5d7",
+        "type": "ui_button",
+        "z": "7b79584f5ac858c5",
+        "g": "f71521d6c8334611",
+        "name": "Volver inicio",
+        "group": "acbac56284ad93c5",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Volver",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Inicio\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "3cfa2f6fc9f615bb"
+            ]
+        ]
+    },
+    {
+        "id": "3cfa2f6fc9f615bb",
+        "type": "ui_ui_control",
+        "z": "7b79584f5ac858c5",
+        "g": "f71521d6c8334611",
+        "name": "Switch to Calibration Tab",
+        "x": 430,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab9d6098bfe746df",
+        "type": "ui_button",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "Iniciar calibración conductividad",
+        "group": "acbac56284ad93c5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Iniciar calibración conductividad",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Calibracionec\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "117f2b0bb7e3b366",
+                "be1d7d55fabc18fb",
+                "8829baf246311f1d"
+            ]
+        ]
+    },
+    {
+        "id": "8bdb59bfd62a44ee",
+        "type": "ui_button",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "Calibrar conduct bajo",
+        "group": "6a341e6f89fb83ca",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrar conduct bajo",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ec_low",
+        "payloadType": "str",
+        "topic": "ec_type",
+        "topicType": "str",
+        "x": 160,
+        "y": 480,
+        "wires": [
+            [
+                "e87d62c233b1ff8c"
+            ]
+        ]
+    },
+    {
+        "id": "4c2685063f2cc2fc",
+        "type": "ui_button",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "Calibrar conduct alto",
+        "group": "6a341e6f89fb83ca",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Calibrar conduct alto",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ec_high",
+        "payloadType": "str",
+        "topic": "ec_type",
+        "topicType": "str",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "e87d62c233b1ff8c"
+            ]
+        ]
+    },
+    {
+        "id": "62bdec7eebc8b7f5",
+        "type": "function",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "name": "Guardar valores de calibration",
+        "func": "// Retrieve the sensor value\nlet ecType = msg.payload.ec_type;  // ph4, ph7, or ph10\nlet sensorValue = parseFloat(msg.payload.ec);  // Raw ec value from sensor\nlet calibrationValue = parseFloat(msg.payload.ec_value); //calibration value from input\nlet is_read = false;\n//try to read current file value\nlet low_calibration_Value_file, high_calibration_Value_file;\nlet payload_message = \"\";\ntry{\n    low_calibration_Value_file = global.get('ec_low_calib_value', 'file');\n    high_calibration_Value_file = global.get('ec_high_calib_value', 'file');\n}\ncatch(err){\n    node.warn(\"error opening file\");\n}\n\n\n// Save the calibration values to file storage\nif (ecType === 'ec_low') {\n    if (calibrationValue > high_calibration_Value_file)\n    {\n        payload_message = `calibrationValue (${calibrationValue}) no valida, debe ser inferior a ${high_calibration_Value_file} `\n    }\n    else{\n        payload_message = \"Calibración para \" + calibrationValue + ' ' + sensorValue + ' ✅!'\n        global.set('ec_low_value', sensorValue, 'file');\n        global.set('ec_low_calib_value', calibrationValue, 'file');\n    }\n} else if (ecType === 'ec_high') {\n    if (calibrationValue < low_calibration_Value_file) {\n        payload_message = `calibrationValue (${calibrationValue}) no valida, debe ser superior a ${low_calibration_Value_file} `\n    }\n    else {\n        payload_message = \"Calibración para \" + calibrationValue + ' ' + sensorValue + ' ✅!'\n        global.set('ec_high_value', sensorValue, 'file');\n        global.set('ec_high_calib_value', calibrationValue, 'file');\n    }\n} \n\nif(isNaN(calibrationValue))\n{\n    payload_message = \"Deben cambiar el valor de Calibracion ec primero\";\n}\n\nreturn { payload: payload_message};",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 560,
+        "wires": [
+            [
+                "dc39b3926446ca9b",
+                "1ae819ece894f491",
+                "e5022564134f4001",
+                "9e1e925e4e53a1e8"
+            ]
+        ]
+    },
+    {
+        "id": "dc39b3926446ca9b",
+        "type": "ui_text",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "group": "6a341e6f89fb83ca",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Calibración confirmación ec",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1060,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "567eb3c4aff10817",
+        "type": "function",
+        "z": "7b79584f5ac858c5",
+        "g": "795911b7df02df87",
+        "name": "Calcular ec calibrado",
+        "func": "// Retrieve stored calibration points\nlet ec_high_value = global.get('ec_high_value', 'file');\nlet ec_low_value = global.get('ec_low_value', 'file');\n\nlet useCalibration_ec = global.get(\"useCalibrationEc\", 'file')\nif(msg.payload) msg.payload.calibrated_etc = {}\n//node.warn(useCalibration);\nif (ec_high_value !== undefined && ec_low_value !== undefined && useCalibration_ec ==\"start\") {\n    // Known pH levels for calibration\n    const x1 = 4, x2 = 7;\n    ec_high_value = 9, ec_low_value=5;\n    // Calculate slope (m) and intercept (b) for linear regression\n    let m = (ec_high_value - ec_low_value)/(x2 - x1)\n    let b = ec_low_value - m * x1\n    \n    // Apply linear regression to the current etc reading\n    const raw_ec = parseFloat(msg.payload);\n    let calibrated_ec = parseFloat(m) * raw_ec + parseFloat(b);\n    //node.warn(m + \" \" + b +\" raw=\"+raw_ec+ \" \" + calibrated_ec );\n    //node.warn(raw_etc + \" \" + calibrated_etc);\n    msg.payload = calibrated_ec.toFixed(2); // fix to 3 digit the value\n} else {\n    // Fallback: use the raw ec reading if calibration data is incomplete\n    msg.payload = parseFloat(msg.payload).toFixed(2);\n}\n//node.warn(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 940,
+        "wires": [
+            [
+                "e6fbe4dbda2eec28",
+                "d611f3f95f7de3aa"
+            ]
+        ]
+    },
+    {
+        "id": "da59df69df96dfc3",
+        "type": "ui_text",
+        "z": "7b79584f5ac858c5",
+        "g": "795911b7df02df87",
+        "group": "6f7bd30d11d84d05",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Indica etc Calibrado",
+        "label": "",
+        "format": "Valor calibrado ec: {{msg.payload}} µS/cm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 800,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "a51ebc7bc19a46db",
+        "type": "ui_switch",
+        "z": "7b79584f5ac858c5",
+        "g": "5feb43d39c874325",
+        "name": "Activar calibración ec",
+        "label": "Activar calibración ec",
+        "tooltip": "",
+        "group": "6f7bd30d11d84d05",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "useCalibration",
+        "topicType": "str",
+        "onvalue": "start",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "stop",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 960,
+        "y": 280,
+        "wires": [
+            [
+                "254c959d532619a8",
+                "d81823822b01054c"
+            ]
+        ]
+    },
+    {
+        "id": "254c959d532619a8",
+        "type": "change",
+        "z": "7b79584f5ac858c5",
+        "g": "5feb43d39c874325",
+        "name": "Set activar Calibración",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(file)::useCalibrationEc",
+                "pt": "global",
+                "to": "msg.payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "x": 1180,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "702191a03284b4f2",
+        "type": "ui_text",
+        "z": "7b79584f5ac858c5",
+        "g": "795911b7df02df87",
+        "group": "6a341e6f89fb83ca",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Valor actual conductividad:",
+        "format": "{{msg.payload}} µS/cm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "be1d7d55fabc18fb",
+        "type": "change",
+        "z": "7b79584f5ac858c5",
+        "g": "5feb43d39c874325",
+        "name": "deactivar calibracion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 280,
+        "wires": [
+            [
+                "a51ebc7bc19a46db"
+            ]
+        ]
+    },
+    {
+        "id": "ebaa4c894bb82c0a",
+        "type": "comment",
+        "z": "7b79584f5ac858c5",
+        "g": "5feb43d39c874325",
+        "name": "Desactiva calibracion set para hacer la calibración",
+        "info": "",
+        "x": 830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "117f2b0bb7e3b366",
+        "type": "ui_ui_control",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "Switch to Calibration Tab",
+        "x": 450,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d50cf00adf1d3c13",
+        "type": "ui_button",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "Volver inicio",
+        "group": "6a341e6f89fb83ca",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Volver",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Inicio\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "117f2b0bb7e3b366",
+                "b02870ff9828ae5e"
+            ]
+        ]
+    },
+    {
+        "id": "8829baf246311f1d",
+        "type": "change",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "erase value ec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "?",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 480,
+        "wires": [
+            [
+                "dc39b3926446ca9b",
+                "e87d62c233b1ff8c"
+            ]
+        ]
+    },
+    {
+        "id": "e46eb518ecc43084",
+        "type": "ui_text",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "group": "6a341e6f89fb83ca",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Indica ec Calibrado",
+        "label": "",
+        "format": "Valor set: {{msg.payload}} ",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1290,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "1ae819ece894f491",
+        "type": "function",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "name": "Valores ec calibrado",
+        "func": "// Retrieve stored calibration points\n\nlet ec_low_value = global.get('ec_low_value', 'file');\nlet ec_high_value = global.get('ec_high_value', 'file');\n\nlet ec_low_calibration_value = global.get('ec_low_calib_value', 'file');\nlet ec_high_calibration_value = global.get('ec_high_calib_value', 'file');\n\nif(msg.payload && msg.payload!= \"\")\n{\n    msg.payload.ec_low_value = {};\n    msg.payload.ec_high_value = {};\n\n    msg.payload.ec_low_value = ec_low_value;\n    msg.payload.ec_high_value = ec_high_value;\n\n    //node.warn(msg.payload);\n    let string_data = `${ec_low_calibration_value}: ${ec_low_value} µS/cm,\\n${ec_high_calibration_value}: ${ec_high_value}µS/cm `    \n\n    return { payload: string_data };\n}\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 640,
+        "wires": [
+            [
+                "e46eb518ecc43084"
+            ]
+        ]
+    },
+    {
+        "id": "c81ca43302d2f9ba",
+        "type": "link in",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "link in - raw etc",
+        "links": [
+            "6d9b0a528c14f1a7"
+        ],
+        "x": 145,
+        "y": 680,
+        "wires": [
+            [
+                "702191a03284b4f2",
+                "ba0432607e0feb08",
+                "567eb3c4aff10817"
+            ]
+        ]
+    },
+    {
+        "id": "43d40871fbed111f",
+        "type": "debug",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "name": "debug 22",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "4433b9aab3f79d92",
+        "type": "join",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "join the values",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "payload",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "1",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 470,
+        "y": 620,
+        "wires": [
+            [
+                "43d40871fbed111f",
+                "62bdec7eebc8b7f5"
+            ]
+        ],
+        "info": "Concatenate all the value into one"
+    },
+    {
+        "id": "ba0432607e0feb08",
+        "type": "csv",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "ec parser",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "ec",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 280,
+        "y": 680,
+        "wires": [
+            [
+                "4433b9aab3f79d92"
+            ]
+        ]
+    },
+    {
+        "id": "e87d62c233b1ff8c",
+        "type": "csv",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "join ec values",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "ec_type",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 360,
+        "y": 560,
+        "wires": [
+            [
+                "4433b9aab3f79d92"
+            ]
+        ]
+    },
+    {
+        "id": "e5022564134f4001",
+        "type": "function",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "name": "reset the value to avoid overflow",
+        "func": "let string = \"a button was press\" + msg.payload\nif(msg.payload)\n{\n    //node.warn(string);\n    msg.payload=\"?\"\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 480,
+        "wires": [
+            [
+                "302e2e7e8ed93f0a"
+            ]
+        ],
+        "info": "function to reset the value in order to not over flow"
+    },
+    {
+        "id": "302e2e7e8ed93f0a",
+        "type": "delay",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1360,
+        "y": 480,
+        "wires": [
+            [
+                "8829baf246311f1d"
+            ]
+        ]
+    },
+    {
+        "id": "ad81b7f80d903c23",
+        "type": "debug",
+        "z": "7b79584f5ac858c5",
+        "g": "795911b7df02df87",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d81823822b01054c",
+        "type": "function",
+        "z": "7b79584f5ac858c5",
+        "g": "5feb43d39c874325",
+        "name": "Save init status calibration ec",
+        "func": "",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "let data = global.get(\"useCalibrationEc\", 'file')\n\n//node.warn(\"on start value=\" + data)\nreturn data;",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 240,
+        "wires": [
+            [
+                "a51ebc7bc19a46db"
+            ]
+        ]
+    },
+    {
+        "id": "e6fbe4dbda2eec28",
+        "type": "function",
+        "z": "7b79584f5ac858c5",
+        "g": "795911b7df02df87",
+        "name": "add color activation calibration",
+        "func": "let useCalibration = global.get(\"useCalibrationEc\", 'file')\nif(useCalibration == \"start\")\n{\n    msg.payload += \"🔵 \"\n}\nelse\n{\n    msg.payload += \"⚫ \"\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 940,
+        "wires": [
+            [
+                "da59df69df96dfc3",
+                "ad81b7f80d903c23"
+            ]
+        ]
+    },
+    {
+        "id": "d611f3f95f7de3aa",
+        "type": "link out",
+        "z": "7b79584f5ac858c5",
+        "g": "795911b7df02df87",
+        "name": "link out etc calibrated - calibrated",
+        "mode": "link",
+        "links": [
+            "37cd30db300483ce"
+        ],
+        "x": 435,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "b02870ff9828ae5e",
+        "type": "change",
+        "z": "7b79584f5ac858c5",
+        "g": "5feb43d39c874325",
+        "name": "re-aactivar calibracion",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "start",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 320,
+        "wires": [
+            [
+                "a51ebc7bc19a46db"
+            ]
+        ]
+    },
+    {
+        "id": "a56c37faeb37553b",
+        "type": "comment",
+        "z": "7b79584f5ac858c5",
+        "g": "6c1a170030b6e3d8",
+        "name": "input from current value etc",
+        "info": "",
+        "x": 180,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "07d52ce5fb94f454",
+        "type": "ui_button",
+        "z": "7b79584f5ac858c5",
+        "g": "f71521d6c8334611",
+        "name": "Iniciar calibración",
+        "group": "6f7bd30d11d84d05",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": false,
+        "label": "Iniciar calibración",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"CalibracionMenu\"}",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "3cfa2f6fc9f615bb"
+            ]
+        ]
+    },
+    {
+        "id": "e65436e8202ad3a7",
+        "type": "ui_text_input",
+        "z": "7b79584f5ac858c5",
+        "g": "0d52326935b4712a",
+        "name": "valor calibracion ec",
+        "label": "valor calibracion ec",
+        "tooltip": "",
+        "group": "6a341e6f89fb83ca",
+        "order": 7,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "mode": "number",
+        "delay": "100",
+        "topic": "ec_value",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "4242f5acbd13769f"
+            ]
+        ]
+    },
+    {
+        "id": "c0bd9719364b1e8f",
+        "type": "csv",
+        "z": "7b79584f5ac858c5",
+        "g": "0d52326935b4712a",
+        "name": "ec parser",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "ec_value",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 700,
+        "y": 780,
+        "wires": [
+            [
+                "4433b9aab3f79d92",
+                "6582e99555c922cc"
+            ]
+        ]
+    },
+    {
+        "id": "6582e99555c922cc",
+        "type": "debug",
+        "z": "7b79584f5ac858c5",
+        "g": "0d52326935b4712a",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "4242f5acbd13769f",
+        "type": "function",
+        "z": "7b79584f5ac858c5",
+        "g": "0d52326935b4712a",
+        "name": "string and init",
+        "func": "global.set('useCalibrationValueEc', msg.payload, 'file');\nmsg.payload = \"\"+msg.payload;\n\n//node.warn(\"2 init string=\" + msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "let msg = {};\nmsg.payload = {};\nlet value = global.get(\"useCalibrationValueEc\", 'file')\nmsg.payload = \"\"+value\nnode.warn(\"init string=\" + value);\nreturn msg;",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 780,
+        "wires": [
+            [
+                "c0bd9719364b1e8f",
+                "e65436e8202ad3a7"
+            ]
+        ]
+    },
+    {
+        "id": "9e1e925e4e53a1e8",
+        "type": "debug",
+        "z": "7b79584f5ac858c5",
+        "g": "c314d5840c040dd0",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 580,
+        "wires": []
     }
 ]
