@@ -46,7 +46,7 @@ configuration_to_set = Configuration('400T22D')
 # To enable RSSI, you must also enable RSSI on receiver
 configuration_to_set.TRANSMISSION_MODE.enableRSSI = RssiEnableByte.RSSI_ENABLED
 code, confSetted = lora.set_configuration(configuration_to_set)
-log.info("Set configuration: {}"+str(ResponseStatusCode.get_description(code)))
+log.info("Set configuration: "+str(ResponseStatusCode.get_description(code)))
 
 def on_connect(client, userdata, flags, rc, properties):
   log.info("Connected with result code " + str(rc))
@@ -55,9 +55,9 @@ def on_connect(client, userdata, flags, rc, properties):
   
 def on_message(client, userdata, msg):
   log.info(msg.topic + " " + str(msg.payload))
-  log.info(len(msg.payload.decode('utf-8')))                                                              
+  log.debug(len(msg.payload.decode('utf-8')))                                                              
   code = lora.send_transparent_dict(msg.payload.decode('utf-8'))
-  log.info("Send message: {}"+ResponseStatusCode.get_description(code))
+  log.info("Send message: "+ResponseStatusCode.get_description(code))
 
 try:
     # connect client to MQTT
