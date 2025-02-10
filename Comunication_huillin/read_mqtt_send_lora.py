@@ -44,11 +44,11 @@ client_ID = "400T22D" #id of the mqtt
 
 # Set the configuration to default values and print the updated configuration to the console
 # Not needed if already configured
-configuration_to_set = Configuration('400T22D')
+#configuration_to_set = Configuration('400T22D')
 # To enable RSSI, you must also enable RSSI on receiver
-configuration_to_set.TRANSMISSION_MODE.enableRSSI = RssiEnableByte.RSSI_ENABLED
-code, confSetted = lora.set_configuration(configuration_to_set)
-log.info("Set configuration: {}"+str(ResponseStatusCode.get_description(code)))
+#configuration_to_set.TRANSMISSION_MODE.enableRSSI = RssiEnableByte.RSSI_ENABLED
+#code, confSetted = lora.set_configuration(configuration_to_set)
+#log.info("Set configuration: {}"+str(ResponseStatusCode.get_description(code)))
 
 def on_connect(client, userdata, flags, rc, properties):
   log.info("Connected with result code " + str(rc))
