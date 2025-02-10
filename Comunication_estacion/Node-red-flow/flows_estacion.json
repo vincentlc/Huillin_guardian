@@ -2,10 +2,201 @@
     {
         "id": "0eeeca0a5c630f84",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Main",
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "e98c0d2ff91a28f6",
+        "type": "group",
+        "z": "0eeeca0a5c630f84",
+        "name": "Show on map",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "41017bab64f5c3e4",
+            "db66b8a2cb5ff745",
+            "014c1793fc9b807a",
+            "fc881f83888ef135"
+        ],
+        "x": 574,
+        "y": 459,
+        "w": 532,
+        "h": 142
+    },
+    {
+        "id": "aa8d3a305a50a3a7",
+        "type": "group",
+        "z": "0eeeca0a5c630f84",
+        "name": "Dashboard data",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e7042c89548b47e8",
+            "9d38683b7ac39e54",
+            "3853779997743269",
+            "c9810f2c7ba2a6ac",
+            "545fe00be33c0b95",
+            "aba3635fca98296f",
+            "cd8360c087fe8c45",
+            "c397702234dc1b5b",
+            "a42235337e286814",
+            "86ed3088df08346b"
+        ],
+        "x": 734,
+        "y": 79,
+        "w": 532,
+        "h": 322
+    },
+    {
+        "id": "5342d5c595ba3da1",
+        "type": "group",
+        "z": "0eeeca0a5c630f84",
+        "name": "test mode",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2cc67417baf6a51c",
+            "88052a379498252f"
+        ],
+        "x": 14,
+        "y": 119,
+        "w": 392,
+        "h": 82,
+        "info": "To test connect the set message to convert the json"
+    },
+    {
+        "id": "f2ee7fce0d30329f",
+        "type": "group",
+        "z": "0eeeca0a5c630f84",
+        "name": "Display fecha",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9964e1e8c206484c",
+            "44e2cfa505161a6b",
+            "f501a47e126aecd4",
+            "6532fc9cb51c409a",
+            "a61c21b3c98d903a",
+            "0e53d428cec0b9e5",
+            "f581a12dd87a3462",
+            "8d94d8f4af73fd88"
+        ],
+        "x": 554,
+        "y": 619,
+        "w": 712,
+        "h": 202
+    },
+    {
+        "id": "c2928f7d830a0dde",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ecc76c187a6349f6",
+        "type": "ui_tab",
+        "name": "Inicio",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "9ba0b072e7bc2c1e",
@@ -39,6 +230,17 @@
         "sessionExpiry": ""
     },
     {
+        "id": "fcac813da4fbe640",
+        "type": "ui_group",
+        "name": "parametro huillin",
+        "tab": "ecc76c187a6349f6",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "9ba3a1d7392627c0",
         "type": "mqtt in",
         "z": "0eeeca0a5c630f84",
@@ -51,10 +253,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 180,
-        "y": 140,
+        "x": 240,
+        "y": 360,
         "wires": [
             [
+                "d59b281db4dbd601",
                 "74a19249120e3a22"
             ]
         ]
@@ -63,7 +266,685 @@
         "id": "064248023e1cbe94",
         "type": "debug",
         "z": "0eeeca0a5c630f84",
-        "name": "debug 1",
+        "name": "debug_show_json",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "74a19249120e3a22",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "name": "Convert to json",
+        "func": "var data_extend ={ \n//use order the data and make the key as short as possible to maximised transmition of data\n\ttimestamp : msg.payload.ts, \n    lat : msg.payload.la,\n    lon : msg.payload.lo,\n    ph_calibrated : msg.payload.ph,\n    ec_calibrated : msg.payload.ec,\n    OD : msg.payload.od,\n    SAT : msg.payload.sa,\n    temp : msg.payload.tp,\n    speed : msg.payload.sp,\n    TempO : msg.payload.tO,\n\tec_high_calib_value: msg.payload.e1,\n\tec_high_value: msg.payload.e2,\n\tec_low_calib_value: msg.payload.e3,\n\tec_low_value: msg.payload.e4,\n\tuseCalibrationValueEc: msg.payload.ue,\n\tuseCalibrationPh: msg.payload.up,\n\tph4_value: msg.payload.p4,\n\tph7_value: msg.payload.p7\n}\nmsg.payload = data_extend;\nreturn msg\n       ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "064248023e1cbe94",
+                "41017bab64f5c3e4",
+                "9d38683b7ac39e54",
+                "3853779997743269",
+                "545fe00be33c0b95",
+                "c397702234dc1b5b",
+                "a42235337e286814",
+                "44e2cfa505161a6b"
+            ]
+        ]
+    },
+    {
+        "id": "d59b281db4dbd601",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "name": "debug input data",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "db66b8a2cb5ff745",
+        "type": "worldmap-tracks",
+        "z": "0eeeca0a5c630f84",
+        "g": "e98c0d2ff91a28f6",
+        "name": "",
+        "depth": 20,
+        "layer": "combined",
+        "smooth": false,
+        "x": 870,
+        "y": 500,
+        "wires": [
+            [
+                "014c1793fc9b807a"
+            ]
+        ]
+    },
+    {
+        "id": "88052a379498252f",
+        "type": "inject",
+        "z": "0eeeca0a5c630f84",
+        "g": "5342d5c595ba3da1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "object",
+        "payloadType": "date",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "2cc67417baf6a51c"
+            ]
+        ]
+    },
+    {
+        "id": "fc881f83888ef135",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "e98c0d2ff91a28f6",
+        "name": "debug map",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "014c1793fc9b807a",
+        "type": "worldmap",
+        "z": "0eeeca0a5c630f84",
+        "g": "e98c0d2ff91a28f6",
+        "name": "",
+        "lat": "-41.276730980109335",
+        "lon": "-72.93218690030963",
+        "zoom": "10",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1020,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "41017bab64f5c3e4",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "e98c0d2ff91a28f6",
+        "name": "pars to world map",
+        "func": "function getRandomInRange(from, to, fixed) {\n    return (Math.random() * (to - from) + from).toFixed(fixed) * 1;\n    // .toFixed() returns string, so ' * 1' is a trick to convert to number\n}\nvar rango=0.01\nvar random_lat = getRandomInRange(rango,-rango,5)\nvar random_lon = getRandomInRange(rango, -rango, 5)\nvar random=true\n\nif(random)\n{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat + random_lat, lon: msg.payload.lon + random_lon } \n\n}else{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat, lon: msg.payload.lon } \n\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 500,
+        "wires": [
+            [
+                "db66b8a2cb5ff745",
+                "fc881f83888ef135"
+            ]
+        ]
+    },
+    {
+        "id": "e7042c89548b47e8",
+        "type": "ui_gauge",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "",
+        "group": "fcac813da4fbe640",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "PH",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9d38683b7ac39e54",
+        "type": "change",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "ph",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.ph_calibrated",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 120,
+        "wires": [
+            [
+                "e7042c89548b47e8"
+            ]
+        ]
+    },
+    {
+        "id": "3853779997743269",
+        "type": "change",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "ec",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.ec_calibrated",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 180,
+        "wires": [
+            [
+                "c9810f2c7ba2a6ac"
+            ]
+        ]
+    },
+    {
+        "id": "c9810f2c7ba2a6ac",
+        "type": "ui_gauge",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "",
+        "group": "fcac813da4fbe640",
+        "order": 3,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Conductividad",
+        "label": "µS/cm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 980,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "545fe00be33c0b95",
+        "type": "change",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 240,
+        "wires": [
+            [
+                "aba3635fca98296f"
+            ]
+        ]
+    },
+    {
+        "id": "aba3635fca98296f",
+        "type": "ui_gauge",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "",
+        "group": "fcac813da4fbe640",
+        "order": 4,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "ºC",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 990,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cd8360c087fe8c45",
+        "type": "ui_gauge",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "",
+        "group": "fcac813da4fbe640",
+        "order": 5,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Oxígeno Disuelto",
+        "label": "mg/L",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c397702234dc1b5b",
+        "type": "change",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "Oxigeno Disuelto",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.OD",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 300,
+        "wires": [
+            [
+                "cd8360c087fe8c45"
+            ]
+        ]
+    },
+    {
+        "id": "86ed3088df08346b",
+        "type": "ui_gauge",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "",
+        "group": "fcac813da4fbe640",
+        "order": 6,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Saturacion",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "140",
+        "colors": [
+            "#b50000",
+            "#e6e600",
+            "#18d9e9"
+        ],
+        "seg1": "95, 102",
+        "seg2": "105",
+        "diff": false,
+        "className": "gaugeCanvas",
+        "x": 1170,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a42235337e286814",
+        "type": "change",
+        "z": "0eeeca0a5c630f84",
+        "g": "aa8d3a305a50a3a7",
+        "name": "Saturacion (Concentracion de Oxigeno)",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.SAT",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 360,
+        "wires": [
+            [
+                "86ed3088df08346b"
+            ]
+        ]
+    },
+    {
+        "id": "2cc67417baf6a51c",
+        "type": "change",
+        "z": "0eeeca0a5c630f84",
+        "g": "5342d5c595ba3da1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"ts\":1739221411000,\"la\":-41.32713717,\"lo\":-72.96855617,\"ph\":4.36,\"ec\":0,\"od\":7.56,\"sa\":87.77,\"tp\":\"24.38\",\"sp\":0.192,\"e1\":13000,\"e2\":0,\"e3\":146,\"e4\":0,\"ue\":12300,\"up\":\"stop\",\"p4\":4.4,\"p7\":4.34}",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9964e1e8c206484c",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "pars date and time",
+        "func": "// Create a new JavaScript Date object based on the timestamp\n// multiplied by 1000 so that the argument is in milliseconds, not seconds\nvar date = new Date(msg.payload );\nglobal.set('last_time_read', msg.payload, 'file');\n\nmsg.payload = date.toLocaleString(\"es-CL\", {timeZone: \"America/Santiago\"});\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar init_value = Date.parse(Date())\nglobal.set('last_time_read', init_value, 'file');",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 700,
+        "wires": [
+            [
+                "f501a47e126aecd4",
+                "6532fc9cb51c409a"
+            ]
+        ]
+    },
+    {
+        "id": "44e2cfa505161a6b",
+        "type": "change",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "Date",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.timestamp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 700,
+        "wires": [
+            [
+                "9964e1e8c206484c"
+            ]
+        ]
+    },
+    {
+        "id": "f501a47e126aecd4",
+        "type": "ui_text",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "group": "fcac813da4fbe640",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hora: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "6532fc9cb51c409a",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "debug fecha",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "18da5139ebad4c28",
+        "type": "ui_template",
+        "z": "0eeeca0a5c630f84",
+        "group": "fcac813da4fbe640",
+        "name": "",
+        "order": 6,
+        "width": "3",
+        "height": "1",
+        "format": "<div>\n    <a href=\"../worldmap/\">Ir al mapa</a>\n    <a href=\"../worldmap/\">Descargar log</a>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 840,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a61c21b3c98d903a",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "time difference",
+        "func": "// Create a new JavaScript Date object based on the timestamp\n// multiplied by 1000 so that the argument is in milliseconds, not seconds\nvar ts_read = global.get('last_time_read', 'file') ; \nvar date_read = new Date(ts_read);\nvar currentTime = new Date();\n\nvar difference = currentTime.getTime()-date_read.getTime(); \nvar secondsDifference = Math.floor(difference/1000);\n\nmsg.payload = secondsDifference;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "1",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 740,
+        "wires": [
+            [
+                "0e53d428cec0b9e5",
+                "8d94d8f4af73fd88"
+            ]
+        ]
+    },
+    {
+        "id": "0e53d428cec0b9e5",
+        "type": "ui_text",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "group": "fcac813da4fbe640",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Tiempo desde ultimo mensaje: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1110,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "f581a12dd87a3462",
+        "type": "inject",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "object",
+        "payloadType": "date",
+        "x": 670,
+        "y": 740,
+        "wires": [
+            [
+                "a61c21b3c98d903a"
+            ]
+        ]
+    },
+    {
+        "id": "8d94d8f4af73fd88",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "debug fecha",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -72,28 +953,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 140,
+        "x": 1050,
+        "y": 780,
         "wires": []
-    },
-    {
-        "id": "74a19249120e3a22",
-        "type": "function",
-        "z": "0eeeca0a5c630f84",
-        "name": "Convert to json",
-        "func": "let value = msg.payload.replace(/'/g, '\"')\nmsg.payload = JSON.parse(value);\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 140,
-        "wires": [
-            [
-                "064248023e1cbe94"
-            ]
-        ]
     }
 ]

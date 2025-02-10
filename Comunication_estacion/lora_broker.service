@@ -4,9 +4,9 @@
 [Service]
 ExecStartPost=/bin/sleep 30
 Type=idle
-ExecStart="/home/huillin/lora_project/start_lora_broker.sh"
+ExecStart="/home/estacion/lora_project/start_lora_broker.sh"
 Restart=always
-User=huillin
+User=estacion
 StartLimitIntervalSec=45
 
 [Install]
