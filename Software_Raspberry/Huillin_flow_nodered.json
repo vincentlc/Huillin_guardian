@@ -38,7 +38,7 @@
         ],
         "x": 74,
         "y": 39,
-        "w": 502,
+        "w": 492,
         "h": 122
     },
     {
@@ -193,9 +193,9 @@
             "254c959d532619a8",
             "b02870ff9828ae5e"
         ],
-        "x": 584,
+        "x": 594,
         "y": 179,
-        "w": 782,
+        "w": 762,
         "h": 182
     },
     {
@@ -234,9 +234,9 @@
             "6582e99555c922cc",
             "4242f5acbd13769f"
         ],
-        "x": 204,
+        "x": 214,
         "y": 739,
-        "w": 792,
+        "w": 772,
         "h": 82
     },
     {
@@ -257,9 +257,9 @@
             "302e2e7e8ed93f0a",
             "43d40871fbed111f"
         ],
-        "x": 604,
+        "x": 614,
         "y": 379,
-        "w": 862,
+        "w": 852,
         "h": 302
     },
     {
@@ -334,9 +334,9 @@
             "c81ca43302d2f9ba",
             "8bdb59bfd62a44ee"
         ],
-        "x": 4,
+        "x": 14,
         "y": 279,
-        "w": 592,
+        "w": 572,
         "h": 442
     },
     {
@@ -390,15 +390,16 @@
             "label": true
         },
         "nodes": [
-            "511d9e4d93520b60",
-            "c08c0658928e9c59",
             "a2483bfaaf1dd8c4",
-            "caab3ae747990a8e"
+            "caab3ae747990a8e",
+            "685226ac8d02260d",
+            "ef4105f3a839bb96",
+            "d78b80378399c560"
         ],
-        "x": 888,
+        "x": 868,
         "y": 253,
-        "w": 918,
-        "h": 148
+        "w": 1178,
+        "h": 188
     },
     {
         "id": "044ad35b83e4af54",
@@ -456,11 +457,12 @@
         },
         "nodes": [
             "18e393bfda96bfe2",
-            "f31c74bf8fd8f9b1"
+            "f31c74bf8fd8f9b1",
+            "c08c0658928e9c59"
         ],
-        "x": 914,
+        "x": 894,
         "y": 279,
-        "w": 412,
+        "w": 532,
         "h": 82,
         "info": "If you want to test, you can connect the random data to huillin data \r\nexposition service"
     },
@@ -988,11 +990,12 @@
         "z": "b28149ca8a6be0f6",
         "g": "044ad35b83e4af54",
         "name": "debug 6",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
@@ -1169,7 +1172,8 @@
                 "b795d192560b64e4",
                 "aed6f0b62b185919",
                 "4280c63eb0afae04",
-                "efec498fe2f1de75"
+                "efec498fe2f1de75",
+                "ef4105f3a839bb96"
             ]
         ]
     },
@@ -1179,7 +1183,7 @@
         "z": "b28149ca8a6be0f6",
         "g": "17976ea43efcf369",
         "name": "function 2",
-        "func": "\nvar salida ={\n    ts : msg.payload.timestamp,\n    fecha : msg.payload.dateTime,\n    speed : msg.payload.speedKnots,\n    lat : msg.payload.lat,\n    lon : msg.payload.lon\n}\n\nmsg.payload = salida \n\nreturn msg;",
+        "func": "var timestamp_total = Date.parse(msg.payload.dateTime);\n\nvar salida ={\n    ts_temp : msg.payload.timestamp, //old time measure\n    ts : timestamp_total,\n    fecha : msg.payload.dateTime,\n    speed : msg.payload.speedKnots,\n    lat : msg.payload.lat,\n    lon : msg.payload.lon\n}\n\nmsg.payload = salida \n//node.warn(timestamp_total);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1223,7 +1227,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 600,
@@ -1364,8 +1369,7 @@
         "wires": [
             [
                 "29463a50c4ed1ac3",
-                "9b46dd59f5a35610",
-                "511d9e4d93520b60"
+                "9b46dd59f5a35610"
             ]
         ]
     },
@@ -1381,46 +1385,19 @@
         "wires": []
     },
     {
-        "id": "511d9e4d93520b60",
-        "type": "delay",
-        "z": "b28149ca8a6be0f6",
-        "g": "6d2adcfab212ecb9",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1420,
-        "y": 320,
-        "wires": [
-            [
-                "c08c0658928e9c59",
-                "a2483bfaaf1dd8c4"
-            ]
-        ]
-    },
-    {
         "id": "c08c0658928e9c59",
         "type": "debug",
         "z": "b28149ca8a6be0f6",
-        "g": "6d2adcfab212ecb9",
+        "g": "caab3ae747990a8e",
         "name": "debug 12",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1600,
+        "x": 1320,
         "y": 320,
         "wires": []
     },
@@ -2314,8 +2291,8 @@
         "correl": "",
         "expiry": "",
         "broker": "5dfc4e76f0b244cd",
-        "x": 1660,
-        "y": 360,
+        "x": 1900,
+        "y": 320,
         "wires": []
     },
     {
@@ -2333,14 +2310,14 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1",
+        "repeat": "5",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "\"semd\"",
         "payloadType": "msg",
-        "x": 1010,
+        "x": 990,
         "y": 320,
         "wires": [
             [
@@ -2361,10 +2338,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1210,
+        "x": 1150,
         "y": 320,
         "wires": [
-            []
+            [
+                "c08c0658928e9c59"
+            ]
         ]
     },
     {
@@ -2399,6 +2378,72 @@
         "y": 220,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ef4105f3a839bb96",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1320,
+        "y": 400,
+        "wires": [
+            [
+                "685226ac8d02260d"
+            ]
+        ]
+    },
+    {
+        "id": "d78b80378399c560",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "debug 29",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1840,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "685226ac8d02260d",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "6d2adcfab212ecb9",
+        "name": "Order and shorter the data to send",
+        "func": "var data_concatenate ={ //use order the data and make the key as short as possible to maximised transmition of data\n    ts : msg.payload.ts, \n    la : msg.payload.lat,\n    lo : msg.payload.lon,\n    ph : msg.payload.ph_calibrated,\n    ec : msg.payload.ec_calibrated,\n    od : msg.payload.OD,\n    sa : msg.payload.SAT,\n    tp : msg.payload.tmp,\n    sp : msg.payload.speed,\n    tO : msg.payload.TempO,\n    e1 : global.get('ec_high_calib_value', 'file'),\n    e2 : global.get('ec_high_value', 'file'),\n    e3 : global.get('ec_low_calib_value', 'file'),\n    e4 : global.get('ec_low_value', 'file'),\n    ue : global.get('useCalibrationValueEc', 'file'),\n    up : global.get('useCalibrationPh', 'file'),\n    p4 : global.get('ph4_value', 'file'),\n    p7 : global.get('ph7_value', 'file')\n}\n/* only two value are not send for size matter: \npn : msg.payload.ph, //valor sin calibracion\n    en : msg.payload.ec, //valor sin calibracion\n*/\n\nmsg.payload = data_concatenate;\nreturn msg\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 400,
+        "wires": [
+            [
+                "a2483bfaaf1dd8c4",
+                "d78b80378399c560"
+            ]
         ]
     },
     {
