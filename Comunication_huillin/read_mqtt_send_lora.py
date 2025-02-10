@@ -18,7 +18,9 @@ from lora_e22_operation_constant import ResponseStatusCode
 import paho.mqtt.client as mqtt
 import logging
 import RPi.GPIO as GPIO
+import random
 
+TEST_MODE = False
 file="huillin_read_mqtt_send_lora"
 #innit logger
 log = logging.getLogger(file)
@@ -46,7 +48,7 @@ configuration_to_set = Configuration('400T22D')
 # To enable RSSI, you must also enable RSSI on receiver
 configuration_to_set.TRANSMISSION_MODE.enableRSSI = RssiEnableByte.RSSI_ENABLED
 code, confSetted = lora.set_configuration(configuration_to_set)
-log.info("Set configuration: "+str(ResponseStatusCode.get_description(code)))
+log.info("Set configuration: {}"+str(ResponseStatusCode.get_description(code)))
 
 def on_connect(client, userdata, flags, rc, properties):
   log.info("Connected with result code " + str(rc))
@@ -54,9 +56,15 @@ def on_connect(client, userdata, flags, rc, properties):
     client.subscribe("huillin/data")
   
 def on_message(client, userdata, msg):
-  log.info(msg.topic + " " + str(msg.payload))
-  log.debug(len(msg.payload.decode('utf-8')))                                                              
-  code = lora.send_transparent_dict(msg.payload.decode('utf-8'))
+  if(TEST_MODE):
+    msg_decode="test "+ str(random.randrange(5000, 50000*50000,2)) # "0 8.1 90.16 20.69 4.35 0.00 21.77 4.35 0 4.4 4.34 13000 0 146 0 12300 stop"
+    code = lora.send_transparent_message(msg_decode)
+#  code = lora.send_transparent_message(msg.payload.decode('utf-8'))
+  else:
+    msg_decode=msg.payload.decode('utf-8')
+    code = lora.send_transparent_dict(msg_decode) 
+  log.info(msg.topic + ",len="+str(len(msg_decode))+  " " + str(msg.payload)) 
+     
   log.info("Send message: "+ResponseStatusCode.get_description(code))
 
 try:
