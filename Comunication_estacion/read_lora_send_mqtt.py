@@ -44,16 +44,16 @@ log.info("Initialization:"+ ResponseStatusCode.get_description(code))
 
 # Set the configuration to default values and print the updated configuration to the console
 # Not needed if already configured
-configuration_to_set = Configuration('400T22D')
+#configuration_to_set = Configuration('400T22D')
 # To enable RSSI, you must also enable RSSI on sender
-configuration_to_set.TRANSMISSION_MODE.enableRSSI = RssiEnableByte.RSSI_ENABLED
+#configuration_to_set.TRANSMISSION_MODE.enableRSSI = RssiEnableByte.RSSI_ENABLED
 
-code, confSetted = lora.set_configuration(configuration_to_set)
-log.info("Set configuration: "+ ResponseStatusCode.get_description(code))
+#code, confSetted = lora.set_configuration(configuration_to_set)
+#log.info("Set configuration: "+ ResponseStatusCode.get_description(code))
 
 # Callback para conexión exitosa al broker MQTT
 def on_connect(client, userdata, flags, rc):
-    log.info("Conectado al broker MQTT con resultado: " + mqtt.connack_string(rc))
+    log.info("Conectado al broker MQTT con resultado: " + str(mqtt.connack_string(rc)))
 
 try:
     # Crear instancia del cliente MQTT
@@ -73,12 +73,12 @@ try:
             try:
                 code, value, rssi = lora.receive_dict(rssi=True)
                 
-                log.info('RSSI: '+ rssi)
+                log.debug('RSSI: '+ str(rssi))
 
-                log.info(ResponseStatusCode.get_description(code))
+                log.debug(str(ResponseStatusCode.get_description(code)))
 
                 client.publish(MQTT_TOPIC, str(value))
-                log.info(value)
+                log.debug(value)
                 time.sleep(2)
             except UnicodeDecodeError as e:
                 log.error("UnicodeDecodeError "+str(e))
