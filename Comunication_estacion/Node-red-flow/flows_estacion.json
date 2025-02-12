@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "9ba8f9380bd39449",
+        "type": "tab",
+        "label": "Download and button",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "e98c0d2ff91a28f6",
         "type": "group",
         "z": "0eeeca0a5c630f84",
@@ -21,7 +29,7 @@
             "014c1793fc9b807a",
             "fc881f83888ef135"
         ],
-        "x": 574,
+        "x": 14,
         "y": 459,
         "w": 532,
         "h": 142
@@ -85,12 +93,131 @@
             "a61c21b3c98d903a",
             "0e53d428cec0b9e5",
             "f581a12dd87a3462",
-            "8d94d8f4af73fd88"
+            "8d94d8f4af73fd88",
+            "d1448831cf435c89"
         ],
         "x": 554,
-        "y": 619,
+        "y": 439,
         "w": 712,
-        "h": 202
+        "h": 222
+    },
+    {
+        "id": "e8a996fe3726f842",
+        "type": "group",
+        "z": "0eeeca0a5c630f84",
+        "name": "Archivos locales",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ee571483c78b3832",
+            "afa528f364d674eb",
+            "5c482b3e66a6aa36",
+            "5d3d5e31547bfac3",
+            "cad8125c63bcefe3",
+            "5c65dc421c8f54f9",
+            "bf4d13c0f70345cf"
+        ],
+        "x": 554,
+        "y": 699,
+        "w": 572,
+        "h": 242
+    },
+    {
+        "id": "1cfcf5314fd22ded",
+        "type": "group",
+        "z": "9ba8f9380bd39449",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "1d7126a647aad528",
+            "e0c05291daad188d",
+            "05a993075446e210",
+            "18da5139ebad4c28"
+        ],
+        "x": 274,
+        "y": 99,
+        "w": 572,
+        "h": 182
+    },
+    {
+        "id": "9cedbfa163340f89",
+        "type": "group",
+        "z": "9ba8f9380bd39449",
+        "name": "Descarga archivo log",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9e949ad16d21649b",
+            "68f50dba58495760",
+            "f62a6fc5710eb1f5",
+            "d03102d5151edb51",
+            "92eebff17e19eac1",
+            "00a54f52d1bbc55f",
+            "504388d20fb6f1ee",
+            "c4c4fe8a1bf0e0ab",
+            "4a23600b3669ba1a"
+        ],
+        "x": 114,
+        "y": 439,
+        "w": 812,
+        "h": 242
+    },
+    {
+        "id": "b2d44ab075bd6ddd",
+        "type": "group",
+        "z": "9ba8f9380bd39449",
+        "name": "Descarga datos",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "15b40974a3089a3d",
+            "5888cf104239d5d4",
+            "9200237d4991413c",
+            "a2edced5f243146a",
+            "d6ec2752e8f4c4a6",
+            "c909ec07a44466ab",
+            "b4ad19c045dd7f39",
+            "f8e084904615bef4",
+            "7dc5d183480a913e",
+            "61e66f78fd516e7d"
+        ],
+        "x": 1014,
+        "y": 79,
+        "w": 832,
+        "h": 302
+    },
+    {
+        "id": "adb25b8ed6a91cb3",
+        "type": "group",
+        "z": "9ba8f9380bd39449",
+        "name": "Descarga archivo data",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b08edc978fd8c73b",
+            "9a76f7918f3a9f56",
+            "ec7b672f2c47ab62",
+            "d5a0e17147750afd",
+            "9eee2ca1129e3bc2",
+            "17b487f428bc1b2d",
+            "0e95de59ad04b8fb",
+            "ce19b058444096da"
+        ],
+        "x": 1014,
+        "y": 439,
+        "w": 872,
+        "h": 262
     },
     {
         "id": "c2928f7d830a0dde",
@@ -199,6 +326,15 @@
         "hidden": false
     },
     {
+        "id": "564af49dfd6ff2c9",
+        "type": "ui_tab",
+        "name": "DownloadFile",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "9ba0b072e7bc2c1e",
         "type": "mqtt-broker",
         "name": "",
@@ -234,6 +370,17 @@
         "type": "ui_group",
         "name": "parametro huillin",
         "tab": "ecc76c187a6349f6",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4fd5d48023f84ec9",
+        "type": "ui_group",
+        "name": "Descargar archivos",
+        "tab": "564af49dfd6ff2c9",
         "order": 1,
         "disp": true,
         "width": 6,
@@ -302,7 +449,9 @@
                 "545fe00be33c0b95",
                 "c397702234dc1b5b",
                 "a42235337e286814",
-                "44e2cfa505161a6b"
+                "44e2cfa505161a6b",
+                "5c482b3e66a6aa36",
+                "bf4d13c0f70345cf"
             ]
         ]
     },
@@ -332,7 +481,7 @@
         "depth": 20,
         "layer": "combined",
         "smooth": false,
-        "x": 870,
+        "x": 310,
         "y": 500,
         "wires": [
             [
@@ -384,7 +533,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 890,
+        "x": 330,
         "y": 560,
         "wires": []
     },
@@ -417,7 +566,7 @@
         "mapurl": "",
         "mapopt": "",
         "mapwms": false,
-        "x": 1020,
+        "x": 460,
         "y": 500,
         "wires": []
     },
@@ -427,14 +576,14 @@
         "z": "0eeeca0a5c630f84",
         "g": "e98c0d2ff91a28f6",
         "name": "pars to world map",
-        "func": "function getRandomInRange(from, to, fixed) {\n    return (Math.random() * (to - from) + from).toFixed(fixed) * 1;\n    // .toFixed() returns string, so ' * 1' is a trick to convert to number\n}\nvar rango=0.01\nvar random_lat = getRandomInRange(rango,-rango,5)\nvar random_lon = getRandomInRange(rango, -rango, 5)\nvar random=true\n\nif(random)\n{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat + random_lat, lon: msg.payload.lon + random_lon } \n\n}else{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat, lon: msg.payload.lon } \n\n}\n\nreturn msg;",
+        "func": "function getRandomInRange(from, to, fixed) {\n    return (Math.random() * (to - from) + from).toFixed(fixed) * 1;\n    // .toFixed() returns string, so ' * 1' is a trick to convert to number\n}\nvar rango=0.01\nvar random_lat = getRandomInRange(rango,-rango,5)\nvar random_lon = getRandomInRange(rango, -rango, 5)\nvar random=true\n\nif(msg.payload.lat==0 && msg.payload.lon==0)\n{\n    //exit if the lat and lon are 0\n    return;\n}\n\nif(random)\n{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat + random_lat, lon: msg.payload.lon + random_lon } \n\n}else{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat, lon: msg.payload.lon } \n\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 130,
         "y": 500,
         "wires": [
             [
@@ -450,7 +599,7 @@
         "g": "aa8d3a305a50a3a7",
         "name": "",
         "group": "fcac813da4fbe640",
-        "order": 2,
+        "order": 3,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -535,7 +684,7 @@
         "g": "aa8d3a305a50a3a7",
         "name": "",
         "group": "fcac813da4fbe640",
-        "order": 3,
+        "order": 4,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -592,7 +741,7 @@
         "g": "aa8d3a305a50a3a7",
         "name": "",
         "group": "fcac813da4fbe640",
-        "order": 4,
+        "order": 5,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -621,7 +770,7 @@
         "g": "aa8d3a305a50a3a7",
         "name": "",
         "group": "fcac813da4fbe640",
-        "order": 5,
+        "order": 6,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -678,7 +827,7 @@
         "g": "aa8d3a305a50a3a7",
         "name": "",
         "group": "fcac813da4fbe640",
-        "order": 6,
+        "order": 7,
         "width": "3",
         "height": "3",
         "gtype": "gage",
@@ -760,7 +909,7 @@
         "z": "0eeeca0a5c630f84",
         "g": "f2ee7fce0d30329f",
         "name": "pars date and time",
-        "func": "// Create a new JavaScript Date object based on the timestamp\n// multiplied by 1000 so that the argument is in milliseconds, not seconds\nvar date = new Date(msg.payload );\nglobal.set('last_time_read', msg.payload, 'file');\n\nmsg.payload = date.toLocaleString(\"es-CL\", {timeZone: \"America/Santiago\"});\n\nreturn msg;",
+        "func": "// Create a new JavaScript Date object based on the timestamp\n// multiplied by 1000 so that the argument is in milliseconds, not seconds\nvar date = new Date(msg.payload);\nglobal.set('last_time_read', msg.payload, 'file');\n\nconst date2025 = new Date(\"2025-01-01\"); // 2025\n\nif(date>date2025)\n{\n    msg.payload = date.toLocaleString(\"es-CL\", {timeZone: \"America/Santiago\"});\n\n    if(msg.payload == \"Invalid Date\")\n    {\n        node.warn(\"invalid\")\n    }\n}\nelse\n{\n    msg.payload = \"GPS no connectado\"\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -768,7 +917,7 @@
         "finalize": "",
         "libs": [],
         "x": 850,
-        "y": 700,
+        "y": 540,
         "wires": [
             [
                 "f501a47e126aecd4",
@@ -797,10 +946,11 @@
         "to": "",
         "reg": false,
         "x": 650,
-        "y": 700,
+        "y": 540,
         "wires": [
             [
-                "9964e1e8c206484c"
+                "9964e1e8c206484c",
+                "d1448831cf435c89"
             ]
         ]
     },
@@ -823,7 +973,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1030,
-        "y": 700,
+        "y": 540,
         "wires": []
     },
     {
@@ -841,29 +991,8 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1050,
-        "y": 660,
+        "y": 500,
         "wires": []
-    },
-    {
-        "id": "18da5139ebad4c28",
-        "type": "ui_template",
-        "z": "0eeeca0a5c630f84",
-        "group": "fcac813da4fbe640",
-        "name": "",
-        "order": 6,
-        "width": "3",
-        "height": "1",
-        "format": "<div>\n    <a href=\"../worldmap/\">Ir al mapa</a>\n    <a href=\"../worldmap/\">Descargar log</a>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 840,
-        "y": 840,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "a61c21b3c98d903a",
@@ -879,7 +1008,7 @@
         "finalize": "",
         "libs": [],
         "x": 840,
-        "y": 740,
+        "y": 580,
         "wires": [
             [
                 "0e53d428cec0b9e5",
@@ -893,7 +1022,7 @@
         "z": "0eeeca0a5c630f84",
         "g": "f2ee7fce0d30329f",
         "group": "fcac813da4fbe640",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
@@ -906,7 +1035,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 1110,
-        "y": 740,
+        "y": 580,
         "wires": []
     },
     {
@@ -932,7 +1061,7 @@
         "payload": "object",
         "payloadType": "date",
         "x": 670,
-        "y": 740,
+        "y": 580,
         "wires": [
             [
                 "a61c21b3c98d903a"
@@ -944,7 +1073,95 @@
         "type": "debug",
         "z": "0eeeca0a5c630f84",
         "g": "f2ee7fce0d30329f",
-        "name": "debug fecha",
+        "name": "debug time diff",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "d1448831cf435c89",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "debug fecha in",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ee571483c78b3832",
+        "type": "comment",
+        "z": "0eeeca0a5c630f84",
+        "g": "e8a996fe3726f842",
+        "name": "Generacion archivo local data",
+        "info": "",
+        "x": 700,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "afa528f364d674eb",
+        "type": "file",
+        "z": "0eeeca0a5c630f84",
+        "g": "e8a996fe3726f842",
+        "name": "Escribir en archivo",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 970,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c482b3e66a6aa36",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "e8a996fe3726f842",
+        "name": "Escribir en el archivo local",
+        "func": "let ph = msg.payload.ph_calibrated;\nlet ec = msg.payload.ec_calibrated;\nlet temp = msg.payload.temp;\nlet sat = msg.payload.SAT;\nlet od = msg.payload.OD;\nlet timestamp = msg.payload.timestamp;\nlet speed = msg.payload.speed;\nlet lat = msg.payload.lat;\nlet lon = msg.payload.lon;\n\nlet ec_high_calib_value = msg.payload.ec_high_calib_value;\nlet ec_high_value = msg.payload.ec_high_value;\nlet ec_low_calib_value = msg.payload.ec_low_calib_value;\nlet ec_low_value = msg.payload.ec_low_value;\nlet useCalibrationValueEc = msg.payload.useCalibrationValueEc;\nlet useCalibrationPh = msg.payload.useCalibrationPh;\nlet ph4_value = msg.payload.ph4_value;\nlet ph7_value = msg.payload.ph7_value;\n\n\n\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = new Date(timestamp);\n\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\nlet day = dosDigitos(fecha.getDate())\nlet month = dosDigitos(fecha.getMonth() + 1) // Los meses en JavaScript comienzan desde 0\nlet year =  fecha.getFullYear() \n\nif(isNaN(day) || isNaN(month) || isNaN(year) )\n{\n    return; // exit if \n}\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = day + '/'\n                       + month + '/' \n                       + year + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n\nvar linea = [\n            fechaFormateada,\n            lat,\n            lon,\n            speed,\n            od,\n            sat,\n            ph,\n            ec,\n            temp,\n            ph4_value,\n            ph7_value,\n            ec_high_calib_value,\n            ec_high_value,\n            ec_low_calib_value,\n            ec_low_value,\n            useCalibrationValueEc,\n            useCalibrationPh\n        ];\n\nlet folder = \"/home/estacion/local_data/huillin_data/\"\nlet file = [\"data_huillin\", year, month, day].join(\"_\");\nlet first_line_file = global.get('first_line_file', 'file');\n\n\nif (first_line_file)\n{\n    let first_line = \"fechaFormateada,lat,lon,speed,od,sat,ph,ec,temp,ph4_value,ph7_value,ec_high_calib_value,ec_high_value,ec_low_calib_value,ec_low_value,useCalibrationValueEc,useCalibrationPh\" + \"\\n\";\n    msg.payload = first_line + linea.join(\",\");\n    global.set('first_line_file',false, 'file');\n}\nelse{\n    msg.payload = linea.join(\",\");\n}\n\nmsg.filename = folder + file + \".csv\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set('first_line_file', true,'file');",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 860,
+        "wires": [
+            [
+                "afa528f364d674eb",
+                "5d3d5e31547bfac3",
+                "cad8125c63bcefe3"
+            ]
+        ]
+    },
+    {
+        "id": "5d3d5e31547bfac3",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "e8a996fe3726f842",
+        "name": "debug archivos",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -953,8 +1170,714 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
+        "x": 940,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "cad8125c63bcefe3",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "e8a996fe3726f842",
+        "name": "debug archivos nombre",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "filename",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
         "y": 780,
+        "wires": []
+    },
+    {
+        "id": "5c65dc421c8f54f9",
+        "type": "file",
+        "z": "0eeeca0a5c630f84",
+        "g": "e8a996fe3726f842",
+        "name": "Escribir en archivo main",
+        "filename": "\"/home/estacion/local_data/huillin_data/All_data_huillin.csv\"",
+        "filenameType": "jsonata",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 990,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf4d13c0f70345cf",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "e8a996fe3726f842",
+        "name": "Escribir en el con todo",
+        "func": "let ph = msg.payload.ph_calibrated;\nlet ec = msg.payload.ec_calibrated;\nlet temp = msg.payload.temp;\nlet sat = msg.payload.SAT;\nlet od = msg.payload.OD;\nlet timestamp = msg.payload.timestamp;\nlet speed = msg.payload.speed;\nlet lat = msg.payload.lat;\nlet lon = msg.payload.lon;\n\nlet ec_high_calib_value = msg.payload.ec_high_calib_value;\nlet ec_high_value = msg.payload.ec_high_value;\nlet ec_low_calib_value = msg.payload.ec_low_calib_value;\nlet ec_low_value = msg.payload.ec_low_value;\nlet useCalibrationValueEc = msg.payload.useCalibrationValueEc;\nlet useCalibrationPh = msg.payload.useCalibrationPh;\nlet ph4_value = msg.payload.ph4_value;\nlet ph7_value = msg.payload.ph7_value;\n\n\n\n\n// Crear un objeto de fecha a partir de la fecha original\nconst fecha = new Date(timestamp);\n\n// Función de formateo para asegurar que los números sean de al menos dos dígitos\nfunction dosDigitos(numero) {\n    return numero < 10 ? '0' + numero : numero;\n}\n\nlet day = dosDigitos(fecha.getDate())\nlet month = dosDigitos(fecha.getMonth() + 1) // Los meses en JavaScript comienzan desde 0\nlet year =  fecha.getFullYear() \n\nif(isNaN(day) || isNaN(month) || isNaN(year) )\n{\n    return; // exit if \n}\n// Construir el formato deseado: dd/mm/yyyy hh:mm:ss\nconst fechaFormateada = day + '/'\n                       + month + '/' \n                       + year + ' '\n                       + dosDigitos(fecha.getHours()) + ':'\n                       + dosDigitos(fecha.getMinutes()) + ':'\n                       + dosDigitos(fecha.getSeconds());\n\n\nvar linea = [\n            fechaFormateada,\n            lat,\n            lon,\n            speed,\n            od,\n            sat,\n            ph,\n            ec,\n            temp,\n            ph4_value,\n            ph7_value,\n            ec_high_calib_value,\n            ec_high_value,\n            ec_low_calib_value,\n            ec_low_value,\n            useCalibrationValueEc,\n            useCalibrationPh\n        ];\n\nmsg.payload = linea.join(\",\");\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set('first_line_file', true,'file');",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 900,
+        "wires": [
+            [
+                "5c65dc421c8f54f9"
+            ]
+        ]
+    },
+    {
+        "id": "1d7126a647aad528",
+        "type": "ui_ui_control",
+        "z": "9ba8f9380bd39449",
+        "g": "1cfcf5314fd22ded",
+        "name": "Swich to download file page",
+        "events": "all",
+        "x": 700,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0c05291daad188d",
+        "type": "ui_button",
+        "z": "9ba8f9380bd39449",
+        "g": "1cfcf5314fd22ded",
+        "name": "",
+        "group": "fcac813da4fbe640",
+        "order": 9,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Descargar archivos",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"DownloadFile\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "1d7126a647aad528",
+                "15b40974a3089a3d"
+            ]
+        ]
+    },
+    {
+        "id": "05a993075446e210",
+        "type": "ui_button",
+        "z": "9ba8f9380bd39449",
+        "g": "1cfcf5314fd22ded",
+        "name": "",
+        "group": "4fd5d48023f84ec9",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Volver",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"Inicio\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "1d7126a647aad528"
+            ]
+        ]
+    },
+    {
+        "id": "18da5139ebad4c28",
+        "type": "ui_template",
+        "z": "9ba8f9380bd39449",
+        "g": "1cfcf5314fd22ded",
+        "group": "fcac813da4fbe640",
+        "name": "Button mapa",
+        "order": 8,
+        "width": "3",
+        "height": "1",
+        "format": "<div>\n    <button class=\"md-raised md-button md-ink-ripple\" type=\"button\"> <a class=\"md-button\" href=\"../worldmap/\">Ir al mapa</a></button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "md-button",
+        "x": 430,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e949ad16d21649b",
+        "type": "ui_template",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "group": "fcac813da4fbe640",
+        "name": "Button log",
+        "order": 10,
+        "width": "3",
+        "height": "1",
+        "format": "<div>\n    <button class=\"md-raised md-button md-ink-ripple\" type=\"button\"> <a class=\" md-button \" href=\"/home/estacion/lora_project/estacion_read_mqtt_send_lora.log\">Download Log</a></button>\n    \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "md-button",
+        "x": 360,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "68f50dba58495760",
+        "type": "http in",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "",
+        "url": "/home/estacion/lora_project/:fn",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 280,
+        "y": 560,
+        "wires": [
+            [
+                "00a54f52d1bbc55f"
+            ]
+        ]
+    },
+    {
+        "id": "f62a6fc5710eb1f5",
+        "type": "file in",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 720,
+        "y": 560,
+        "wires": [
+            [
+                "d03102d5151edb51"
+            ]
+        ]
+    },
+    {
+        "id": "d03102d5151edb51",
+        "type": "http response",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 850,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "92eebff17e19eac1",
+        "type": "debug",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "debug file",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "00a54f52d1bbc55f",
+        "type": "function",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "nombre estacion set",
+        "func": "msg.filename = \"/home/estacion/lora_project/estacion_read_mqtt_send_lora.log\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 560,
+        "wires": [
+            [
+                "f62a6fc5710eb1f5",
+                "92eebff17e19eac1"
+            ]
+        ]
+    },
+    {
+        "id": "504388d20fb6f1ee",
+        "type": "catch",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "",
+        "scope": "group",
+        "uncaught": false,
+        "x": 290,
+        "y": 600,
+        "wires": [
+            [
+                "c4c4fe8a1bf0e0ab",
+                "4a23600b3669ba1a"
+            ]
+        ]
+    },
+    {
+        "id": "c4c4fe8a1bf0e0ab",
+        "type": "function",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "set 404",
+        "func": "msg.payload = msg.error; \nmsg.statusCode = 404; // ressource not found\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 600,
+        "wires": [
+            [
+                "d03102d5151edb51"
+            ]
+        ]
+    },
+    {
+        "id": "4a23600b3669ba1a",
+        "type": "debug",
+        "z": "9ba8f9380bd39449",
+        "g": "9cedbfa163340f89",
+        "name": "msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "15b40974a3089a3d",
+        "type": "fs-file-lister",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "Filtro de archivos locales",
+        "start": "/home/estacion/local_data/huillin_data/",
+        "pattern": "*data_huillin_*",
+        "folders": "*",
+        "hidden": true,
+        "lstype": "files",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": false,
+        "showWarnings": true,
+        "x": 1150,
+        "y": 200,
+        "wires": [
+            [
+                "5888cf104239d5d4",
+                "a2edced5f243146a"
+            ]
+        ]
+    },
+    {
+        "id": "5888cf104239d5d4",
+        "type": "debug",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "debug list archivos",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9200237d4991413c",
+        "type": "ui_dropdown",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4fd5d48023f84ec9",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 1760,
+        "y": 160,
+        "wires": [
+            [
+                "f8e084904615bef4"
+            ]
+        ]
+    },
+    {
+        "id": "a2edced5f243146a",
+        "type": "change",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 180,
+        "wires": [
+            [
+                "d6ec2752e8f4c4a6"
+            ]
+        ]
+    },
+    {
+        "id": "d6ec2752e8f4c4a6",
+        "type": "function",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "Acorta los string",
+        "func": "let split_text = [] ;\nlet base_file = \"/home/estacion/local_data/huillin_data/data_huillin_\"; \n\nmsg.options.forEach(\n    (n, i) => {\n        split_text[i] = n.slice(base_file.length) \n         });\nsplit_text.push(\"All_data_huillin.csv\")\nmsg.options = split_text;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1600,
+        "y": 160,
+        "wires": [
+            [
+                "9200237d4991413c"
+            ]
+        ]
+    },
+    {
+        "id": "c909ec07a44466ab",
+        "type": "ui_text",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "group": "4fd5d48023f84ec9",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Fecha a descargar",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1290,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b4ad19c045dd7f39",
+        "type": "ui_template",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "group": "4fd5d48023f84ec9",
+        "name": "Descarga archivos",
+        "order": 3,
+        "width": "3",
+        "height": "1",
+        "format": "<div>\n    <button class=\"md-raised md-button md-ink-ripple\" type=\"button\"> <a class=\"md-button\" href=\"/home/estacion/local_data/huillin_data/{{msg.payload}}\"\">Download</a></button>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "md-button",
+        "x": 1590,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8e084904615bef4",
+        "type": "function",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "Reformatear los string",
+        "func": "let message = msg.payload; \nif ( message == \"All_data_huillin.csv\")\n{\n    return msg;\n}\nelse\n{\n    msg.payload = \"data_huillin_\"+msg.payload;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 260,
+        "wires": [
+            [
+                "b4ad19c045dd7f39",
+                "7dc5d183480a913e"
+            ]
+        ]
+    },
+    {
+        "id": "7dc5d183480a913e",
+        "type": "debug",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "debug list string",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1620,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "61e66f78fd516e7d",
+        "type": "ui_button",
+        "z": "9ba8f9380bd39449",
+        "g": "b2d44ab075bd6ddd",
+        "name": "",
+        "group": "4fd5d48023f84ec9",
+        "order": 4,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Refrescar lista",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "{\"tab\":\"DownloadFile\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1180,
+        "y": 340,
+        "wires": [
+            [
+                "15b40974a3089a3d"
+            ]
+        ]
+    },
+    {
+        "id": "b08edc978fd8c73b",
+        "type": "http in",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "",
+        "url": "/home/estacion/local_data/huillin_data/:fn",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 1210,
+        "y": 560,
+        "wires": [
+            [
+                "9eee2ca1129e3bc2"
+            ]
+        ]
+    },
+    {
+        "id": "9a76f7918f3a9f56",
+        "type": "file in",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 1680,
+        "y": 560,
+        "wires": [
+            [
+                "ec7b672f2c47ab62"
+            ]
+        ]
+    },
+    {
+        "id": "ec7b672f2c47ab62",
+        "type": "http response",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1810,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d5a0e17147750afd",
+        "type": "debug",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "debug file",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1680,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "9eee2ca1129e3bc2",
+        "type": "function",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "nombre data huillin",
+        "func": "var basePath = \"/home/estacion/local_data/huillin_data/\";\n\nvar filename = msg.req.params.fn;\n\nif(filename.includes(\"..//\")||filename.includes(\"../\"))\n{\n    msg.payload = \"illegal file path\";\n    msg.statusCode = 405 ; // not allowed\n    return [null, msg];  //fire output 2 \n}\n\nmsg.filename = basePath + filename ; \nreturn [msg, null]; //file output",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 560,
+        "wires": [
+            [
+                "9a76f7918f3a9f56",
+                "d5a0e17147750afd"
+            ]
+        ]
+    },
+    {
+        "id": "17b487f428bc1b2d",
+        "type": "catch",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "",
+        "scope": "group",
+        "uncaught": false,
+        "x": 1170,
+        "y": 620,
+        "wires": [
+            [
+                "0e95de59ad04b8fb",
+                "ce19b058444096da"
+            ]
+        ]
+    },
+    {
+        "id": "0e95de59ad04b8fb",
+        "type": "function",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "set 404",
+        "func": "msg.payload = msg.error; \nmsg.statusCode = 404; // ressource not found\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 620,
+        "wires": [
+            [
+                "ec7b672f2c47ab62"
+            ]
+        ]
+    },
+    {
+        "id": "ce19b058444096da",
+        "type": "debug",
+        "z": "9ba8f9380bd39449",
+        "g": "adb25b8ed6a91cb3",
+        "name": "msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 660,
         "wires": []
     }
 ]
