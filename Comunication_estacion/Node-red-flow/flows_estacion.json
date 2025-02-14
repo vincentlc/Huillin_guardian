@@ -27,12 +27,14 @@
             "41017bab64f5c3e4",
             "db66b8a2cb5ff745",
             "014c1793fc9b807a",
-            "fc881f83888ef135"
+            "fc881f83888ef135",
+            "a5c9c21c951753d6",
+            "563feec903401a22"
         ],
         "x": 14,
         "y": 459,
-        "w": 532,
-        "h": 142
+        "w": 712,
+        "h": 162
     },
     {
         "id": "aa8d3a305a50a3a7",
@@ -96,8 +98,8 @@
             "8d94d8f4af73fd88",
             "d1448831cf435c89"
         ],
-        "x": 554,
-        "y": 439,
+        "x": 794,
+        "y": 419,
         "w": 712,
         "h": 222
     },
@@ -118,8 +120,8 @@
             "5c65dc421c8f54f9",
             "bf4d13c0f70345cf"
         ],
-        "x": 554,
-        "y": 699,
+        "x": 894,
+        "y": 659,
         "w": 572,
         "h": 242
     },
@@ -218,6 +220,25 @@
         "y": 439,
         "w": 872,
         "h": 262
+    },
+    {
+        "id": "52cc9ad41c612a33",
+        "type": "group",
+        "z": "0eeeca0a5c630f84",
+        "name": "get ip address",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c2aae51d37187b40",
+            "a5513e120c1f1897",
+            "af5bb34e6b909829",
+            "c04dba738f818870"
+        ],
+        "x": 14,
+        "y": 639,
+        "w": 572,
+        "h": 142
     },
     {
         "id": "c2928f7d830a0dde",
@@ -480,12 +501,13 @@
         "name": "",
         "depth": 20,
         "layer": "combined",
-        "smooth": false,
-        "x": 310,
+        "smooth": true,
+        "x": 290,
         "y": 500,
         "wires": [
             [
-                "014c1793fc9b807a"
+                "fc881f83888ef135",
+                "a5c9c21c951753d6"
             ]
         ]
     },
@@ -533,8 +555,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 330,
-        "y": 560,
+        "x": 370,
+        "y": 580,
         "wires": []
     },
     {
@@ -546,7 +568,7 @@
         "lat": "-41.276730980109335",
         "lon": "-72.93218690030963",
         "zoom": "10",
-        "layer": "OSMC",
+        "layer": "Custom",
         "cluster": "",
         "maxage": "",
         "usermenu": "show",
@@ -561,13 +583,13 @@
         "allowFileDrop": "false",
         "path": "/worldmap",
         "overlist": "DR,CO,RA,DN",
-        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
-        "mapname": "",
-        "mapurl": "",
+        "maplist": "",
+        "mapname": "OSMChile",
+        "mapurl": "http://192.168.4.229:1884/styles/basic-preview/{z}/{x}/{y}.png",
         "mapopt": "",
         "mapwms": false,
-        "x": 460,
-        "y": 500,
+        "x": 640,
+        "y": 520,
         "wires": []
     },
     {
@@ -576,7 +598,7 @@
         "z": "0eeeca0a5c630f84",
         "g": "e98c0d2ff91a28f6",
         "name": "pars to world map",
-        "func": "function getRandomInRange(from, to, fixed) {\n    return (Math.random() * (to - from) + from).toFixed(fixed) * 1;\n    // .toFixed() returns string, so ' * 1' is a trick to convert to number\n}\nvar rango=0.01\nvar random_lat = getRandomInRange(rango,-rango,5)\nvar random_lon = getRandomInRange(rango, -rango, 5)\nvar random=true\n\nif(msg.payload.lat==0 && msg.payload.lon==0)\n{\n    //exit if the lat and lon are 0\n    return;\n}\n\nif(random)\n{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat + random_lat, lon: msg.payload.lon + random_lon } \n\n}else{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat, lon: msg.payload.lon } \n\n}\n\nreturn msg;",
+        "func": "function getRandomInRange(from, to, fixed) {\n    return (Math.random() * (to - from) + from).toFixed(fixed) * 1;\n    // .toFixed() returns string, so ' * 1' is a trick to convert to number\n}\nvar rango=0.01\nvar random_lat = getRandomInRange(rango,-rango,5)\nvar random_lon = getRandomInRange(rango, -rango, 5)\nvar random=true\n\nif(msg.payload.lat==0 && msg.payload.lon==0)\n{\n    //exit if the lat and lon are 0\n    return;\n}\n\nif(random)\n{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat + random_lat, lon: msg.payload.lon + random_lon } \n\n}else{\n    msg.payload = { name: \"huillin\", lat: msg.payload.lat, lon: msg.payload.lon } \n\n}\n\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -587,8 +609,7 @@
         "y": 500,
         "wires": [
             [
-                "db66b8a2cb5ff745",
-                "fc881f83888ef135"
+                "db66b8a2cb5ff745"
             ]
         ]
     },
@@ -916,8 +937,8 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar init_value = Date.parse(Date())\nglobal.set('last_time_read', init_value, 'file');",
         "finalize": "",
         "libs": [],
-        "x": 850,
-        "y": 540,
+        "x": 1090,
+        "y": 520,
         "wires": [
             [
                 "f501a47e126aecd4",
@@ -945,8 +966,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
-        "y": 540,
+        "x": 890,
+        "y": 520,
         "wires": [
             [
                 "9964e1e8c206484c",
@@ -972,8 +993,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1030,
-        "y": 540,
+        "x": 1270,
+        "y": 520,
         "wires": []
     },
     {
@@ -990,8 +1011,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1050,
-        "y": 500,
+        "x": 1290,
+        "y": 480,
         "wires": []
     },
     {
@@ -1007,8 +1028,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 580,
+        "x": 1080,
+        "y": 560,
         "wires": [
             [
                 "0e53d428cec0b9e5",
@@ -1034,8 +1055,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1110,
-        "y": 580,
+        "x": 1350,
+        "y": 560,
         "wires": []
     },
     {
@@ -1060,8 +1081,8 @@
         "topic": "",
         "payload": "object",
         "payloadType": "date",
-        "x": 670,
-        "y": 580,
+        "x": 910,
+        "y": 560,
         "wires": [
             [
                 "a61c21b3c98d903a"
@@ -1082,8 +1103,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
-        "y": 620,
+        "x": 1300,
+        "y": 600,
         "wires": []
     },
     {
@@ -1100,8 +1121,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 480,
+        "x": 1060,
+        "y": 460,
         "wires": []
     },
     {
@@ -1111,8 +1132,8 @@
         "g": "e8a996fe3726f842",
         "name": "Generacion archivo local data",
         "info": "",
-        "x": 700,
-        "y": 800,
+        "x": 1040,
+        "y": 760,
         "wires": []
     },
     {
@@ -1127,8 +1148,8 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 970,
-        "y": 840,
+        "x": 1310,
+        "y": 800,
         "wires": [
             []
         ]
@@ -1146,8 +1167,8 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set('first_line_file', true,'file');",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 860,
+        "x": 1030,
+        "y": 820,
         "wires": [
             [
                 "afa528f364d674eb",
@@ -1162,7 +1183,7 @@
         "z": "0eeeca0a5c630f84",
         "g": "e8a996fe3726f842",
         "name": "debug archivos",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1170,8 +1191,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 740,
+        "x": 1280,
+        "y": 700,
         "wires": []
     },
     {
@@ -1180,7 +1201,7 @@
         "z": "0eeeca0a5c630f84",
         "g": "e8a996fe3726f842",
         "name": "debug archivos nombre",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1188,8 +1209,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 780,
+        "x": 1310,
+        "y": 740,
         "wires": []
     },
     {
@@ -1204,8 +1225,8 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 990,
-        "y": 880,
+        "x": 1330,
+        "y": 840,
         "wires": [
             []
         ]
@@ -1223,13 +1244,141 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set('first_line_file', true,'file');",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 900,
+        "x": 1020,
+        "y": 860,
         "wires": [
             [
                 "5c65dc421c8f54f9"
             ]
         ]
+    },
+    {
+        "id": "c2aae51d37187b40",
+        "type": "ip",
+        "z": "0eeeca0a5c630f84",
+        "g": "52cc9ad41c612a33",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": false,
+        "publicIPv6": false,
+        "x": 270,
+        "y": 680,
+        "wires": [
+            [
+                "a5513e120c1f1897",
+                "c04dba738f818870"
+            ]
+        ]
+    },
+    {
+        "id": "a5513e120c1f1897",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "52cc9ad41c612a33",
+        "name": "debug ip",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "af5bb34e6b909829",
+        "type": "inject",
+        "z": "0eeeca0a5c630f84",
+        "g": "52cc9ad41c612a33",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 680,
+        "wires": [
+            [
+                "c2aae51d37187b40"
+            ]
+        ]
+    },
+    {
+        "id": "a5c9c21c951753d6",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "e98c0d2ff91a28f6",
+        "name": "change map layer",
+        "func": "msg.payload.command = {};\nlet ip=global.get('ip_address', 'file');\nmsg.payload.command.map = {\n    name:\"OSMhot\",\n    \"url\": \"http://\"+ip+\":1884/styles/basic-preview/{z}/{x}/{y}.png\",\n    opt:{ maxZoom:19, attribution:\"&copy; OpenStreetMap\" }\n};\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 520,
+        "wires": [
+            [
+                "014c1793fc9b807a",
+                "563feec903401a22"
+            ]
+        ]
+    },
+    {
+        "id": "c04dba738f818870",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "52cc9ad41c612a33",
+        "name": "Set Ip address",
+        "func": "let ip = msg.payload.internalIPv4\nif(ip != \"\")\n{\n    global.set('ip_address', msg.payload.internalIPv4, 'file');\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "563feec903401a22",
+        "type": "debug",
+        "z": "0eeeca0a5c630f84",
+        "g": "e98c0d2ff91a28f6",
+        "name": "debug map 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 580,
+        "wires": []
     },
     {
         "id": "1d7126a647aad528",

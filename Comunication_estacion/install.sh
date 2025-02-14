@@ -68,3 +68,28 @@ if [ $valid_config -lt 1 ]; then
 fi
 
 
+##### install node-red:
+
+if [[ ! -x "$(command -v node-red)" ]]; then
+	sudo apt-get update
+	sudo apt-get install -y build-essential
+	sudo apt-get install npm
+	
+	npm install -g --unsafe-perm node-red
+	cp Node-red-flow/flows_estacion.json /home/$user_install/.node-red/flows.json
+fi
+
+
+##### install docker:
+if [[ ! -x "$(command -v docker)" ]]; then
+	curl -sSL https://get.docker.com | sh
+	sudo usermod -aG docker $USER
+fi
+
+##### config world map off line: 
+cd Map_image #caroeta donde hay archivo
+docker run --name maptiler -d -v $(pwd):/data -p 1884:8080 maptiler/tileserver-gl --restart=always -p 8080 --mbtiles osm-2020-02-10-v3.11_south-america_chile.mbtiles
+docker start maptiler
+
+
+
