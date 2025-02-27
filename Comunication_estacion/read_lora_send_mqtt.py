@@ -21,27 +21,28 @@ import RPi.GPIO as GPIO
 file="estacion_read_mqtt_send_lora"
 #innit logger
 log = logging.getLogger(file)
-logging.basicConfig(
+logging.basicConfig( #logging into a local file
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    #level=logging.INFO,
+    level=logging.INFO,
     level=logging.DEBUG,
-    #filename=file+".log",
+    filename=file+".log",
     encoding="utf-8",
-    #filemode="a"
+    filemode="a"
 )
 
 GPIO.setwarnings(False) #de activate the GPIO warning to avoir the waring of re-use of port
 
 # Configuración del servidor MQTT
-MQTT_BROKER = "127.0.0.1" #'192.168.1.2'  # Cambia esto a la dirección de tu broker MQTT
-MQTT_TOPIC = 'huillin/data'  # Cambia esto al tema MQTT que desees utilizar
+MQTT_BROKER = "127.0.0.1" # Direccion de broker MQTT
+MQTT_TOPIC = 'huillin/data'  # Tema MQTT utilizado
 
 # Initialize the LoRaE22 module
-loraSerial = serial.Serial('/dev/ttyUSB0') #, baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
+loraSerial = serial.Serial('/dev/ttyS0') #, baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
 lora = LoRaE22('400T22D', loraSerial, m0_pin=23, m1_pin=24)
 code = lora.begin()
 log.info("Initialization:"+ ResponseStatusCode.get_description(code))
 
+# I found out that if i config it everytime it was creating conflict, but i leave it in case needed.
 # Set the configuration to default values and print the updated configuration to the console
 # Not needed if already configured
 #configuration_to_set = Configuration('400T22D')
@@ -65,21 +66,17 @@ try:
 
     log.info("Waiting for messages...")
     while True:
-        if lora.available() > 0:
-            # If the sender not set RSSI
-            # code, value = lora.receive_message()
-            # If the sender set RSSI
-            #code, value, rssi = lora.receive_message(rssi=True)
+        if lora.available() > 0: #wait for lora to be available
             try:
-                code, value, rssi = lora.receive_dict(rssi=True)
+                code, value, rssi = lora.receive_dict(rssi=True) # reading the data
                 
-                log.debug('RSSI: '+ str(rssi))
-
+                # print debug message
+                log.debug('RSSI: '+ str(rssi)) 
                 log.debug(str(ResponseStatusCode.get_description(code)))
 
-                client.publish(MQTT_TOPIC, str(value))
+                client.publish(MQTT_TOPIC, str(value)) #publish value to mqtt
                 log.debug(value)
-                time.sleep(2)
+                time.sleep(2) #sleep time required in order to not overload the lora module
             except UnicodeDecodeError as e:
                 log.error("UnicodeDecodeError "+str(e))
             except Exception as e: 
