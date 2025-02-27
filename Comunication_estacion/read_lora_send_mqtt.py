@@ -37,7 +37,7 @@ MQTT_BROKER = "127.0.0.1" # Direccion de broker MQTT
 MQTT_TOPIC = 'huillin/data'  # Tema MQTT utilizado
 
 # Initialize the LoRaE22 module
-loraSerial = serial.Serial('/dev/ttyS0') #, baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
+loraSerial = serial.Serial('/dev/ttyUSB0') #, baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE, bytesize=serial.EIGHTBITS)
 lora = LoRaE22('400T22D', loraSerial, m0_pin=23, m1_pin=24)
 code = lora.begin()
 log.info("Initialization:"+ ResponseStatusCode.get_description(code))
