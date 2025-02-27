@@ -1,7 +1,10 @@
 1) Errror could bot open port /dev/ttyS0: [Errno 13] Permission denied: '/dev/ttyS0'
 `sudo gpasswd --add ${USER} dialout;
 sudo usermod -a -G tty $USER;
-sudo usermod -a -G dialout $USER` #to solved it
+sudo usermod -a -G dialout $USER` 
+#to solved it
+You can also have a look at this article:
+https://github.com/codebugtools/codebug_tether/issues/17
 
 
 cd lora_project/; source .venv/bin/activate
