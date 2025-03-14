@@ -1195,7 +1195,8 @@
         "wires": [
             [
                 "28d7516a68070605",
-                "84eff09503c12e81"
+                "84eff09503c12e81",
+                "127965f035aa30e3"
             ]
         ]
     },
@@ -1416,7 +1417,7 @@
         "label": "",
         "format": "{{value}}",
         "min": 0,
-        "max": "20",
+        "max": "14",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -1663,7 +1664,7 @@
         "label": "µS/cm",
         "format": "{{value}}",
         "min": 0,
-        "max": "20",
+        "max": "1200",
         "colors": [
             "#00b500",
             "#e6e600",
@@ -2430,7 +2431,7 @@
         "z": "b28149ca8a6be0f6",
         "g": "6d2adcfab212ecb9",
         "name": "Order and shorter the data to send",
-        "func": "if(msg.payload.ec_calibrated==undefined)\n{\n    msg.payload.ec_calibrated=1.11111111111; // this is for test, to remove\n}\n\nvar data_concatenate ={ //use order the data and make the key as short as possible to maximised transmition of data\n    ts : msg.payload.ts, \n    la : msg.payload.lat,\n    lo : msg.payload.lon,\n    ph : msg.payload.ph_calibrated,\n    ec : msg.payload.ec_calibrated,\n    od : msg.payload.OD,\n    sa : msg.payload.SAT,\n    tp : msg.payload.rtd,\n    sp : msg.payload.speed,\n    //tO : msg.payload.TempO,\n    e1 : global.get('ec_high_calib_value', 'file'),\n    e2 : global.get('ec_high_value', 'file'),\n    e3 : global.get('ec_low_calib_value', 'file'),\n    e4 : global.get('ec_low_value', 'file'),\n    ue : global.get('useCalibrationValueEc', 'file'),\n    up : global.get('useCalibrationPh', 'file'),\n    p4 : global.get('ph4_value', 'file'),\n    p7 : global.get('ph7_value', 'file')\n}\n/* only two value are not send for size matter: \npn : msg.payload.ph, //valor sin calibracion\n    en : msg.payload.ec, //valor sin calibracion\n*/\n\nmsg.payload = data_concatenate;\nreturn msg\n",
+        "func": "\nvar data_concatenate ={ //use order the data and make the key as short as possible to maximised transmition of data\n    ts : msg.payload.ts, \n    la : msg.payload.lat,\n    lo : msg.payload.lon,\n    ph : msg.payload.ph_calibrated,\n    ec : msg.payload.ec_calibrated,\n    od : msg.payload.OD,\n    sa : msg.payload.SAT,\n    tp : msg.payload.rtd,\n    sp : msg.payload.speed,\n    //tO : msg.payload.TempO,\n    e1 : global.get('ec_high_calib_value', 'file'),\n    e2 : global.get('ec_high_value', 'file'),\n    e3 : global.get('ec_low_calib_value', 'file'),\n    e4 : global.get('ec_low_value', 'file'),\n    ue : global.get('useCalibrationEc', 'file'),\n    up : global.get('useCalibrationPh', 'file'),\n    p4 : global.get('ph4_value', 'file'),\n    p7 : global.get('ph7_value', 'file')\n}\n/* only two value are not send for size matter: \npn : msg.payload.ph, //valor sin calibracion\n    en : msg.payload.ec, //valor sin calibracion\n*/\n\nmsg.payload = data_concatenate;\nreturn msg\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2445,6 +2446,65 @@
                 "d78b80378399c560"
             ]
         ]
+    },
+    {
+        "id": "127965f035aa30e3",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "name": "Semaphore del GPS",
+        "func": "function semaphore(data) {\n    var status = \"\"\n    if (!data.ts || data.ts === 0) {\n        status = \"🔴 \"; // No GPS connection\n        \n    } else if (data.ts && (!data.lat || !data.lon)) {\n        status = \"🟠 \"; // Time is there but no latitude or longitude\n        \n    } else if (data.ts && data.lat && data.lon) {\n        status = \"🟢 \"; // We have it all\n    }\n    return status;\n}\nvar status = semaphore(msg.payload)\nfunction formatDate(data)\n{\n    const formatter = new Intl.DateTimeFormat('es-US', { day: '2-digit', month: '2-digit',year: 'numeric',hour: '2-digit', minute: '2-digit', second: '2-digit' })\n    return formatter.format(data.fecha);\n}\n\nmsg.payload.status = status \n        + formatDate(msg.payload)\nmsg.payload.position =  \n         \" lat=\" + msg.payload.lat \n        + \" lon=\" + msg.payload.lon \n//node.warn(timestamp_total);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 80,
+        "wires": [
+            [
+                "22b28770a7091e78",
+                "a24a72440073a1e7"
+            ]
+        ]
+    },
+    {
+        "id": "22b28770a7091e78",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "name": "debug gps",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a24a72440073a1e7",
+        "type": "ui_text",
+        "z": "b28149ca8a6be0f6",
+        "group": "a3b1899c42a8b66e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "GPS:",
+        "format": "{{msg.payload.status}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1610,
+        "y": 120,
+        "wires": []
     },
     {
         "id": "mainCalibrationButton",
