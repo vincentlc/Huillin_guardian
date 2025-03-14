@@ -33,7 +33,7 @@ logging.basicConfig( #logging into a local file
 GPIO.setwarnings(False) #de activate the GPIO warning to avoir the waring of re-use of port
 
 # Configuración del servidor MQTT
-MQTT_BROKER = "127.0.0.1" # Direccion de broker MQTT
+MQTT_BROKER = "10.3.141.1" #"127.0.0.1" # Direccion de broker MQTT
 MQTT_TOPIC = 'huillin/data'  # Tema MQTT utilizado
 
 # Initialize the LoRaE22 module
