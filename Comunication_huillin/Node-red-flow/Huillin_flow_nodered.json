@@ -56,9 +56,9 @@
             "0dddfa9784215a05",
             "8445246cb69f1005"
         ],
-        "x": 204,
+        "x": 214,
         "y": 719,
-        "w": 782,
+        "w": 762,
         "h": 182
     },
     {
@@ -149,11 +149,12 @@
             "b795d192560b64e4",
             "103054ae609ed613",
             "2e1bd94d21e1792b",
-            "fd44840d4abf9212"
+            "fd44840d4abf9212",
+            "d36dd38e37896148"
         ],
         "x": 914,
         "y": 659,
-        "w": 692,
+        "w": 812,
         "h": 402
     },
     {
@@ -215,9 +216,9 @@
             "calibrationToggle",
             "d1471c661a6cca22"
         ],
-        "x": 404,
+        "x": 414,
         "y": 19,
-        "w": 812,
+        "w": 792,
         "h": 202
     },
     {
@@ -281,9 +282,9 @@
             "b3d47c2c06c8083d",
             "97ced0fcc825eab1"
         ],
-        "x": 624,
+        "x": 634,
         "y": 259,
-        "w": 842,
+        "w": 832,
         "h": 322
     },
     {
@@ -308,9 +309,9 @@
             "75fc955d9873c691",
             "ae3fa3bbbe40ecf3"
         ],
-        "x": 24,
+        "x": 34,
         "y": 199,
-        "w": 572,
+        "w": 552,
         "h": 462
     },
     {
@@ -1415,7 +1416,7 @@
         "gtype": "gage",
         "title": "PH",
         "label": "",
-        "format": "{{value}}",
+        "format": "{{value | number:1}}",
         "min": 0,
         "max": "14",
         "colors": [
@@ -1423,11 +1424,11 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "12",
+        "seg2": "13",
         "diff": false,
         "className": "",
-        "x": 1390,
+        "x": 1650,
         "y": 760,
         "wires": []
     },
@@ -1455,8 +1456,8 @@
         "y": 760,
         "wires": [
             [
-                "677d69de3cf1939c",
-                "2e1bd94d21e1792b"
+                "2e1bd94d21e1792b",
+                "d36dd38e37896148"
             ]
         ]
     },
@@ -1641,8 +1642,8 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "18",
+        "seg2": "25",
         "diff": false,
         "className": "",
         "x": 1410,
@@ -1670,8 +1671,8 @@
             "#e6e600",
             "#ca3838"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "60",
+        "seg2": "110",
         "diff": false,
         "className": "",
         "x": 1420,
@@ -1724,12 +1725,12 @@
         "min": 0,
         "max": "20",
         "colors": [
-            "#00b500",
+            "#ca3838",
             "#e6e600",
-            "#ca3838"
+            "#00b500"
         ],
-        "seg1": "",
-        "seg2": "",
+        "seg1": "2",
+        "seg2": "5",
         "diff": false,
         "className": "",
         "x": 1490,
@@ -2001,12 +2002,12 @@
         "min": 0,
         "max": "140",
         "colors": [
-            "#00b500",
+            "#ca3838",
             "#e6e600",
-            "#ca3838"
+            "#00b500"
         ],
-        "seg1": "100",
-        "seg2": "101",
+        "seg1": "50",
+        "seg2": "70",
         "diff": false,
         "className": "range-ui",
         "x": 1510,
@@ -2505,6 +2506,27 @@
         "x": 1610,
         "y": 120,
         "wires": []
+    },
+    {
+        "id": "d36dd38e37896148",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "25f9441755bfb3b4",
+        "name": "options multi range",
+        "func": "msg.ui_control = {options:{customSectors: {\n  percents: false, \n  ranges: [{\n    color : \"#ca3838\",\n    lo : 0,\n    hi : 6.5\n  },{\n    color : \"#e6e600\", //yellow\n    lo : 6.5,\n    hi : 7\n  },{\n    color : \"#00b500\", //green\n    lo : 7,\n    hi : 8\n  },{\n    color : \"#e6e600\", //yellow\n    lo : 8,\n    hi : 8.5\n  },{\n    color : \"#ca3838\", //red\n    lo : 8.5,\n    hi : 14\n  }]\n    \n}}}\n//delete msg.payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1470,
+        "y": 760,
+        "wires": [
+            [
+                "677d69de3cf1939c"
+            ]
+        ]
     },
     {
         "id": "mainCalibrationButton",
