@@ -23,11 +23,11 @@ file="estacion_read_mqtt_send_lora"
 log = logging.getLogger(file)
 logging.basicConfig( #logging into a local file
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    level=logging.INFO,
+    #level=logging.INFO,
     level=logging.DEBUG,
-    filename=file+".log",
+    #filename=file+".log",
     encoding="utf-8",
-    filemode="a"
+    #filemode="a"
 )
 
 GPIO.setwarnings(False) #de activate the GPIO warning to avoir the waring of re-use of port
