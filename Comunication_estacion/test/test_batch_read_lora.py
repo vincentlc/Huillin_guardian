@@ -9,7 +9,6 @@
 
 import serial
 import time
-from datetime import datetime
 import json
 import os
 
@@ -40,8 +39,15 @@ expected_start_value = 1000000000000
 received_messages = []
 lost_messages = 0
 time_differences = []
-time_greater_than_3s = 0
+time_greater_than_threshold = 0
 test_batch_file = "test_batch_number.txt"
+folder_name = "test_result"
+
+# Constants
+SLEEP_TIME = 2  # Sleep time in seconds
+TIME_DIFF_THRESHOLD = 3  # Threshold for time differences in seconds
+LOG_STATS_INTERVAL = 10  # Log statistics every N messages
+
 
 # Function to read the last test batch number
 def read_test_batch_number():
@@ -58,8 +64,17 @@ def write_test_batch_number(batch_number):
 # Function to check the integrity of the message
 def check_integrity(message, expected_message):
     try:
+        # Parse the message if it's a JSON string
+        if isinstance(message, str):
+            try:
+                message = json.loads(message)
+            except json.JSONDecodeError as e:
+                log.debug(f"Failed to parse JSON: {e}")
+                return False
+            
         # Check if the message is a dictionary
         if not isinstance(message, dict):
+            log.debug(f"Message is not a dictionary. ->{message}")
             return False
         
         # Check required fields and their types
@@ -85,15 +100,18 @@ def check_integrity(message, expected_message):
         
         for field, field_type in required_fields.items():
             if field not in message or not isinstance(message[field], field_type):
+                log.debug(f"Field '{field}' is missing or not of type {field_type}.")
                 return False
         
         # Check if 'ts' is greater than or equal to the expected start value
         if message['ts'] < expected_start_value:
+            log.debug(f"Message 'ts' ({message['ts']}) is less than expected_start_value ({expected_start_value}).")
             return False
         
         # Check if the received message matches the expected message (except for 'ts')
         for field in expected_message:
             if field != 'ts' and message[field] != expected_message[field]:
+                log.debug(f"Field '{field}' does not match the expected value.")
                 return False
         
         return True
@@ -103,18 +121,23 @@ def check_integrity(message, expected_message):
 
 # Function to log statistics
 def log_statistics(batch_number, received_count, lost_count, time_diff_stats):
-    log_file = f"test_batch_{batch_number}.txt"
+    ensure_test_result_folder_exists()
+    log_file = f"{folder_name}/test_batch_{batch_number}.txt"
     with open(log_file, 'a') as f:
-        f.write(f"Test Batch: {batch_number}\n")
-        f.write(f"Received Messages: {received_count}\n")
-        f.write(f"Lost Messages: {lost_count}\n")
-        f.write(f"Time Differences: {time_diff_stats}\n")
-        f.write(f"Messages with Time Difference > 3s: {time_greater_than_3s}\n")
-        f.write("\n")
+        f.write(f"Test Batch: {batch_number},Received Messages: {received_count},Lost Messages: {lost_count},Messages with Time Difference > 3s: {time_greater_than_threshold},Time Differences: {time_diff_stats}\n")
+
+def ensure_test_result_folder_exists():
+    """Check if the 'test_result' folder exists, and create it if it doesn't."""
+    
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
+        #log.info(f"Folder '{folder_name}' created.")
+    #else:
+        #log.debug(f"Folder '{folder_name}' already exists.")
         
 # Main loop to receive messages
 def main():
-    global lost_messages, time_differences, time_greater_than_3s
+    global lost_messages, time_differences, time_greater_than_threshold
     last_received_time = None
     expected_message = {
             'ts': None,  # Placeholder for the timestamp
@@ -135,6 +158,11 @@ def main():
         while True:
             if lora.available() > 0: #wait for lora to be available
                 code, value, rssi = lora.receive_dict(rssi=True) # reading the data
+                if(isinstance(expected_message['ts'], int)):
+                    log.debug(f"RSSI: {rssi},Status: {ResponseStatusCode.get_description(code)}, expected={expected_message['ts']-expected_start_value}")
+                else:
+                    log.debug(f"RSSI: {rssi},Status: {ResponseStatusCode.get_description(code)}, expected={expected_message['ts']}")
+
                 # Update the expected timestamp for the next message
                 if expected_message['ts'] is None:
                     expected_message['ts'] = expected_start_value
@@ -149,22 +177,21 @@ def main():
                     # Check time difference
                     if last_received_time is not None:
                         time_diff = current_received_time - last_received_time
-                        time_differences.append(time_diff)
+                        time_diff = float("{:.2f}".format(time_diff))
                         
-                        if time_diff > 3:
-                            time_greater_than_3s += 1
+                        if time_diff > TIME_DIFF_THRESHOLD:
+                            time_greater_than_threshold += 1
+                            time_differences.append(time_diff)
                     
                     last_received_time = current_received_time
                 else:
                     lost_messages += 1
-            else:
-                lost_messages += 1
                 
                 # Sleep for 2 seconds (or adjust as needed)
-                time.sleep(2)
+                time.sleep(SLEEP_TIME)
 
                 # Log statistics every 10 messages (or adjust as needed)
-                if len(received_messages) % 10 == 0:
+                if len(received_messages) % LOG_STATS_INTERVAL == 0:
                     log_statistics(test_batch, len(received_messages), lost_messages, time_differences)
 
     except KeyboardInterrupt:
@@ -182,4 +209,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
