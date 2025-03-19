@@ -1,3 +1,0 @@
-ebyte-lora-e22-rpi
-pyserial
-paho-mqtt
