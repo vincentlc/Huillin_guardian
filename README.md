@@ -58,10 +58,51 @@ This project aims to help the local community monitor different parameters of th
 
 ## Future Enhancements
 
+
 - Posibility to add extra sensor
 - Automated report to data platforms
 
 ---
+
+Please find below all the documentation of the project
+
+
+a) The general diagram:
+![Diagrama general](Doc/Diagrama_general.drawio.svg)
+
+<details closed>
+<summary>
+The others diagram
+</summary> <br />
+
+
+b) Caja_A:
+![Caja_A](Doc/Caja_A.drawio.svg)
+
+
+c) Caja_B:
+![Caja_B](Doc/Caja_B.drawio.svg)
+
+
+d) Modulo_Tierra:
+![Modulo_Tierra](Doc/Modulo_Tierra.drawio.svg)
+
+
+e) Caja_Carga_A:
+![Caja_Carga_A](Doc/Caja_Carga_A.drawio.svg)
+
+
+f) Caja_Carga_B:
+![Caja_Carga_B](Doc/Caja_Carga_B.drawio.svg)
+
+
+</details closed>
+
+There is a list also of vocabulary used in the different diagrams:
+![List_vocab](Doc/Lista_de_definiciones.md)
+
+### Shortly will be added the rest of the source code
+
 
 ## Requirements
 
@@ -70,6 +111,5 @@ This project aims to help the local community monitor different parameters of th
 ---
 
 ## Contact
-
 For any questions or support, please contact the project maintainers.
 Or this instagram : https://www.instagram.com/huillin.guardian/
