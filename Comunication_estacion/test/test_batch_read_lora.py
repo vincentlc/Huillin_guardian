@@ -32,6 +32,10 @@ logging.basicConfig( #logging into a local file
     #filemode="a"
 )
 
+# Constants
+MQTT_BROKER = "10.3.141.1"
+MQTT_TOPIC = 'huillin/data'
+
 GPIO.setwarnings(False) #de activate the GPIO warning to avoir the waring of re-use of port
 
 # Initialize variables
@@ -48,6 +52,9 @@ SLEEP_TIME = 2  # Sleep time in seconds
 TIME_DIFF_THRESHOLD = 3  # Threshold for time differences in seconds
 LOG_STATS_INTERVAL = 10  # Log statistics every N messages
 
+def on_connect(client, userdata, flags, rc):
+    """Callback for successful MQTT connection."""
+    log.info("Conectado al broker MQTT con resultado: " + str(mqtt.connack_string(rc)))
 
 # Function to read the last test batch number
 def read_test_batch_number():
@@ -148,6 +155,12 @@ def main():
     lora = LoRaE22('400T22D', loraSerial, m0_pin=23, m1_pin=24)
     code = lora.begin()
     log.info("Initialization:"+ ResponseStatusCode.get_description(code))
+
+    # Crear instancia del cliente MQTT
+    client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+    client.on_connect = on_connect
+    # Conectar al broker MQTT
+    client.connect(MQTT_BROKER, 1883, 60)
     
     # Read the current test batch number
     test_batch = read_test_batch_number()
@@ -186,6 +199,10 @@ def main():
                     last_received_time = current_received_time
                 else:
                     lost_messages += 1
+                
+                if isinstance(value, dict) or isinstance(value, str):
+                        client.publish(MQTT_TOPIC, str(value))
+                        log.debug(f"Published to MQTT: {value}")
                 
                 # Sleep for 2 seconds (or adjust as needed)
                 time.sleep(SLEEP_TIME)

@@ -39,7 +39,7 @@ void setup() {
   Serial.begin(115200); // Velocidad de baudios puede variar según tu configuración
 
   // Inicializar el puerto serial para la comunicación con el módulo RS485
-  HardwareSerial &RS485Serial = Serial1; // Cambia Serial2 a Serial1, Serial3, etc. según el pin que estés utilizando
+  HardwareSerial &RS485Serial = Serial; // Cambia Serial2 a Serial1, Serial3, etc. según el pin que estés utilizando
   RS485Serial.begin(9600, SERIAL_8N1); // Configuración del puerto serial: 9600 baudios, 8 bits de datos, sin paridad, 1 bit de parada
 
   // Inicializar los pines de dirección y habilitación del MAX485
@@ -82,8 +82,8 @@ void loop() {
 Serial.println("Activado");
   //delay(300000);
   result = node.readHoldingRegisters(83,6);
-  // if (result == node.ku8MBSuccess)
-  // {
+  if (result == node.ku8MBSuccess)
+  {
     foo.ints[1]= node.getResponseBuffer(0x00);
     foo.ints[0]= node.getResponseBuffer(0x01);
     String stringOne = String(foo.toFloat, 2);
@@ -103,11 +103,11 @@ Serial.println("Activado");
   Serial.println(Dato);
 
 
-//   }
-//   else
-//   {
-//     Dox = "Failed,Failed,Failed";
-// }
+   }
+   else
+   {
+     Dox = "Failed,Failed,Failed";
+   }
   delay(1000);
   Dato = Dox;
   Serial.println(Dato);
