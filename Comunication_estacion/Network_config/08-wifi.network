@@ -1,0 +1,11 @@
+#/etc/systemd/network/08-wifi.network
+[Match]
+Name=wl*
+[Network]
+LLMNR=no
+MulticastDNS=yes
+# If you need a static ip address, then toggle commenting next four lines (example)
+DHCP=yes
+#Address=10.3.141.1/24
+#Gateway=10.3.141.1
+#DNS=10.3.141.1 8.8.8.8

@@ -1,0 +1,5 @@
+ebyte-lora-e22-rpi==0.0.4
+pyserial==3.5
+RPI.GPIO==0.7.1
+paho-mqtt==2.1.0
+logger==1.4
