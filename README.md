@@ -2,6 +2,8 @@
 
 This project aims to help the local community monitor different parameters of the water.
 
+The Spanish version of readme is here [`README_ES.md`](README_ES.md)
+
 ---
 
 ## Components
@@ -58,14 +60,12 @@ This project aims to help the local community monitor different parameters of th
 
 ## Future Enhancements
 
-
 - Posibility to add extra sensor
 - Automated report to data platforms
 
 ---
 
 Please find below all the documentation of the project
-
 
 a) The general diagram:
 ![Diagrama general](Doc/Diagrama_general.drawio.svg)
@@ -75,26 +75,20 @@ a) The general diagram:
 The others diagram
 </summary> <br />
 
-
 b) Caja_A:
 ![Caja_A](Doc/Caja_A.drawio.svg)
-
 
 c) Caja_B:
 ![Caja_B](Doc/Caja_B.drawio.svg)
 
-
 d) Modulo_Tierra:
 ![Modulo_Tierra](Doc/Modulo_Tierra.drawio.svg)
-
 
 e) Caja_Carga_A:
 ![Caja_Carga_A](Doc/Caja_Carga_A.drawio.svg)
 
-
 f) Caja_Carga_B:
 ![Caja_Carga_B](Doc/Caja_Carga_B.drawio.svg)
-
 
 </details closed>
 
@@ -103,7 +97,6 @@ There is a list also of vocabulary used in the different diagrams:
 
 ### Shortly will be added the rest of the source code
 
-
 ## Requirements
 
 - Node-RED version: `3.1.9`
@@ -111,5 +104,6 @@ There is a list also of vocabulary used in the different diagrams:
 ---
 
 ## Contact
+
 For any questions or support, please contact the project maintainers.
 Or this instagram : https://www.instagram.com/huillin.guardian/
