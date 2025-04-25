@@ -98,12 +98,13 @@
             "8d94d8f4af73fd88",
             "d1448831cf435c89",
             "d0e8c589179eeaf8",
-            "217e18523557647c"
+            "217e18523557647c",
+            "6c20c51506181bb4"
         ],
         "x": 794,
-        "y": 419,
+        "y": 379,
         "w": 632,
-        "h": 242
+        "h": 282
     },
     {
         "id": "e8a996fe3726f842",
@@ -423,8 +424,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 240,
-        "y": 360,
+        "x": 80,
+        "y": 280,
         "wires": [
             [
                 "d59b281db4dbd601",
@@ -973,8 +974,8 @@
         "y": 520,
         "wires": [
             [
-                "9964e1e8c206484c",
-                "d1448831cf435c89"
+                "d1448831cf435c89",
+                "9964e1e8c206484c"
             ]
         ]
     },
@@ -1006,7 +1007,7 @@
         "z": "0eeeca0a5c630f84",
         "g": "f2ee7fce0d30329f",
         "name": "debug fecha",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1101,8 +1102,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1060,
-        "y": 460,
+        "x": 1040,
+        "y": 420,
         "wires": []
     },
     {
@@ -1423,6 +1424,46 @@
         "x": 1290,
         "y": 620,
         "wires": []
+    },
+    {
+        "id": "d51696db72d22e97",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "name": "Node only for the test Convert to json",
+        "func": "// Assuming msg.payload contains the input string\nvar inputString = msg.payload;\n\n// Replace single quotes with double quotes\nvar jsonString = inputString.replace(/'/g, '\"');\n\n// Parse the JSON string into an object\ntry {\n    msg.payload = JSON.parse(jsonString);\n} catch (e) {\n    node.error(\"Invalid JSON: \" + e.message);\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c20c51506181bb4",
+        "type": "function",
+        "z": "0eeeca0a5c630f84",
+        "g": "f2ee7fce0d30329f",
+        "name": "pars date and time for test",
+        "func": "// Create a new JavaScript Date object based on the timestamp\n// multiplied by 1000 so that the argument is in milliseconds, not seconds\nvar date = new Date(msg.payload);\nglobal.set('last_time_read', msg.payload, 'file');\n\nconst date2025 = new Date(\"2025-01-01\"); // 2025\n\nif(date>date2025)\n{\n    msg.payload = date.toLocaleString(\"es-CL\", {timeZone: \"America/Santiago\"});\n\n    if(msg.payload == \"Invalid Date\")\n    {\n        node.warn(\"invalid\")\n    }\n}\nelse\n{\n    var test = msg.payload - 1000000000000\n    msg.payload = \"GPS no connectado \" + test.toString()\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar init_value = Date.parse(Date())\nglobal.set('last_time_read', init_value, 'file');",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 460,
+        "wires": [
+            [
+                "f501a47e126aecd4",
+                "6532fc9cb51c409a"
+            ]
+        ]
     },
     {
         "id": "1d7126a647aad528",
