@@ -1,6 +1,9 @@
 #include <ModbusMaster.h>
 #include <HardwareSerial.h> // Para ESP32, usamos HardwareSerial
 
+// Note: this file was received as it is from previous developer, but was never test in the last huillin
+// so might be needed to do some adjustment to make it work
+
 // Definir el pin de dirección y el pin de habilitación para el MAX485
 #define MAX485_DE      4
 #define MAX485_RE_NEG  5

@@ -2,6 +2,8 @@
 #include <Wire.h>    //include arduinos i2c library
 #include <sequencer2.h> //imports a 2 function sequencer 
 #include <Ezo_i2c_util.h> //brings in common print statements
+// Note: this file was received as it is from previous developer, but was never test in the last huillin
+// so might be needed to do some adjustment to make it work
 
 Ezo_board PH = Ezo_board(99, "PH");       //create a PH circuit object, who's address is 99 and name is "PH"
 Ezo_board EC = Ezo_board(100, "EC");      //create an EC circuit object who's address is 100 and name is "EC"
