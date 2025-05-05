@@ -412,15 +412,16 @@
         },
         "nodes": [
             "ad24ca838bc8172a",
-            "55747e2ad51dcc81",
             "874374257552a5b2",
-            "b711700a67c97b1e",
-            "356957fc3c3ed298"
+            "356957fc3c3ed298",
+            "c18a4731e5e4fecf",
+            "572758ad73981ffb",
+            "55747e2ad51dcc81"
         ],
-        "x": 34,
+        "x": 14,
         "y": 579,
-        "w": 672,
-        "h": 142
+        "w": 732,
+        "h": 182
     },
     {
         "id": "01e65d4d9567570d",
@@ -991,7 +992,7 @@
         "z": "b28149ca8a6be0f6",
         "g": "044ad35b83e4af54",
         "name": "debug 6",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -999,7 +1000,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 600,
+        "x": 640,
         "y": 620,
         "wires": []
     },
@@ -1010,11 +1011,12 @@
         "g": "044ad35b83e4af54",
         "name": "",
         "serial": "71abda4c42167479",
-        "x": 130,
-        "y": 620,
+        "x": 110,
+        "y": 660,
         "wires": [
             [
-                "55747e2ad51dcc81"
+                "c18a4731e5e4fecf",
+                "572758ad73981ffb"
             ]
         ]
     },
@@ -1109,7 +1111,7 @@
         "type": "function",
         "z": "b28149ca8a6be0f6",
         "g": "01e65d4d9567570d",
-        "name": "function 1",
+        "name": "split in string",
         "func": "var salida = {\n    ph : msg.payload.PH.substring(4),\n    ec : msg.payload.EC.substring(4),\n    rtd: msg.payload.RTD.substring(5)\n\n}\n\nmsg.payload = salida\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1117,7 +1119,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 450,
         "y": 480,
         "wires": [
             [
@@ -1183,7 +1185,7 @@
         "type": "function",
         "z": "b28149ca8a6be0f6",
         "g": "17976ea43efcf369",
-        "name": "function 2",
+        "name": "parsing GPS",
         "func": "var timestamp_total = Date.parse(msg.payload.dateTime);\n\nvar salida ={\n    ts_temp : msg.payload.timestamp, //old time measure\n    ts : timestamp_total,\n    fecha : msg.payload.dateTime,\n    speed : msg.payload.speedKnots,\n    lat : msg.payload.lat,\n    lon : msg.payload.lon\n}\n\nmsg.payload = salida \n//node.warn(timestamp_total);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1191,7 +1193,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
+        "x": 800,
         "y": 100,
         "wires": [
             [
@@ -1255,38 +1257,11 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 600,
+        "x": 660,
         "y": 460,
         "wires": [
             [
                 "84eff09503c12e81"
-            ]
-        ]
-    },
-    {
-        "id": "55747e2ad51dcc81",
-        "type": "delay",
-        "z": "b28149ca8a6be0f6",
-        "g": "044ad35b83e4af54",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "10",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "4",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": true,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 340,
-        "y": 620,
-        "wires": [
-            [
-                "356957fc3c3ed298",
-                "874374257552a5b2"
             ]
         ]
     },
@@ -1306,7 +1281,7 @@
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 490,
+        "x": 530,
         "y": 660,
         "wires": [
             [
@@ -2142,34 +2117,6 @@
         ]
     },
     {
-        "id": "b711700a67c97b1e",
-        "type": "inject",
-        "z": "b28149ca8a6be0f6",
-        "g": "044ad35b83e4af54",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "12,138,19",
-        "payloadType": "str",
-        "x": 160,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "4280c63eb0afae04",
         "type": "change",
         "z": "b28149ca8a6be0f6",
@@ -2525,6 +2472,72 @@
         "wires": [
             [
                 "677d69de3cf1939c"
+            ]
+        ]
+    },
+    {
+        "id": "c18a4731e5e4fecf",
+        "type": "debug",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "debug ready oxygen",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "572758ad73981ffb",
+        "type": "function",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "Escape error",
+        "func": "function getRandomArbitrary(min, max)\n{\n    var number = Math.random()*(max - min)+min\n    return number.toFixed(0);\n}\nif(msg.payload.includes(\"Failed\"))\n{\n    //msg.payload = getRandomArbitrary(1, 15) + \",\" + getRandomArbitrary(1, 130) + \",\"+ getRandomArbitrary(1, 20)\n    msg.payload = \"0,0,0\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 680,
+        "wires": [
+            [
+                "55747e2ad51dcc81"
+            ]
+        ]
+    },
+    {
+        "id": "55747e2ad51dcc81",
+        "type": "delay",
+        "z": "b28149ca8a6be0f6",
+        "g": "044ad35b83e4af54",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "4",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 720,
+        "wires": [
+            [
+                "356957fc3c3ed298",
+                "874374257552a5b2"
             ]
         ]
     },
